@@ -10,14 +10,15 @@
   <meta property="og:type" content="website">
   <title>12WASHERE — Project Zomboid</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=3">
   <script src="script.js?v=2" defer></script>
+  <script src="players.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="header wrap">
     <a class="brand" href="#" aria-label="12WASHERE home"><span class="brand-mark">12<span>↗</span></span><span>WASHERE<span class="brand-sub">PROJECT ZOMBOID</span></span></a>
-    <nav aria-label="Main navigation"><a class="nav-guide" href="#how-to-join">How to join</a><a class="nav-join" href="#connection" data-join>Join the server <span aria-hidden="true">↗</span></a></nav>
+    <nav aria-label="Main navigation"><a class="nav-guide" href="#how-to-join">How to join</a><a class="nav-mods" href="mods.html">Modlist</a><a class="nav-join" href="#connection" data-join>Join the server <span aria-hidden="true">↗</span></a></nav>
   </header>
   <main id="main">
     <section class="hero wrap" aria-labelledby="hero-title">
@@ -43,6 +44,16 @@
         <li><span class="step-number">02 /</span><h3>Find your way.</h3><p>Add <strong>pz.12washere.pro</strong> as the IP and <strong>7449</strong> as the port. Save it to your favorites.</p></li>
         <li><span class="step-number">03 /</span><h3>Make a little history.</h3><p>Enter your player credentials and any required server password, then connect. Your story starts there.</p></li>
       </ol>
+    </section>
+    <section class="roster wrap" aria-labelledby="roster-title">
+      <div class="section-heading"><div><p class="eyebrow">✳ SERVER STATUS</p><h2 id="roster-title">Online players.</h2></div><a class="button outline-button" href="mods.html">View modlist <span aria-hidden="true">↗</span></a></div>
+      <div class="server-card roster-card">
+        <div class="card-title"><span class="status-dot" id="player-status-dot" aria-hidden="true"></span> <span id="player-status">Checking server…</span><span class="protocol" id="player-count"></span></div>
+        <p class="roster-message" id="player-message" role="status">Loading the latest player list.</p>
+        <ul class="player-list" id="player-list" aria-label="Players online" hidden></ul>
+        <p class="server-note" id="player-checked" hidden></p>
+        <noscript><p class="roster-message">Enable JavaScript to see the latest player list.</p></noscript>
+      </div>
     </section>
     <section class="connection wrap" id="connection" aria-labelledby="connection-title">
       <div class="connection-copy"><p class="eyebrow">YOUR NEXT CHAPTER</p><h2 id="connection-title">We saved you<br><span>a spot in the apocalypse.</span></h2><p>Bring a plan. Bring a friend.<br>Maybe bring a spare bandage.</p><a class="button primary" href="#connection" data-join>Let's survive <span aria-hidden="true">↗</span></a></div>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101411">
+  <meta name="description" content="Browse the 12WASHERE Project Zomboid server's Steam Workshop mods and required ZombieBuddy setup.">
+  <title>Modlist — 12WASHERE</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css?v=3">
+  <script src="mods.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="header wrap">
+    <a class="brand" href="./" aria-label="12WASHERE home"><span class="brand-mark">12<span>↗</span></span><span>WASHERE<span class="brand-sub">PROJECT ZOMBOID</span></span></a>
+    <nav aria-label="Main navigation"><a class="nav-mods" href="mods.html" aria-current="page">Modlist</a><a class="nav-join" href="./#connection">Join the server <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main class="mod-page wrap" id="main">
+    <section class="mod-intro" aria-labelledby="mods-title">
+      <p class="eyebrow"><span class="cross" aria-hidden="true">✳</span> FIELD GUIDE / 002</p>
+      <h1 id="mods-title">SERVER <span>MODLIST.</span></h1>
+      <p>Browse the Steam Workshop items used by 12WASHERE. Set up ZombieBuddy before your first join.</p>
+    </section>
+    <section class="required-card" aria-labelledby="required-title">
+      <div class="card-title"><span aria-hidden="true">✳</span> REQUIRED BEFORE JOINING <span class="protocol">SETUP / 01</span></div>
+      <h2 id="required-title">Install ZombieBuddy.</h2>
+      <p><strong>ZombieBuddy is required. Subscribing on Steam alone is not enough.</strong> Follow the setup tutorial before connecting.</p>
+      <ol class="setup-steps">
+        <li><span>Subscribe to <strong>ZombieBuddy</strong> on Steam Workshop.</span><a class="button outline-button" href="https://steamcommunity.com/workshop/filedetails/?id=3619862853">Steam Workshop <span aria-hidden="true">↗</span></a></li>
+        <li><span>Close Project Zomboid. On Windows, download and run the <strong>ZombieBuddy 4.4 installer</strong> from the release's Assets section.</span><a class="button outline-button" href="https://github.com/zed-0xff/ZombieBuddy/releases/tag/windows_installer_4.4">Windows installer <span aria-hidden="true">↗</span></a></li>
+        <li><span>Finish setup using the tutorial, then launch the game and join <strong>12WASHERE</strong>.</span><a class="button outline-button" href="https://www.youtube.com/watch?v=pxk5iyz0yME">Watch tutorial <span aria-hidden="true">↗</span></a></li>
+      </ol>
+      <p class="setup-note">On Linux or macOS? Follow the instructions for your platform on the ZombieBuddy Workshop page.</p>
+    </section>
+    <section class="catalog" aria-labelledby="catalog-title">
+      <div class="section-heading"><div><p class="eyebrow">STEAM WORKSHOP</p><h2 id="catalog-title">Server mods.</h2></div><p id="mod-count" role="status">Loading modlist…</p></div>
+      <div class="mod-search" id="mod-search" hidden><label for="mod-filter">Find a mod</label><input id="mod-filter" type="search" placeholder="Search by name or Workshop ID" autocomplete="off"></div>
+      <ul class="mod-grid" id="mod-grid" aria-label="Server Workshop items"></ul>
+      <noscript><p>Enable JavaScript to browse the Workshop cards, or open the <a class="text-link" href="mods.json">raw mod list</a>.</p></noscript>
+    </section>
+  </main>
+  <footer class="footer wrap"><a class="footer-brand" href="./">12WASHERE<span>↗</span></a><p>Leave your mark. Stay alive.</p><span class="footer-note">An independent Project Zomboid server.<br>Not affiliated with The Indie Stone.</span></footer>
+</body>
+</html>

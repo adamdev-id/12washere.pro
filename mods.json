@@ -1,0 +1,754 @@
+[
+  {
+    "id": "2913313821",
+    "name": "1993 Mazda RX-7 (JM1FD) USDM [B42/41]"
+  },
+  {
+    "id": "2883755057",
+    "name": "41.78+ Propane Torch Fix [B42 Supported]"
+  },
+  {
+    "id": "3171176891",
+    "name": "'49 Ford 8N Tractor"
+  },
+  {
+    "id": "3787530735",
+    "name": "'62 Daimler Ferret"
+  },
+  {
+    "id": "3810302175",
+    "name": "6282 3D models for Viewpoint [sour_kisel]"
+  },
+  {
+    "id": "3041122351",
+    "name": "'63 Volkswagen Type 2 Van"
+  },
+  {
+    "id": "2478247379",
+    "name": "'67 Cadillac Gage Commando"
+  },
+  {
+    "id": "3026723485",
+    "name": "'67 Shelby GT500 + Eleanor"
+  },
+  {
+    "id": "2991201484",
+    "name": "'69 Chevrolet Camaro"
+  },
+  {
+    "id": "3631989559",
+    "name": "'69 Dodge Charger"
+  },
+  {
+    "id": "2873290424",
+    "name": "'70 Dodge Challenger"
+  },
+  {
+    "id": "2913633066",
+    "name": "'70 Plymouth Barracuda"
+  },
+  {
+    "id": "3642935062",
+    "name": "'70 Plymouth Road Runner"
+  },
+  {
+    "id": "2785549133",
+    "name": "'74 AM General M151A2 MUTT"
+  },
+  {
+    "id": "3161951724",
+    "name": "'76 Chevrolet K Series"
+  },
+  {
+    "id": "2799152995",
+    "name": "'78 AM General M35 Series Trucks"
+  },
+  {
+    "id": "3726526329",
+    "name": "'78 Lamborghini Countach"
+  },
+  {
+    "id": "2886832257",
+    "name": "'82 Jeep J10"
+  },
+  {
+    "id": "2618213077",
+    "name": "'82 Oshkosh M911 + Military Semi-Trailers"
+  },
+  {
+    "id": "3320947974",
+    "name": "'82 Pontiac Firebird"
+  },
+  {
+    "id": "3379334330",
+    "name": "'82 Porsche 911"
+  },
+  {
+    "id": "2811383142",
+    "name": "'83 AM General M923"
+  },
+  {
+    "id": "3596903773",
+    "name": "'84 Buick Electra"
+  },
+  {
+    "id": "3592777775",
+    "name": "'84 Cadillac DeVille"
+  },
+  {
+    "id": "3171184800",
+    "name": "'84 Cadillac Gage LAV-300"
+  },
+  {
+    "id": "2805630347",
+    "name": "'84 Mercedes Benz W460"
+  },
+  {
+    "id": "3614034284",
+    "name": "'85 Chevrolet Step-Van"
+  },
+  {
+    "id": "3330401526",
+    "name": "'85 Club Car Golf Cart"
+  },
+  {
+    "id": "3428008364",
+    "name": "'86 Chevrolet CUCVs + M101A2 Trailer"
+  },
+  {
+    "id": "2870394916",
+    "name": "'86 Ford Econoline E-150 + Pop Culture vans"
+  },
+  {
+    "id": "2566953935",
+    "name": "'86 Oshkosh P19A + Military Trailers"
+  },
+  {
+    "id": "3196180339",
+    "name": "'87 Chevrolet Suburban"
+  },
+  {
+    "id": "3110911330",
+    "name": "'87 Ford B700/F700 Trucks"
+  },
+  {
+    "id": "3779315249",
+    "name": "'87 Toyota Corolla AE92"
+  },
+  {
+    "id": "2886832936",
+    "name": "'88 Chevrolet S10"
+  },
+  {
+    "id": "3034636011",
+    "name": "'89 Dodge Caravan"
+  },
+  {
+    "id": "2932549988",
+    "name": "'89 Isuzu Trooper"
+  },
+  {
+    "id": "3570973322",
+    "name": "'89 LAND ROVER Defender"
+  },
+  {
+    "id": "3292659291",
+    "name": "'89 Volvo 200 Series"
+  },
+  {
+    "id": "3110913021",
+    "name": "'90 BMW 3 Series (E30)"
+  },
+  {
+    "id": "2952802178",
+    "name": "'90 Ford F350 Ambulance"
+  },
+  {
+    "id": "2942793445",
+    "name": "'90 Pierce Arrow Pumper and Ladder Trucks"
+  },
+  {
+    "id": "3539691958",
+    "name": "'91 Ford Ranger"
+  },
+  {
+    "id": "3770890864",
+    "name": "'91 Lexus LS400"
+  },
+  {
+    "id": "3504401781",
+    "name": "'91 Nissan 240SX"
+  },
+  {
+    "id": "2409333430",
+    "name": "'91 RANGE ROVER Classic"
+  },
+  {
+    "id": "2642541073",
+    "name": "'92 AM General M998 + M101A3 Cargo trailer"
+  },
+  {
+    "id": "2962175696",
+    "name": "'92 Ford Crown Victoria"
+  },
+  {
+    "id": "3287727378",
+    "name": "'92 Jeep YJ Wrangler"
+  },
+  {
+    "id": "2846036306",
+    "name": "'92 NISSAN Skyline GT-R (R32)"
+  },
+  {
+    "id": "3152529790",
+    "name": "'93 Chevrolet Suburban / Silverado"
+  },
+  {
+    "id": "2969343830",
+    "name": "'93 Ford CF8000 Elgin Street Sweeper"
+  },
+  {
+    "id": "3073430075",
+    "name": "'93 Ford F-Series"
+  },
+  {
+    "id": "3001592312",
+    "name": "'93 Ford Mustang"
+  },
+  {
+    "id": "2932547723",
+    "name": "'93 Lincoln Town Car + Limo"
+  },
+  {
+    "id": "3647735736",
+    "name": "'95 Subaru Impreza WRX STI"
+  },
+  {
+    "id": "3647736504",
+    "name": "'96 Mitsubishi Lancer EVO IV"
+  },
+  {
+    "id": "2897390033",
+    "name": "'97 ADI Bushmaster"
+  },
+  {
+    "id": "3315443103",
+    "name": "'98 Nissan Stagea 260RS Autech"
+  },
+  {
+    "id": "2971246021",
+    "name": "'99 Ford Crown Victoria Police Interceptor"
+  },
+  {
+    "id": "3610677934",
+    "name": "[41/42.21MP] Visible Casing Ejection Framework - Hot Brass"
+  },
+  {
+    "id": "3789269879",
+    "name": "[42.21] Tracer Location Fix + Custom Tracers Colors"
+  },
+  {
+    "id": "3722134990",
+    "name": "[42.21MP] GoM - Gunz of Marz"
+  },
+  {
+    "id": "3722064198",
+    "name": "[42.21MP] Gunworks Framework"
+  },
+  {
+    "id": "3802070967",
+    "name": "[42.21MP] Gunworks Heavy Ordnance"
+  },
+  {
+    "id": "3774316897",
+    "name": "[42] Marz Mods animsets for Linux"
+  },
+  {
+    "id": "3783267574",
+    "name": "[42] Retroactive Skill Books"
+  },
+  {
+    "id": "2920899878",
+    "name": "[B41 / B42] Load All Magazines"
+  },
+  {
+    "id": "3781616141",
+    "name": "[B42.20+] Vehicle Aim Roof Fix"
+  },
+  {
+    "id": "3791086306",
+    "name": "[B42.20+MP] Nik's Military Stuff"
+  },
+  {
+    "id": "3749026793",
+    "name": "[B42.20] Carry Visible Items In Hands [WIP]"
+  },
+  {
+    "id": "3420478458",
+    "name": "[B42.21] Better Flashlights"
+  },
+  {
+    "id": "3592172476",
+    "name": "[B42:SP/MP] Take A Bath And Shower"
+  },
+  {
+    "id": "3393821407",
+    "name": "[B42] Drag Bodies Faster"
+  },
+  {
+    "id": "3402930234",
+    "name": "[B42] Harry's Hair"
+  },
+  {
+    "id": "2747517727",
+    "name": "[B42] Spawn with items and clothing by occupation"
+  },
+  {
+    "id": "3402516345",
+    "name": "[B42] Survival"
+  },
+  {
+    "id": "3409723807",
+    "name": "[B42] UH-1B Helicopter (Beta)"
+  },
+  {
+    "id": "3546314080",
+    "name": "[B42] Water Pipes"
+  },
+  {
+    "id": "3783444342",
+    "name": "[B42]Aviation Core (Beta)"
+  },
+  {
+    "id": "3790021065",
+    "name": "[Ki5]AM General Tanker Functionality"
+  },
+  {
+    "id": "3824463369",
+    "name": "[RKC]BOEING 737-200 / RV-HOPE"
+  },
+  {
+    "id": "3822736890",
+    "name": "[RKC]LV-93 Business Jet (Based on Learjet 60) - Flyable Airplane"
+  },
+  {
+    "id": "3822736282",
+    "name": "[RKC]WINGSMITH Aircraft"
+  },
+  {
+    "id": "3610005735",
+    "name": "ALICE Gear [B41/B42.20]"
+  },
+  {
+    "id": "3775549570",
+    "name": "Alice's Weapon Sling"
+  },
+  {
+    "id": "2788256295",
+    "name": "Ammo Maker"
+  },
+  {
+    "id": "3816324722",
+    "name": "Attachments UI [B42]"
+  },
+  {
+    "id": "2335368829",
+    "name": "Authentic Z"
+  },
+  {
+    "id": "3404737883",
+    "name": "Autotsar Motor Club B42"
+  },
+  {
+    "id": "2756434288",
+    "name": "Better Server Settings"
+  },
+  {
+    "id": "2313387159",
+    "name": "Better Sorting"
+  },
+  {
+    "id": "3670064951",
+    "name": "Campers!"
+  },
+  {
+    "id": "3461263912",
+    "name": "Clean HotBar [B42]"
+  },
+  {
+    "id": "2286124931",
+    "name": "Combat Text (B40+B41+B42)"
+  },
+  {
+    "id": "3717968421",
+    "name": "Common Sense B42.21 - Community Compatibility Fix"
+  },
+  {
+    "id": "3306168142",
+    "name": "Condition On Dash"
+  },
+  {
+    "id": "2625625421",
+    "name": "Containers!"
+  },
+  {
+    "id": "3634921455",
+    "name": "Context Menu Icons"
+  },
+  {
+    "id": "3825724093",
+    "name": "DeadWorks Vehicle Framework [B42.21]"
+  },
+  {
+    "id": "3390014923",
+    "name": "Easy Spare Magazine Reload"
+  },
+  {
+    "id": "2896041179",
+    "name": "errorMagnifier"
+  },
+  {
+    "id": "2447729538",
+    "name": "Fluffy Hair [B41 & B42]"
+  },
+  {
+    "id": "3755993986",
+    "name": "Gas Pump Indicator"
+  },
+  {
+    "id": "3541349730",
+    "name": "GAZ-3937 Vodnik [B41/B42]"
+  },
+  {
+    "id": "3822754688",
+    "name": "Immersive Physics & Weather (Project Viewpoint)"
+  },
+  {
+    "id": "3426448380",
+    "name": "Immersive Suicide [B42/B41]"
+  },
+  {
+    "id": "3470422050",
+    "name": "KATTAJ1 Clothes Core [B41/B42MP]"
+  },
+  {
+    "id": "3470426196",
+    "name": "KATTAJ1 Military Pack [B41/B42MP]"
+  },
+  {
+    "id": "3826650541",
+    "name": "KI5 Engine Sounds"
+  },
+  {
+    "id": "3789366983",
+    "name": "KI5 General Fixes"
+  },
+  {
+    "id": "3740300378",
+    "name": "KI5 Mini-fixes"
+  },
+  {
+    "id": "3390453390",
+    "name": "Kitsune Lib"
+  },
+  {
+    "id": "3531611692",
+    "name": "Lethal Stealth"
+  },
+  {
+    "id": "3811344119",
+    "name": "Light Fix - Project Viewpoint"
+  },
+  {
+    "id": "2934132344",
+    "name": "Louisville Quarantine Zone [B41/B42]"
+  },
+  {
+    "id": "2650547917",
+    "name": "Manage Containers"
+  },
+  {
+    "id": "2710167561",
+    "name": "Map Legend UI [B42\\41]"
+  },
+  {
+    "id": "2734705913",
+    "name": "Map Symbol Size Slider"
+  },
+  {
+    "id": "2705406713",
+    "name": "Military Tool Kit"
+  },
+  {
+    "id": "2866258937",
+    "name": "Mini Health Panel"
+  },
+  {
+    "id": "3423660713",
+    "name": "Mod Load Order Sorter [b42]"
+  },
+  {
+    "id": "3077900375",
+    "name": "Mod Update and Alert System"
+  },
+  {
+    "id": "3451167732",
+    "name": "Modern Status [B42]"
+  },
+  {
+    "id": "3396446795",
+    "name": "Moodle Framework"
+  },
+  {
+    "id": "3645687954",
+    "name": "MoodleFramework Safety Patch"
+  },
+  {
+    "id": "1299328280",
+    "name": "More Traits [Legacy, read description]"
+  },
+  {
+    "id": "3536052310",
+    "name": "Neat Building [B42]"
+  },
+  {
+    "id": "3502080466",
+    "name": "Neat Crafting [B42]"
+  },
+  {
+    "id": "3508537032",
+    "name": "NeatUI Framework [B42]"
+  },
+  {
+    "id": "3465040406",
+    "name": "Open All Containers [42MP]"
+  },
+  {
+    "id": "3823941573",
+    "name": "Operator Gear [B42.20]"
+  },
+  {
+    "id": "3827957976",
+    "name": "Project Real Limbs - Physics Bodies for Zombies Ragdolls and NPCs"
+  },
+  {
+    "id": "3809306528",
+    "name": "Project Viewpoint"
+  },
+  {
+    "id": "3815019204",
+    "name": "Project Viewpoint - KI5 Vehicle Parts Fix"
+  },
+  {
+    "id": "3812518796",
+    "name": "Project Viewpoint - Place Items (SUB-MOD)"
+  },
+  {
+    "id": "3813929757",
+    "name": "Project Viewpoint: KK's General Mod Map Fix"
+  },
+  {
+    "id": "3815931973",
+    "name": "Project Viewpoint: KK's Shelves in 3D"
+  },
+  {
+    "id": "3812612054",
+    "name": "Project Viewpoint: Recoil & ADS"
+  },
+  {
+    "id": "2695471997",
+    "name": "PZ-ClothingUI - Clothing items grid view (B41 + B42 Updated)"
+  },
+  {
+    "id": "3781012462",
+    "name": "QoL Compendium"
+  },
+  {
+    "id": "3635550823",
+    "name": "R.U. BMP-2 by Papa_Chad"
+  },
+  {
+    "id": "3661387277",
+    "name": "R.U. BTR-80 by Papa_Chad"
+  },
+  {
+    "id": "3774360904",
+    "name": "Railroader [MP | Viewpoint 3D]: Drivable Trains, Rolling Stock & Railway Life"
+  },
+  {
+    "id": "2956146279",
+    "name": "Rain Cleans Blood [B42.20 + MP]"
+  },
+  {
+    "id": "3659447892",
+    "name": "Server Workshop Mod Update Checker & Auto-Restart (B42) MP"
+  },
+  {
+    "id": "2815560151",
+    "name": "Share Annotations"
+  },
+  {
+    "id": "3828905319",
+    "name": "Shelf Contents 3D (Viewpoint)"
+  },
+  {
+    "id": "3634921763",
+    "name": "Simple Context Menu Icons"
+  },
+  {
+    "id": "2503622437",
+    "name": "Skill Recovery Journal"
+  },
+  {
+    "id": "3805569715",
+    "name": "Smart Roof Cutaway (B42)"
+  },
+  {
+    "id": "1910606509",
+    "name": "Soul Filcher's Cooking Time"
+  },
+  {
+    "id": "3808944882",
+    "name": "Survivor Briefing"
+  },
+  {
+    "id": "2366717227",
+    "name": "Swap It"
+  },
+  {
+    "id": "3786120850",
+    "name": "Tactical Flashlight Animation - B42"
+  },
+  {
+    "id": "3171167894",
+    "name": "that DAMN Library"
+  },
+  {
+    "id": "3796669056",
+    "name": "The Mutants"
+  },
+  {
+    "id": "3470659758",
+    "name": "The Shortcut [B42]"
+  },
+  {
+    "id": "3572122233",
+    "name": "Trading Trailer [B41/B42]"
+  },
+  {
+    "id": "3330403100",
+    "name": "Trailers!"
+  },
+  {
+    "id": "3784847437",
+    "name": "Traits As Skills"
+  },
+  {
+    "id": "3402491515",
+    "name": "Tsar's Common Library B42"
+  },
+  {
+    "id": "2705655822",
+    "name": "U.S. M113 APC by Papa_Chad"
+  },
+  {
+    "id": "3598575779",
+    "name": "U.S. M163 VADS by Papa_Chad"
+  },
+  {
+    "id": "3608725379",
+    "name": "U.S. M41 Walker Bulldog by Papa_Chad"
+  },
+  {
+    "id": "3424497614",
+    "name": "U.S. M548 Cargo Carrier by Papa_Chad"
+  },
+  {
+    "id": "3739363702",
+    "name": "U.S. M60A3 by Papa_Chad"
+  },
+  {
+    "id": "3554424111",
+    "name": "U.S. M998 Humvee by Papa_Chad"
+  },
+  {
+    "id": "3682045254",
+    "name": "Unified Carry Weight Framework (UCWF)"
+  },
+  {
+    "id": "3436537035",
+    "name": "Useful Barrels"
+  },
+  {
+    "id": "3401134276",
+    "name": "Vanilla Gear Expanded"
+  },
+  {
+    "id": "3783094058",
+    "name": "Vanilla Outfits Expanded"
+  },
+  {
+    "id": "1430463738",
+    "name": "Vehicle Tweaker API"
+  },
+  {
+    "id": "3814486926",
+    "name": "Viewpoint - 3D Fences"
+  },
+  {
+    "id": "3820158673",
+    "name": "Viewpoint - 3D RVs [B42.21] [WIP]"
+  },
+  {
+    "id": "3813194971",
+    "name": "Viewpoint - Advanced Throwables"
+  },
+  {
+    "id": "3812984535",
+    "name": "Viewpoint - Immersive Effects"
+  },
+  {
+    "id": "3812659488",
+    "name": "Viewpoint - Papa_Chad Vehicle Compatibility [B42.21]"
+  },
+  {
+    "id": "3818189653",
+    "name": "Viewpoint - Visible Loot"
+  },
+  {
+    "id": "3815223174",
+    "name": "Viewpoint Better Terrain"
+  },
+  {
+    "id": "3812864848",
+    "name": "Viewpoint True Ballistics"
+  },
+  {
+    "id": "3409472393",
+    "name": "W900 Semi-Truck [B42]"
+  },
+  {
+    "id": "3819972196",
+    "name": "WinterFX"
+  },
+  {
+    "id": "2810471370",
+    "name": "Yaki's BarberShop"
+  },
+  {
+    "id": "3624971238",
+    "name": "Yet Another PZ LIbrary"
+  },
+  {
+    "id": "2830570280",
+    "name": "You drive, I sleep"
+  },
+  {
+    "id": "3814073243",
+    "name": "Zombie Visibility Fix + Stair-O-Vision"
+  },
+  {
+    "id": "3619862853",
+    "name": "ZombieBuddy"
+  }
+]

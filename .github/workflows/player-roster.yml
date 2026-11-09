@@ -1,0 +1,42 @@
+name: Update public player roster
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/player-roster.yml
+      - scripts/query-status.py
+      - scripts/requirements-status.txt
+  schedule:
+    - cron: '3-58/5 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: public-player-roster
+  cancel-in-progress: false
+
+jobs:
+  query:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - name: Query the public Steam server endpoint
+        run: |
+          python3 -m venv "$RUNNER_TEMP/status-venv"
+          "$RUNNER_TEMP/status-venv/bin/pip" install --disable-pip-version-check --require-hashes --only-binary=:all: -r scripts/requirements-status.txt
+          "$RUNNER_TEMP/status-venv/bin/python" scripts/query-status.py "$RUNNER_TEMP/status.json"
+      - name: Publish the latest snapshot on the data branch
+        shell: bash
+        run: |
+          ref=refs/heads/server-status
+          previous=$(git ls-remote origin "$ref" | cut -f1)
+          blob=$(git hash-object -w "$RUNNER_TEMP/status.json")
+          tree=$(printf '100644 blob %s\tstatus.json\n' "$blob" | git mktree)
+          commit=$(git -c user.name=github-actions -c user.email=41898282+github-actions[bot]@users.noreply.github.com \
+            commit-tree "$tree" -m 'Update public player roster')
+          git push --force-with-lease="$ref:$previous" origin "$commit:$ref"

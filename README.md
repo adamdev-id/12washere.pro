@@ -15,3 +15,9 @@ The game hostname points to the separate Google Cloud server. Keep its game DNS 
 - `style.css` and `assets/`: layout, colors, and SVG artwork. Google Fonts has local system-font fallbacks.
 
 Without JavaScript, the Join links go to the connection section, where players can copy the details manually.
+
+## Player roster and modlist
+
+- `mods.json` lists the configured Steam Workshop items, one card per Workshop ID. Update it from the server's `WorkshopItems=` list when that list changes. The required ZombieBuddy setup links are in `mods.html`.
+- The **Update public player roster** workflow checks the game's public Steam A2S endpoint about every five minutes and publishes `status.json` on the dedicated `server-status` branch. The site reads that file without contacting the admin panel or needing a token. A failed check is shown as unreachable; older snapshots expire in the UI after 20 minutes. Player names appear only when the Steam query returns them.
+- GitHub may delay scheduled checks. To refresh on demand or re-enable a paused schedule, use **Actions → Update public player roster**.
