@@ -31,10 +31,10 @@ document.querySelectorAll('[data-copy]').forEach(button => {
     try {
       if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
       await navigator.clipboard.writeText(value);
-      message = `Copied: ${value}`;
+      message = siteLanguage.t('copied', { value });
     } catch {
       // Allow manual copying on file://, insecure origins, and restricted browsers.
-      message = 'Automatic copy is unavailable. Select and copy the value shown.';
+      message = siteLanguage.t('copyFallback');
       const range = document.createRange();
       range.selectNodeContents(text);
       const selection = window.getSelection();

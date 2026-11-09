@@ -8,7 +8,16 @@ const playerList = document.querySelector('#player-list');
 const playerChecked = document.querySelector('#player-checked');
 const rosterUrl = 'https://raw.githubusercontent.com/adamdev-id/12washere.pro/server-status/status.json';
 
+let lastRoster;
+let rosterLoaded = false;
+
 function renderRoster(snapshot) {
+  const { t, locale } = siteLanguage;
+  if (!rosterLoaded) {
+    playerStatus.textContent = t('checking');
+    playerMessage.textContent = t('rosterLoading');
+    return;
+  }
   playerList.replaceChildren();
   playerList.hidden = true;
   playerCount.textContent = '';
@@ -17,30 +26,30 @@ function renderRoster(snapshot) {
   const hasTimestamp = Number.isFinite(age);
   playerChecked.hidden = !hasTimestamp;
   if (hasTimestamp) {
-    playerChecked.textContent = `Last checked ${checked.toLocaleString()}. Steam roster refreshes about every five minutes.`;
+    playerChecked.textContent = t('lastChecked', { date: checked.toLocaleString(locale) });
   }
   if (!hasTimestamp || age > 20 * 60 * 1000) {
-    playerStatus.textContent = 'Status unavailable';
+    playerStatus.textContent = t('unavailable');
     playerDot.dataset.state = 'unknown';
-    playerMessage.textContent = hasTimestamp ? 'The latest server check is out of date.' : 'Could not load the latest server check.';
+    playerMessage.textContent = t(hasTimestamp ? 'stale' : 'rosterFailed');
     return;
   }
   if (snapshot.state !== 'online') {
-    playerStatus.textContent = 'Server unreachable';
+    playerStatus.textContent = t('unreachable');
     playerDot.dataset.state = 'unreachable';
-    playerMessage.textContent = 'The server did not respond to the latest Steam query.';
+    playerMessage.textContent = t('noResponse');
     return;
   }
-  playerStatus.textContent = 'Server online';
+  playerStatus.textContent = t('online');
   playerDot.dataset.state = 'online';
-  playerCount.textContent = `${snapshot.playerCount} / ${snapshot.maxPlayers} ONLINE`;
+  playerCount.textContent = t('onlineCount', { current: snapshot.playerCount, max: snapshot.maxPlayers });
   const names = snapshot.names.filter(name => typeof name === 'string' && name.trim()).slice(0, snapshot.playerCount);
   if (snapshot.playerCount === 0) {
-    playerMessage.textContent = 'No players online.';
+    playerMessage.textContent = t('noPlayers');
   } else if (!names.length) {
-    playerMessage.textContent = 'Players are online, but Steam did not return their names.';
+    playerMessage.textContent = t('namesUnavailable');
   } else {
-    playerMessage.textContent = names.length === snapshot.playerCount ? 'Currently in Knox Country:' : 'Player names reported by Steam:';
+    playerMessage.textContent = t(names.length === snapshot.playerCount ? 'allNames' : 'someNames');
     for (const name of names) {
       const item = document.createElement('li');
       item.textContent = name;
@@ -50,7 +59,6 @@ function renderRoster(snapshot) {
   }
 }
 
-let lastRoster;
 async function refreshRoster() {
   try {
     const minute = Math.floor(Date.now() / 60000);
@@ -67,8 +75,11 @@ async function refreshRoster() {
   } catch {
     // Keep a recent result through a short network interruption.
   }
+  rosterLoaded = true;
   renderRoster(lastRoster);
 }
 
+document.addEventListener('site-language-change', () => renderRoster(lastRoster));
+renderRoster(lastRoster);
 refreshRoster();
 setInterval(refreshRoster, 60000);
