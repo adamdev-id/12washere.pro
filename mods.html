@@ -7,9 +7,9 @@
   <meta name="description" content="Browse the 12WASHERE Project Zomboid server's Steam Workshop mods and required ZombieBuddy setup.">
   <title data-i18n="modPageTitle">Modlist — 12WASHERE</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=6">
-  <script src="language.js?v=3" defer></script>
-  <script src="mods.js?v=2" defer></script>
+  <link rel="stylesheet" href="style.css?v=7">
+  <script src="language.js?v=4" defer></script>
+  <script src="mods.js?v=3" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
@@ -48,7 +48,9 @@
     </section>
     <section class="catalog" aria-labelledby="catalog-title">
       <div class="section-heading"><div><p class="eyebrow">STEAM WORKSHOP</p><h2 id="catalog-title" data-i18n="serverMods">Server mods.</h2></div><p id="mod-count" role="status">Loading modlist…</p></div>
-      <div class="mod-search" id="mod-search" hidden><label for="mod-filter" data-i18n="modSearch">Find a mod</label><input id="mod-filter" type="search" placeholder="Search by name or Workshop ID" data-i18n-placeholder="searchPlaceholder" autocomplete="off"></div>
+      <div class="mod-search" id="mod-search" hidden><label for="mod-filter" data-i18n="modSearch">Find a mod</label><input id="mod-filter" type="search" placeholder="Mod name or Workshop ID" data-i18n-placeholder="searchPlaceholder" autocomplete="off"></div>
+      <div class="mod-categories" id="mod-categories" role="group" aria-label="Filter mods by category" data-i18n-aria="modCategories" hidden></div>
+      <p class="mod-empty" id="mod-empty" data-i18n="modsEmpty" hidden>No mods match. Try a different category or search.</p>
       <ul class="mod-grid" id="mod-grid" aria-label="Server Workshop items" data-i18n-aria="serverMods"></ul>
       <noscript><p>Enable JavaScript to browse the Workshop cards, or open the <a class="text-link" href="mods.json">raw mod list</a>.</p></noscript>
     </section>

@@ -1,754 +1,1130 @@
 [
   {
     "id": "2913313821",
-    "name": "1993 Mazda RX-7 (JM1FD) USDM [B42/41]"
+    "name": "1993 Mazda RX-7 (JM1FD) USDM [B42/41]",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/2056489234183986875/9762E80F4A37AA1BE05361CF094D2B9156A7B1CA/"
   },
   {
     "id": "2883755057",
-    "name": "41.78+ Propane Torch Fix [B42 Supported]"
+    "name": "41.78+ Propane Torch Fix [B42 Supported]",
+    "category": "gameplay",
+    "thumbnail": "https://images.steamusercontent.com/ugc/1893227872150839597/DBC267C88AC9A25DEAC3ED405612967996B6C54A/"
   },
   {
     "id": "3171176891",
-    "name": "'49 Ford 8N Tractor"
+    "name": "'49 Ford 8N Tractor",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/2440458973134853899/B4A952DFFB4834037D026BAA7C82B5C828329A0C/"
   },
   {
     "id": "3787530735",
-    "name": "'62 Daimler Ferret"
+    "name": "'62 Daimler Ferret",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/10914691073659773702/3DF6CC8FCE8B48A6ED6C85AEA97DE1B5EA3B8B72/"
   },
   {
     "id": "3810302175",
-    "name": "6282 3D models for Viewpoint [sour_kisel]"
+    "name": "6282 3D models for Viewpoint [sour_kisel]",
+    "category": "visuals",
+    "thumbnail": "https://images.steamusercontent.com/ugc/10271782414478548645/4C4F27DF95107791B2888ED69B4C9224ACCCD478/"
   },
   {
     "id": "3041122351",
-    "name": "'63 Volkswagen Type 2 Van"
+    "name": "'63 Volkswagen Type 2 Van",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/2072275113033105590/E57F4684D1D3A8EC54AC6C70B92F7EAFAB3FFCA6/"
   },
   {
     "id": "2478247379",
-    "name": "'67 Cadillac Gage Commando"
+    "name": "'67 Cadillac Gage Commando",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/2499026690435255371/29CF7248B311604E4C60BAFA7686AC84F6FF8CAD/"
   },
   {
     "id": "3026723485",
-    "name": "'67 Shelby GT500 + Eleanor"
+    "name": "'67 Shelby GT500 + Eleanor",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/2005844571125338398/D1D841FD62F24D287B4DC9B28DF6AFE410C65888/"
   },
   {
     "id": "2991201484",
-    "name": "'69 Chevrolet Camaro"
+    "name": "'69 Chevrolet Camaro",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/2010342134966247928/1E04E836E41C6AE81E2DF8693EADCA7E837ECCAC/"
   },
   {
     "id": "3631989559",
-    "name": "'69 Dodge Charger"
+    "name": "'69 Dodge Charger",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/11443403421001564463/29E91DAA4277691234284BC656AC1A0A1BAE8E4B/"
   },
   {
     "id": "2873290424",
-    "name": "'70 Dodge Challenger"
+    "name": "'70 Dodge Challenger",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/1799775776169107343/40797401338F3379A5AD865AA5FA684B5E876962/"
   },
   {
     "id": "2913633066",
-    "name": "'70 Plymouth Barracuda"
+    "name": "'70 Plymouth Barracuda",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/2002446038658805973/852CD1D9583056097FD75F3169E257F19BED019D/"
   },
   {
     "id": "3642935062",
-    "name": "'70 Plymouth Road Runner"
+    "name": "'70 Plymouth Road Runner",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/11998241031950436230/A562B995B8F4A4E4ECB7B8F31E35EA35208672D6/"
   },
   {
     "id": "2785549133",
-    "name": "'74 AM General M151A2 MUTT"
+    "name": "'74 AM General M151A2 MUTT",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/2499026327394497611/9A3B2EC8295A9B0AB498A1E77F4C50D3E00B77FF/"
   },
   {
     "id": "3161951724",
-    "name": "'76 Chevrolet K Series"
+    "name": "'76 Chevrolet K Series",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/2487745594534376682/99AF5117825CA55714B175F7EF7B8AB140998195/"
   },
   {
     "id": "2799152995",
-    "name": "'78 AM General M35 Series Trucks"
+    "name": "'78 AM General M35 Series Trucks",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/2022723703329740953/E2F66C3E5572340BDACB6980BBA905D39A9D89C6/"
   },
   {
     "id": "3726526329",
-    "name": "'78 Lamborghini Countach"
+    "name": "'78 Lamborghini Countach",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/16202198234918839237/CA2C3DAEA8F2D0DF5E4CEB8A3FF62C23C8808792/"
   },
   {
     "id": "2886832257",
-    "name": "'82 Jeep J10"
+    "name": "'82 Jeep J10",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/1868458795511520023/56F6006F0BD4C2431CB54C96CC7B9E7E3FB60D3A/"
   },
   {
     "id": "2618213077",
-    "name": "'82 Oshkosh M911 + Military Semi-Trailers"
+    "name": "'82 Oshkosh M911 + Military Semi-Trailers",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/1754734980975942757/CBC6EBD45C12EE1ED3EAE299506DCCB2D5C2C3D6/"
   },
   {
     "id": "3320947974",
-    "name": "'82 Pontiac Firebird"
+    "name": "'82 Pontiac Firebird",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/2420209258548376932/76562436E96331081D21A3B1EF1D82E77F9985AE/"
   },
   {
     "id": "3379334330",
-    "name": "'82 Porsche 911"
+    "name": "'82 Porsche 911",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/54702617429256582/D5D690AB82284F56B40FDF25E4320F51D3E6182F/"
   },
   {
     "id": "2811383142",
-    "name": "'83 AM General M923"
+    "name": "'83 AM General M923",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/1832414365387916942/EE7D4699F29E62754A5E3DE85471FFC352BC36C1/"
   },
   {
     "id": "3596903773",
-    "name": "'84 Buick Electra"
+    "name": "'84 Buick Electra",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/16502003834451959379/7F4E5C21DF9DEDFC3E94B075946370896FA77337/"
   },
   {
     "id": "3592777775",
-    "name": "'84 Cadillac DeVille"
+    "name": "'84 Cadillac DeVille",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/14709326505903816886/E0B0CFF0ACD65A6F96BC8469DE2FFEF5AB4D92FC/"
   },
   {
     "id": "3171184800",
-    "name": "'84 Cadillac Gage LAV-300"
+    "name": "'84 Cadillac Gage LAV-300",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/2440458973134911054/0AA8BC63A62D910101BA83D27FC98B52B7B1EC16/"
   },
   {
     "id": "2805630347",
-    "name": "'84 Mercedes Benz W460"
+    "name": "'84 Mercedes Benz W460",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/1832413036942719424/B72A1AF02DF0ACE4F44692FE3A71E048B5BBFB17/"
   },
   {
     "id": "3614034284",
-    "name": "'85 Chevrolet Step-Van"
+    "name": "'85 Chevrolet Step-Van",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/13786117600799927718/6FA3922C60C29B9A9E1248BEF490E0C31A5AB7CC/"
   },
   {
     "id": "3330401526",
-    "name": "'85 Club Car Golf Cart"
+    "name": "'85 Club Car Golf Cart",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/2495646454754749348/663F7B3F3AA7317D60B7003D19F5DAF07C3C4B64/"
   },
   {
     "id": "3428008364",
-    "name": "'86 Chevrolet CUCVs + M101A2 Trailer"
+    "name": "'86 Chevrolet CUCVs + M101A2 Trailer",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/54708874920569288/F6A3001C1C5539AEFED945E41A6C5C1465192645/"
   },
   {
     "id": "2870394916",
-    "name": "'86 Ford Econoline E-150 + Pop Culture vans"
+    "name": "'86 Ford Econoline E-150 + Pop Culture vans",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/1772753397114425735/6B5692F131ECA05580BCA78611CC8E8A387DD600/"
   },
   {
     "id": "2566953935",
-    "name": "'86 Oshkosh P19A + Military Trailers"
+    "name": "'86 Oshkosh P19A + Military Trailers",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/1856060164428313001/FC5B93D1570B1488BD78AC99AC142122BA185DF1/"
   },
   {
     "id": "3196180339",
-    "name": "'87 Chevrolet Suburban"
+    "name": "'87 Chevrolet Suburban",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/2430327955922198810/9BE1124D3880A569494C316B84EFC18485EE3191/"
   },
   {
     "id": "3110911330",
-    "name": "'87 Ford B700/F700 Trucks"
+    "name": "'87 Ford B700/F700 Trucks",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/2495646454754760552/BCC881708A819402E1C641A6A20BFDC660D5C1DF/"
   },
   {
     "id": "3779315249",
-    "name": "'87 Toyota Corolla AE92"
+    "name": "'87 Toyota Corolla AE92",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/14674377807513312279/3F99399B13E9CE2804B6B803A2D86B0382AA4384/"
   },
   {
     "id": "2886832936",
-    "name": "'88 Chevrolet S10"
+    "name": "'88 Chevrolet S10",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/1868458795511526513/8C02BFDBA322A6F2766B039A5A9243342990A0F6/"
   },
   {
     "id": "3034636011",
-    "name": "'89 Dodge Caravan"
+    "name": "'89 Dodge Caravan",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/2005845843880314255/66666F0A0DFD6C4403B5C9530E26DFB91308B655/"
   },
   {
     "id": "2932549988",
-    "name": "'89 Isuzu Trooper"
+    "name": "'89 Isuzu Trooper",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/2002449096858736452/71418B2121BE9676BA35FF99212E410B4E6C07D9/"
   },
   {
     "id": "3570973322",
-    "name": "'89 LAND ROVER Defender"
+    "name": "'89 LAND ROVER Defender",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/9421608761060861158/91073526BA5C31AFBE05F2807FBD4E1DE984257E/"
   },
   {
     "id": "3292659291",
-    "name": "'89 Volvo 200 Series"
+    "name": "'89 Volvo 200 Series",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/2486633548111412304/F6654AF484AB558FC19E22AEC202675A90857BCB/"
   },
   {
     "id": "3110913021",
-    "name": "'90 BMW 3 Series (E30)"
+    "name": "'90 BMW 3 Series (E30)",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/2263685075970870209/820699959095CB36F8B7E71AD2604D3CD3D381CB/"
   },
   {
     "id": "2952802178",
-    "name": "'90 Ford F350 Ambulance"
+    "name": "'90 Ford F350 Ambulance",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/2021593439124205255/C5D0678430BEA8101552DCF827195C6F4E8017BD/"
   },
   {
     "id": "2942793445",
-    "name": "'90 Pierce Arrow Pumper and Ladder Trucks"
+    "name": "'90 Pierce Arrow Pumper and Ladder Trucks",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/2002450932059006575/5CF7B99982853A9884ED5FF0A84FDF61D517BCE2/"
   },
   {
     "id": "3539691958",
-    "name": "'91 Ford Ranger"
+    "name": "'91 Ford Ranger",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/13459002209171035448/93947177E5DF9A5EFB59D68F4815B4B6F8E00A29/"
   },
   {
     "id": "3770890864",
-    "name": "'91 Lexus LS400"
+    "name": "'91 Lexus LS400",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/13417301407667219119/2D3C3114A4D5612C25F201B9D13A8E687ED15C8A/"
   },
   {
     "id": "3504401781",
-    "name": "'91 Nissan 240SX"
+    "name": "'91 Nissan 240SX",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/10887093173284128475/A6F39C4D6BAC3E92C88EB0A858FB7D8F3BD3525F/"
   },
   {
     "id": "2409333430",
-    "name": "'91 RANGE ROVER Classic"
+    "name": "'91 RANGE ROVER Classic",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/2022722832883031201/FE7926E74A656C742E60FA8C2849E43DBEFABBC8/"
   },
   {
     "id": "2642541073",
-    "name": "'92 AM General M998 + M101A3 Cargo trailer"
+    "name": "'92 AM General M998 + M101A3 Cargo trailer",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/1799744951508337785/02E5596A72F06C355D178C515A9DB02146DD0A9E/"
   },
   {
     "id": "2962175696",
-    "name": "'92 Ford Crown Victoria"
+    "name": "'92 Ford Crown Victoria",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/2021595193338196773/F2D7E025023F570065F0736D17A8753DFD0EDFED/"
   },
   {
     "id": "3287727378",
-    "name": "'92 Jeep YJ Wrangler"
+    "name": "'92 Jeep YJ Wrangler",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/2514780592696458392/2FA7BC474668B4D8081787133F80DAB799510A54/"
   },
   {
     "id": "2846036306",
-    "name": "'92 NISSAN Skyline GT-R (R32)"
+    "name": "'92 NISSAN Skyline GT-R (R32)",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/1903353113601622415/A28BB1AC9352F6BAB133C28F5C558B7141F31179/"
   },
   {
     "id": "3152529790",
-    "name": "'93 Chevrolet Suburban / Silverado"
+    "name": "'93 Chevrolet Suburban / Silverado",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/54700621460223099/D304B7AEFC36F892A1AA44C4536805CF1BDD8E20/"
   },
   {
     "id": "2969343830",
-    "name": "'93 Ford CF8000 Elgin Street Sweeper"
+    "name": "'93 Ford CF8000 Elgin Street Sweeper",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/2022722200063052142/383321C6058A710F14C30DE3BEE50DB541139050/"
   },
   {
     "id": "3073430075",
-    "name": "'93 Ford F-Series"
+    "name": "'93 Ford F-Series",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/2415706293267191901/A7C4D9FD86F531F3DBFC4FB83F8E5CC75C614D4E/"
   },
   {
     "id": "3001592312",
-    "name": "'93 Ford Mustang"
+    "name": "'93 Ford Mustang",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/9842420268390414909/E22088F147A66C7A657E53348A98678907C2E531/"
   },
   {
     "id": "2932547723",
-    "name": "'93 Lincoln Town Car + Limo"
+    "name": "'93 Lincoln Town Car + Limo",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/2002449096858722793/77BA892FDD7832DCD76C8FAA6DD626CCF142611E/"
   },
   {
     "id": "3647735736",
-    "name": "'95 Subaru Impreza WRX STI"
+    "name": "'95 Subaru Impreza WRX STI",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/17341350457447635357/9FBDB66FF2D9A012E9C8033B1DA2DA913259B07A/"
   },
   {
     "id": "3647736504",
-    "name": "'96 Mitsubishi Lancer EVO IV"
+    "name": "'96 Mitsubishi Lancer EVO IV",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/17063957872578627962/908644CAFFB37F71901F7B9886AFA5359088724D/"
   },
   {
     "id": "2897390033",
-    "name": "'97 ADI Bushmaster"
+    "name": "'97 ADI Bushmaster",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/1975421088580874001/EACAFF3ACBF4432B3EA0B8B5691D789014C0390F/"
   },
   {
     "id": "3315443103",
-    "name": "'98 Nissan Stagea 260RS Autech"
+    "name": "'98 Nissan Stagea 260RS Autech",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/2394312926723220524/6DEC9CA16290354F62003E6D35683CB091EA7800/"
   },
   {
     "id": "2971246021",
-    "name": "'99 Ford Crown Victoria Police Interceptor"
+    "name": "'99 Ford Crown Victoria Police Interceptor",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/2022722832857167366/47D35081548DC37B72AFD73B76FBD0A9B9BC3C7E/"
   },
   {
     "id": "3610677934",
-    "name": "[41/42.21MP] Visible Casing Ejection Framework - Hot Brass"
+    "name": "[41/42.21MP] Visible Casing Ejection Framework - Hot Brass",
+    "category": "weapons",
+    "thumbnail": "https://images.steamusercontent.com/ugc/15857189141864117715/47F2DCDC148BAD4465DE91CF06455D7C77D7EB21/"
   },
   {
     "id": "3789269879",
-    "name": "[42.21] Tracer Location Fix + Custom Tracers Colors"
+    "name": "[42.21] Tracer Location Fix + Custom Tracers Colors",
+    "category": "weapons",
+    "thumbnail": "https://images.steamusercontent.com/ugc/11959388189487799923/AB7ECEC9F1FC6CBC9C5F31727216C4AF3CF432FB/"
   },
   {
     "id": "3722134990",
-    "name": "[42.21MP] GoM - Gunz of Marz"
+    "name": "[42.21MP] GoM - Gunz of Marz",
+    "category": "weapons",
+    "thumbnail": "https://images.steamusercontent.com/ugc/12348515643610724028/D48DD78EDFDA679FB1B789B3956576A07F8CCCA6/"
   },
   {
     "id": "3722064198",
-    "name": "[42.21MP] Gunworks Framework"
+    "name": "[42.21MP] Gunworks Framework",
+    "category": "weapons",
+    "thumbnail": "https://images.steamusercontent.com/ugc/14956160736855973228/5A7616D5F48BF478C105FA48CB984483490D5511/"
   },
   {
     "id": "3802070967",
-    "name": "[42.21MP] Gunworks Heavy Ordnance"
+    "name": "[42.21MP] Gunworks Heavy Ordnance",
+    "category": "weapons",
+    "thumbnail": "https://images.steamusercontent.com/ugc/11215160649061727820/DA9356EEAEEEEF7D2D6A2EE1F0CDEB4BBAD01253/"
   },
   {
     "id": "3774316897",
-    "name": "[42] Marz Mods animsets for Linux"
+    "name": "[42] Marz Mods animsets for Linux",
+    "category": "frameworks",
+    "thumbnail": "https://images.steamusercontent.com/ugc/13548014279141056862/B41250609FF470ED0074231E106E60E56DB3F36A/"
   },
   {
     "id": "3783267574",
-    "name": "[42] Retroactive Skill Books"
+    "name": "[42] Retroactive Skill Books",
+    "category": "gameplay",
+    "thumbnail": "https://images.steamusercontent.com/ugc/9308664574920912131/57848FEE1652DF6CF37C0B38A71390252B51D087/"
   },
   {
     "id": "2920899878",
-    "name": "[B41 / B42] Load All Magazines"
+    "name": "[B41 / B42] Load All Magazines",
+    "category": "weapons",
+    "thumbnail": "https://images.steamusercontent.com/ugc/2035098222691143786/1A361225932A063E90D7F76500CBF7DF39A5B711/"
   },
   {
     "id": "3781616141",
-    "name": "[B42.20+] Vehicle Aim Roof Fix"
+    "name": "[B42.20+] Vehicle Aim Roof Fix",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/12115443873188198230/83FDB3540CA92766AB78E33C04F1BD61D9940392/"
   },
   {
     "id": "3791086306",
-    "name": "[B42.20+MP] Nik's Military Stuff"
+    "name": "[B42.20+MP] Nik's Military Stuff",
+    "category": "gear",
+    "thumbnail": "https://images.steamusercontent.com/ugc/15364049622996532117/5C644DB91A45E068687DFDC96B83432686403011/"
   },
   {
     "id": "3749026793",
-    "name": "[B42.20] Carry Visible Items In Hands [WIP]"
+    "name": "[B42.20] Carry Visible Items In Hands [WIP]",
+    "category": "visuals",
+    "thumbnail": "https://images.steamusercontent.com/ugc/18391563020777737780/609EE41F670372E7B122C2171EC32B2098D2D599/"
   },
   {
     "id": "3420478458",
-    "name": "[B42.21] Better Flashlights"
+    "name": "[B42.21] Better Flashlights",
+    "category": "gear",
+    "thumbnail": "https://images.steamusercontent.com/ugc/16368868299536637551/A7321C1BEF70211928D0F4A3097653A1066BF86F/"
   },
   {
     "id": "3592172476",
-    "name": "[B42:SP/MP] Take A Bath And Shower"
+    "name": "[B42:SP/MP] Take A Bath And Shower",
+    "category": "gameplay",
+    "thumbnail": "https://images.steamusercontent.com/ugc/13241292669884223890/357627F4158963434C41FD27F2C6AAC7E2C16A48/"
   },
   {
     "id": "3393821407",
-    "name": "[B42] Drag Bodies Faster"
+    "name": "[B42] Drag Bodies Faster",
+    "category": "interface",
+    "thumbnail": "https://images.steamusercontent.com/ugc/10793773218666616/2F19F3CF9D8150ACE8AF1B6B19D825D1D483A1F1/"
   },
   {
     "id": "3402930234",
-    "name": "[B42] Harry's Hair"
+    "name": "[B42] Harry's Hair",
+    "category": "gear",
+    "thumbnail": "https://images.steamusercontent.com/ugc/9905019905468974662/A173D982553167E3FFADF2AC424475477A910290/"
   },
   {
     "id": "2747517727",
-    "name": "[B42] Spawn with items and clothing by occupation"
+    "name": "[B42] Spawn with items and clothing by occupation",
+    "category": "gameplay",
+    "thumbnail": "https://images.steamusercontent.com/ugc/13933757170086471292/B093262F68273FADBF7063257C55989B8E7A8BF4/"
   },
   {
     "id": "3402516345",
-    "name": "[B42] Survival"
+    "name": "[B42] Survival",
+    "category": "interface",
+    "thumbnail": "https://images.steamusercontent.com/ugc/8552036264544139/D7AF829879FDBF8B3F5476CE7D9C1B5A9DEB8EDE/"
   },
   {
     "id": "3409723807",
-    "name": "[B42] UH-1B Helicopter (Beta)"
+    "name": "[B42] UH-1B Helicopter (Beta)",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/1789036378438117/DFCBB731B9ECDB852B8080BEA4E75CCD2593D8D3/"
   },
   {
     "id": "3546314080",
-    "name": "[B42] Water Pipes"
+    "name": "[B42] Water Pipes",
+    "category": "interface",
+    "thumbnail": "https://images.steamusercontent.com/ugc/9518334001341677482/A6205F9184361466598E814C096FA59661537223/"
   },
   {
     "id": "3783444342",
-    "name": "[B42]Aviation Core (Beta)"
+    "name": "[B42]Aviation Core (Beta)",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/16785610240929791942/BAC2354718477993A49E8C3CB52B36D9BDB263F4/"
   },
   {
     "id": "3790021065",
-    "name": "[Ki5]AM General Tanker Functionality"
+    "name": "[Ki5]AM General Tanker Functionality",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/12986781048564877993/AF978D63C43D85CCBAADED523BFB13C6A2B5DF21/"
   },
   {
     "id": "3824463369",
-    "name": "[RKC]BOEING 737-200 / RV-HOPE"
+    "name": "[RKC]BOEING 737-200 / RV-HOPE",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/17329556907425980358/2F168CEF494DDAB58FE28C472598CE7315798522/"
   },
   {
     "id": "3822736890",
-    "name": "[RKC]LV-93 Business Jet (Based on Learjet 60) - Flyable Airplane"
+    "name": "[RKC]LV-93 Business Jet (Based on Learjet 60) - Flyable Airplane",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/17079044509663511070/074AC36B3FD7D1BE451A7759EE976EAA09F26B84/"
   },
   {
     "id": "3822736282",
-    "name": "[RKC]WINGSMITH Aircraft"
+    "name": "[RKC]WINGSMITH Aircraft",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/17826355138324721515/3E468E114E204024EB9EE7A4C904F5AA69559A08/"
   },
   {
     "id": "3610005735",
-    "name": "ALICE Gear [B41/B42.20]"
+    "name": "ALICE Gear [B41/B42.20]",
+    "category": "weapons",
+    "thumbnail": "https://images.steamusercontent.com/ugc/14569987654936100689/7D257487A9873DC21D68E3317E7CE2215CBA9BF1/"
   },
   {
     "id": "3775549570",
-    "name": "Alice's Weapon Sling"
+    "name": "Alice's Weapon Sling",
+    "category": "weapons",
+    "thumbnail": "https://images.steamusercontent.com/ugc/11620454513387873465/DE6669179BC2501448C60B6709766A986566F357/"
   },
   {
     "id": "2788256295",
-    "name": "Ammo Maker"
+    "name": "Ammo Maker",
+    "category": "weapons",
+    "thumbnail": "https://images.steamusercontent.com/ugc/2456223158373205714/F19056094D25496B4A66933AEE13368A63A1E033/"
   },
   {
     "id": "3816324722",
-    "name": "Attachments UI [B42]"
+    "name": "Attachments UI [B42]",
+    "category": "weapons",
+    "thumbnail": "https://images.steamusercontent.com/ugc/10656544480461865950/E1E7DEAD29B705FB143565565D0E8B64327BC8C3/"
   },
   {
     "id": "2335368829",
-    "name": "Authentic Z"
+    "name": "Authentic Z",
+    "category": "gear",
+    "thumbnail": "https://images.steamusercontent.com/ugc/13753189360470261206/CE3DA4FD3F0687B54DF4F19DF30108B7EC979420/"
   },
   {
     "id": "3404737883",
-    "name": "Autotsar Motor Club B42"
+    "name": "Autotsar Motor Club B42",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/47950207615515272/139A3819BF66CF7A4D790182A6F707BE9578A4D8/"
   },
   {
     "id": "2756434288",
-    "name": "Better Server Settings"
+    "name": "Better Server Settings",
+    "category": "interface",
+    "thumbnail": "https://images.steamusercontent.com/ugc/13664344389224810259/EDCE40296FDFEEFC7D8891EC8B66D6851812240E/"
   },
   {
     "id": "2313387159",
-    "name": "Better Sorting"
+    "name": "Better Sorting",
+    "category": "interface",
+    "thumbnail": "https://images.steamusercontent.com/ugc/16772822583472605211/D95CB3CD91A8350380A3613B70E87C31F9F37DC6/"
   },
   {
     "id": "3670064951",
-    "name": "Campers!"
+    "name": "Campers!",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/15738427441569989522/8787D3A498FE25C83194CABE7D652B2491DC57B8/"
   },
   {
     "id": "3461263912",
-    "name": "Clean HotBar [B42]"
+    "name": "Clean HotBar [B42]",
+    "category": "interface",
+    "thumbnail": "https://images.steamusercontent.com/ugc/10625835939624056538/69BCD2511D4567951B543FA8947C91F9A0E084FA/"
   },
   {
     "id": "2286124931",
-    "name": "Combat Text (B40+B41+B42)"
+    "name": "Combat Text (B40+B41+B42)",
+    "category": "interface",
+    "thumbnail": "https://images.steamusercontent.com/ugc/1646591393623073497/9283B77F607010AA9CC0D9C3CB747E6EB0DD0E71/"
   },
   {
     "id": "3717968421",
-    "name": "Common Sense B42.21 - Community Compatibility Fix"
+    "name": "Common Sense B42.21 - Community Compatibility Fix",
+    "category": "interface",
+    "thumbnail": "https://images.steamusercontent.com/ugc/14984705306509228567/AC6CBA5C770446C35EB1A9973E3A2D749B36D094/"
   },
   {
     "id": "3306168142",
-    "name": "Condition On Dash"
+    "name": "Condition On Dash",
+    "category": "interface",
+    "thumbnail": "https://images.steamusercontent.com/ugc/10793773199704568/C4B50C94EC923E512201981F770B30179781C0C9/"
   },
   {
     "id": "2625625421",
-    "name": "Containers!"
+    "name": "Containers!",
+    "category": "gameplay",
+    "thumbnail": "https://images.steamusercontent.com/ugc/1754734980975952281/CD56B953F193EC3B9001BACA3FF11516323E7FF1/"
   },
   {
     "id": "3634921455",
-    "name": "Context Menu Icons"
+    "name": "Context Menu Icons",
+    "category": "interface",
+    "thumbnail": "https://images.steamusercontent.com/ugc/12899416899600432604/D044797042212D804E92C1DDCDDCA3A4D9C7F9CB/"
   },
   {
     "id": "3825724093",
-    "name": "DeadWorks Vehicle Framework [B42.21]"
+    "name": "DeadWorks Vehicle Framework [B42.21]",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/15143993747792728335/0D88991725AF0C20FA258DB705C117E0F903010B/"
   },
   {
     "id": "3390014923",
-    "name": "Easy Spare Magazine Reload"
+    "name": "Easy Spare Magazine Reload",
+    "category": "weapons",
+    "thumbnail": "https://images.steamusercontent.com/ugc/43444870501325014/55A3DA7D063BDCCF27DECCD6C1CA4692FABBEF8D/"
   },
   {
     "id": "2896041179",
-    "name": "errorMagnifier"
+    "name": "errorMagnifier",
+    "category": "frameworks",
+    "thumbnail": "https://images.steamusercontent.com/ugc/2006946285955965520/F1B969816DF9BDB7EF43BDD2345BA1045BEA895F/"
   },
   {
     "id": "2447729538",
-    "name": "Fluffy Hair [B41 & B42]"
+    "name": "Fluffy Hair [B41 & B42]",
+    "category": "gear",
+    "thumbnail": "https://images.steamusercontent.com/ugc/1826771388267456806/43EAEA9297AD755C3D7C0F0DA7762E5C6BEF9D1A/"
   },
   {
     "id": "3755993986",
-    "name": "Gas Pump Indicator"
+    "name": "Gas Pump Indicator",
+    "category": "interface",
+    "thumbnail": "https://images.steamusercontent.com/ugc/10817087992756869080/CC7F72C30E477FB9C44970F15D0B4172F967191A/"
   },
   {
     "id": "3541349730",
-    "name": "GAZ-3937 Vodnik [B41/B42]"
+    "name": "GAZ-3937 Vodnik [B41/B42]",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/14074466576912419734/BBF659C935F83F03F207039C906D0ECF8602122E/"
   },
   {
     "id": "3822754688",
-    "name": "Immersive Physics & Weather (Project Viewpoint)"
+    "name": "Immersive Physics & Weather (Project Viewpoint)",
+    "category": "visuals",
+    "thumbnail": "https://images.steamusercontent.com/ugc/13860909155889136549/C7FEBE57B7B8FA5CD55467A5876483BB03F52713/"
   },
   {
     "id": "3426448380",
-    "name": "Immersive Suicide [B42/B41]"
+    "name": "Immersive Suicide [B42/B41]",
+    "category": "gameplay",
+    "thumbnail": "https://images.steamusercontent.com/ugc/46828112627107656/51C9FA98D5B904F3452F888B6A1A076FE3D5F431/"
   },
   {
     "id": "3470422050",
-    "name": "KATTAJ1 Clothes Core [B41/B42MP]"
+    "name": "KATTAJ1 Clothes Core [B41/B42MP]",
+    "category": "gear",
+    "thumbnail": "https://images.steamusercontent.com/ugc/52463316440908304/D6744E19183BD5F840E084150C5B05B06061790D/"
   },
   {
     "id": "3470426196",
-    "name": "KATTAJ1 Military Pack [B41/B42MP]"
+    "name": "KATTAJ1 Military Pack [B41/B42MP]",
+    "category": "gear",
+    "thumbnail": "https://images.steamusercontent.com/ugc/52463316440928130/3D1AB7AFA5D1E42C8B138EE8C167B93033A73E13/"
   },
   {
     "id": "3826650541",
-    "name": "KI5 Engine Sounds"
+    "name": "KI5 Engine Sounds",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/16146588148859915462/889C40F67105F4757C93C2B71B23528E2C98AF37/"
   },
   {
     "id": "3789366983",
-    "name": "KI5 General Fixes"
+    "name": "KI5 General Fixes",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/12161617992830057077/1423972762D53C68C477ADEE9E05266AF8F03E6E/"
   },
   {
     "id": "3740300378",
-    "name": "KI5 Mini-fixes"
+    "name": "KI5 Mini-fixes",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/15532118099276667177/A4EEBB5751F848A450E92FBBAE67831B3EC52D4F/"
   },
   {
     "id": "3390453390",
-    "name": "Kitsune Lib"
+    "name": "Kitsune Lib",
+    "category": "frameworks",
+    "thumbnail": "https://images.steamusercontent.com/ugc/24304572086813202/5622889849F948BF5054F69EA615BF1BB2770FC5/"
   },
   {
     "id": "3531611692",
-    "name": "Lethal Stealth"
+    "name": "Lethal Stealth",
+    "category": "weapons",
+    "thumbnail": "https://images.steamusercontent.com/ugc/15715050568416654795/087DEA3ACE0996A19BC44EB44410CB2B899BBA73/"
   },
   {
     "id": "3811344119",
-    "name": "Light Fix - Project Viewpoint"
+    "name": "Light Fix - Project Viewpoint",
+    "category": "visuals",
+    "thumbnail": "https://images.steamusercontent.com/ugc/17761879297563457144/226E9FA9A06057093B504304426CD32243EC852D/"
   },
   {
     "id": "2934132344",
-    "name": "Louisville Quarantine Zone [B41/B42]"
+    "name": "Louisville Quarantine Zone [B41/B42]",
+    "category": "maps",
+    "thumbnail": "https://images.steamusercontent.com/ugc/6297184322520791/1BE16F35717F62AB7C42B4F007A2CDC734092930/"
   },
   {
     "id": "2650547917",
-    "name": "Manage Containers"
+    "name": "Manage Containers",
+    "category": "interface",
+    "thumbnail": "https://images.steamusercontent.com/ugc/1792990424214317761/A2B9EF8490087581A464B7811D258306AB158306/"
   },
   {
     "id": "2710167561",
-    "name": "Map Legend UI [B42\\41]"
+    "name": "Map Legend UI [B42\\41]",
+    "category": "interface",
+    "thumbnail": "https://images.steamusercontent.com/ugc/1831278003372708650/CCD99E070163DC62D21FF47673853CAF7B21830A/"
   },
   {
     "id": "2734705913",
-    "name": "Map Symbol Size Slider"
+    "name": "Map Symbol Size Slider",
+    "category": "interface",
+    "thumbnail": "https://images.steamusercontent.com/ugc/1833529903252537067/E82226841ADC68FA8D4723373C3AA1E2DAF02267/"
   },
   {
     "id": "2705406713",
-    "name": "Military Tool Kit"
+    "name": "Military Tool Kit",
+    "category": "frameworks",
+    "thumbnail": "https://images.steamusercontent.com/ugc/10612263466846902078/0B5B38DFBA2063A14A4EDDEEBFF11DFFBBD73126/"
   },
   {
     "id": "2866258937",
-    "name": "Mini Health Panel"
+    "name": "Mini Health Panel",
+    "category": "interface",
+    "thumbnail": "https://images.steamusercontent.com/ugc/47948470137919175/F65D54EB204CE32EE49D15FADF9A07CD8863BAF2/"
   },
   {
     "id": "3423660713",
-    "name": "Mod Load Order Sorter [b42]"
+    "name": "Mod Load Order Sorter [b42]",
+    "category": "interface",
+    "thumbnail": "https://images.steamusercontent.com/ugc/13049847193035507/47492AB2DA2158810D51B345E3CF3BEF663A983B/"
   },
   {
     "id": "3077900375",
-    "name": "Mod Update and Alert System"
+    "name": "Mod Update and Alert System",
+    "category": "frameworks",
+    "thumbnail": "https://images.steamusercontent.com/ugc/24307035126317491/0578D28193C22EBCECD677A4253ACE6426BD842D/"
   },
   {
     "id": "3451167732",
-    "name": "Modern Status [B42]"
+    "name": "Modern Status [B42]",
+    "category": "interface",
+    "thumbnail": "https://images.steamusercontent.com/ugc/16028790699315887250/64B4180229567D8CBF83E3E41502BB9E64559CA2/"
   },
   {
     "id": "3396446795",
-    "name": "Moodle Framework"
+    "name": "Moodle Framework",
+    "category": "frameworks",
+    "thumbnail": "https://images.steamusercontent.com/ugc/47948470152838093/FB00B2CEA99B24481236817072500D97FC44D806/"
   },
   {
     "id": "3645687954",
-    "name": "MoodleFramework Safety Patch"
+    "name": "MoodleFramework Safety Patch",
+    "category": "frameworks",
+    "thumbnail": "https://images.steamusercontent.com/ugc/16338958128929926556/D8A8676286642BEA8A65E90B95893C34E06ACD60/"
   },
   {
     "id": "1299328280",
-    "name": "More Traits [Legacy, read description]"
+    "name": "More Traits [Legacy, read description]",
+    "category": "gameplay",
+    "thumbnail": "https://images.steamusercontent.com/ugc/921419892343911553/57FEEE04CC786646074F5DE52A1BD812B1CABF95/"
   },
   {
     "id": "3536052310",
-    "name": "Neat Building [B42]"
+    "name": "Neat Building [B42]",
+    "category": "gameplay",
+    "thumbnail": "https://images.steamusercontent.com/ugc/16299626114154844195/16F39881F6FBBF155CA0CEE2C5FA9767F04D0E8B/"
   },
   {
     "id": "3502080466",
-    "name": "Neat Crafting [B42]"
+    "name": "Neat Crafting [B42]",
+    "category": "gameplay",
+    "thumbnail": "https://images.steamusercontent.com/ugc/10063063783802541784/F475A666DDE8FE3341B9A224A9403EF02C7FAB6E/"
   },
   {
     "id": "3508537032",
-    "name": "NeatUI Framework [B42]"
+    "name": "NeatUI Framework [B42]",
+    "category": "frameworks",
+    "thumbnail": "https://images.steamusercontent.com/ugc/10778131726246828238/97BFC6401E4E1C4B3AADCEE17D4D86C8FD2713CA/"
   },
   {
     "id": "3465040406",
-    "name": "Open All Containers [42MP]"
+    "name": "Open All Containers [42MP]",
+    "category": "gameplay",
+    "thumbnail": "https://images.steamusercontent.com/ugc/17014627234948777872/C6259357B678C74AC46CB093B818254BE04B9137/"
   },
   {
     "id": "3823941573",
-    "name": "Operator Gear [B42.20]"
+    "name": "Operator Gear [B42.20]",
+    "category": "gear",
+    "thumbnail": "https://images.steamusercontent.com/ugc/14939636752433231355/29CF108068BE0573076C7A20E6DD0545540B2E33/"
   },
   {
     "id": "3827957976",
-    "name": "Project Real Limbs - Physics Bodies for Zombies Ragdolls and NPCs"
+    "name": "Project Real Limbs - Physics Bodies for Zombies Ragdolls and NPCs",
+    "category": "visuals",
+    "thumbnail": "https://images.steamusercontent.com/ugc/9289215037668716391/712DF0D2D83BEA1EC635CEDE1F794755FBC4998E/"
   },
   {
     "id": "3809306528",
-    "name": "Project Viewpoint"
+    "name": "Project Viewpoint",
+    "category": "visuals",
+    "thumbnail": "https://images.steamusercontent.com/ugc/16249019974149349336/1CCDE21EF067AA876A68EAB010ED65D07AF1DB81/"
   },
   {
     "id": "3815019204",
-    "name": "Project Viewpoint - KI5 Vehicle Parts Fix"
+    "name": "Project Viewpoint - KI5 Vehicle Parts Fix",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/10580302107048888923/A140B578DF4FE6882DC94AF086137CEC3F5F5199/"
   },
   {
     "id": "3812518796",
-    "name": "Project Viewpoint - Place Items (SUB-MOD)"
+    "name": "Project Viewpoint - Place Items (SUB-MOD)",
+    "category": "gameplay",
+    "thumbnail": "https://images.steamusercontent.com/ugc/16015762719304082596/0453D289E9DA790FFEEFC0FAAEFD304F133F804B/"
   },
   {
     "id": "3813929757",
-    "name": "Project Viewpoint: KK's General Mod Map Fix"
+    "name": "Project Viewpoint: KK's General Mod Map Fix",
+    "category": "maps",
+    "thumbnail": "https://images.steamusercontent.com/ugc/14641239258062905490/33D4ED043F345DBC7FB5861E468386DC6581BD3E/"
   },
   {
     "id": "3815931973",
-    "name": "Project Viewpoint: KK's Shelves in 3D"
+    "name": "Project Viewpoint: KK's Shelves in 3D",
+    "category": "visuals",
+    "thumbnail": "https://images.steamusercontent.com/ugc/14905196074454851014/DA9E118CC401DEA1596AF98F3E69485FF7B5D404/"
   },
   {
     "id": "3812612054",
-    "name": "Project Viewpoint: Recoil & ADS"
+    "name": "Project Viewpoint: Recoil & ADS",
+    "category": "weapons",
+    "thumbnail": "https://images.steamusercontent.com/ugc/11455362144364358968/8DECAEC60BE58D1E9EC5C8798DCBDE14810E9ED8/"
   },
   {
     "id": "2695471997",
-    "name": "PZ-ClothingUI - Clothing items grid view (B41 + B42 Updated)"
+    "name": "PZ-ClothingUI - Clothing items grid view (B41 + B42 Updated)",
+    "category": "interface",
+    "thumbnail": "https://images.steamusercontent.com/ugc/13329851009688042755/D752A2FDF4D46649D3E1D4CC2969E3F70EE1D322/"
   },
   {
     "id": "3781012462",
-    "name": "QoL Compendium"
+    "name": "QoL Compendium",
+    "category": "interface",
+    "thumbnail": "https://images.steamusercontent.com/ugc/9703193866967236663/1C887A3C18310230CC0F5781B613E80E5AA13EE0/"
   },
   {
     "id": "3635550823",
-    "name": "R.U. BMP-2 by Papa_Chad"
+    "name": "R.U. BMP-2 by Papa_Chad",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/14721362067950000160/CFB7BA0DC5F1B3F332AED7673925A37DB4532867/"
   },
   {
     "id": "3661387277",
-    "name": "R.U. BTR-80 by Papa_Chad"
+    "name": "R.U. BTR-80 by Papa_Chad",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/16099906274350214560/57EB4C4105FACA64986B4D428A4B9E9A32E5985B/"
   },
   {
     "id": "3774360904",
-    "name": "Railroader [MP | Viewpoint 3D]: Drivable Trains, Rolling Stock & Railway Life"
+    "name": "Railroader [MP | Viewpoint 3D]: Drivable Trains, Rolling Stock & Railway Life",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/13583497214559321320/F5652B9A6022710BF534752AD375FDCB540D87A3/"
   },
   {
     "id": "2956146279",
-    "name": "Rain Cleans Blood [B42.20 + MP]"
+    "name": "Rain Cleans Blood [B42.20 + MP]",
+    "category": "gameplay",
+    "thumbnail": "https://images.steamusercontent.com/ugc/16590947677681455242/0492039769B26BAD08ED7B90FFE045EF00DBDF98/"
   },
   {
     "id": "3659447892",
-    "name": "Server Workshop Mod Update Checker & Auto-Restart (B42) MP"
+    "name": "Server Workshop Mod Update Checker & Auto-Restart (B42) MP",
+    "category": "frameworks",
+    "thumbnail": "https://images.steamusercontent.com/ugc/13897261580648849397/D0A30FDBC1F4635C804A620DBC55461DE96D93C5/"
   },
   {
     "id": "2815560151",
-    "name": "Share Annotations"
+    "name": "Share Annotations",
+    "category": "interface",
+    "thumbnail": "https://images.steamusercontent.com/ugc/1870697156082072775/176628AB5F4912BE102C2EFA5D85F8CC07144E59/"
   },
   {
     "id": "3828905319",
-    "name": "Shelf Contents 3D (Viewpoint)"
+    "name": "Shelf Contents 3D (Viewpoint)",
+    "category": "visuals",
+    "thumbnail": "https://images.steamusercontent.com/ugc/10417200470918148775/7721D00A1D02580AF208609B91E43A14BF7F4879/"
   },
   {
     "id": "3634921763",
-    "name": "Simple Context Menu Icons"
+    "name": "Simple Context Menu Icons",
+    "category": "interface",
+    "thumbnail": "https://images.steamusercontent.com/ugc/10654890213890924123/3FE01230FCAEC1FB513F9CF0D0CE82A304883B3C/"
   },
   {
     "id": "2503622437",
-    "name": "Skill Recovery Journal"
+    "name": "Skill Recovery Journal",
+    "category": "gameplay",
+    "thumbnail": "https://images.steamusercontent.com/ugc/16705179691990913665/8391C9CC390A0FA349F1343BB1C03E3A5B397CC7/"
   },
   {
     "id": "3805569715",
-    "name": "Smart Roof Cutaway (B42)"
+    "name": "Smart Roof Cutaway (B42)",
+    "category": "visuals",
+    "thumbnail": "https://images.steamusercontent.com/ugc/10184077615375995037/079A38246917490F819A340F7C1355F01A015CF6/"
   },
   {
     "id": "1910606509",
-    "name": "Soul Filcher's Cooking Time"
+    "name": "Soul Filcher's Cooking Time",
+    "category": "gameplay",
+    "thumbnail": "https://images.steamusercontent.com/ugc/1827897065409539427/175207B978514BBBA61A861D331DECE7FF5FB841/"
   },
   {
     "id": "3808944882",
-    "name": "Survivor Briefing"
+    "name": "Survivor Briefing",
+    "category": "gameplay",
+    "thumbnail": "https://images.steamusercontent.com/ugc/16239685112603834019/626491FFDE26C1A177A4606AB20D7CDC9703BFF4/"
   },
   {
     "id": "2366717227",
-    "name": "Swap It"
+    "name": "Swap It",
+    "category": "weapons",
+    "thumbnail": "https://images.steamusercontent.com/ugc/1764816200834819970/142FBDDE34D5DEBFD6C4D914910ACD4F15399EE4/"
   },
   {
     "id": "3786120850",
-    "name": "Tactical Flashlight Animation - B42"
+    "name": "Tactical Flashlight Animation - B42",
+    "category": "visuals",
+    "thumbnail": "https://images.steamusercontent.com/ugc/17556384248059651317/BA2EA5948557E55DA36B7E59CE317BE5E6D30D24/"
   },
   {
     "id": "3171167894",
-    "name": "that DAMN Library"
+    "name": "that DAMN Library",
+    "category": "frameworks",
+    "thumbnail": "https://images.steamusercontent.com/ugc/2440458973134780877/3CB9696BBB8A945AD8A2470A158E6B478085ED5E/"
   },
   {
     "id": "3796669056",
-    "name": "The Mutants"
+    "name": "The Mutants",
+    "category": "gameplay",
+    "thumbnail": "https://images.steamusercontent.com/ugc/12204466930213336454/ACB1F3C4A341C4A24B1EA249354CCECB2A326541/"
   },
   {
     "id": "3470659758",
-    "name": "The Shortcut [B42]"
+    "name": "The Shortcut [B42]",
+    "category": "interface",
+    "thumbnail": "https://images.steamusercontent.com/ugc/15941049849072563305/AF7BA6E4909CF627415247A8BAC15847ED66815D/"
   },
   {
     "id": "3572122233",
-    "name": "Trading Trailer [B41/B42]"
+    "name": "Trading Trailer [B41/B42]",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/12719707795301347407/2D5C8129B74B3D67743444DC41153224051F3EE2/"
   },
   {
     "id": "3330403100",
-    "name": "Trailers!"
+    "name": "Trailers!",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/2414581210971649312/966E337BD80E0DD9190A1E27FB948B5678A60F13/"
   },
   {
     "id": "3784847437",
-    "name": "Traits As Skills"
+    "name": "Traits As Skills",
+    "category": "gameplay",
+    "thumbnail": "https://images.steamusercontent.com/ugc/13994556884921062826/E6455770D5E9C5D7E781284DC499D2EA5406BCD5/"
   },
   {
     "id": "3402491515",
-    "name": "Tsar's Common Library B42"
+    "name": "Tsar's Common Library B42",
+    "category": "frameworks",
+    "thumbnail": "https://images.steamusercontent.com/ugc/47949754457568426/DD2ED7708887B4DA49AF29FAB4C27DA482E92F64/"
   },
   {
     "id": "2705655822",
-    "name": "U.S. M113 APC by Papa_Chad"
+    "name": "U.S. M113 APC by Papa_Chad",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/7419080039497640/964123D0E7C6FAFC1A860FA1D8BC120F08DB80D5/"
   },
   {
     "id": "3598575779",
-    "name": "U.S. M163 VADS by Papa_Chad"
+    "name": "U.S. M163 VADS by Papa_Chad",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/10219832678899540775/ADAC067FD7244B5D908FF9F52E52BDBD4EA8F86F/"
   },
   {
     "id": "3608725379",
-    "name": "U.S. M41 Walker Bulldog by Papa_Chad"
+    "name": "U.S. M41 Walker Bulldog by Papa_Chad",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/9520520083669483176/0C1C3FAD5B62F6F1314DBB95844DE2890027E517/"
   },
   {
     "id": "3424497614",
-    "name": "U.S. M548 Cargo Carrier by Papa_Chad"
+    "name": "U.S. M548 Cargo Carrier by Papa_Chad",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/7420347664190179/59DEAACA996F166D071FCE520787F9B2395AF407/"
   },
   {
     "id": "3739363702",
-    "name": "U.S. M60A3 by Papa_Chad"
+    "name": "U.S. M60A3 by Papa_Chad",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/17503711889747664307/36379BB06579458A2079A0C9D538180BD2DAC75C/"
   },
   {
     "id": "3554424111",
-    "name": "U.S. M998 Humvee by Papa_Chad"
+    "name": "U.S. M998 Humvee by Papa_Chad",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/12804235529627629963/FFA3E3A2FC3488A80034D22EBB21C854CDED45E3/"
   },
   {
     "id": "3682045254",
-    "name": "Unified Carry Weight Framework (UCWF)"
+    "name": "Unified Carry Weight Framework (UCWF)",
+    "category": "frameworks",
+    "thumbnail": "https://images.steamusercontent.com/ugc/16015392596279590848/5974F8482099273D43B6C9F2C9A2FD24A9BE5D60/"
   },
   {
     "id": "3436537035",
-    "name": "Useful Barrels"
+    "name": "Useful Barrels",
+    "category": "interface",
+    "thumbnail": "https://images.steamusercontent.com/ugc/16089800453663231176/603709082B8ACFA860D7A9528AD3D66FE1516BE6/"
   },
   {
     "id": "3401134276",
-    "name": "Vanilla Gear Expanded"
+    "name": "Vanilla Gear Expanded",
+    "category": "gear",
+    "thumbnail": "https://images.steamusercontent.com/ugc/15829791564104189368/44D06EA8CFCB97132CAE905BCF3F72AB2E3E772B/"
   },
   {
     "id": "3783094058",
-    "name": "Vanilla Outfits Expanded"
+    "name": "Vanilla Outfits Expanded",
+    "category": "gear",
+    "thumbnail": "https://images.steamusercontent.com/ugc/9485216327067664513/BB013BE96ECA03737AC81BD32D6CC48AB06AFDE9/"
   },
   {
     "id": "1430463738",
-    "name": "Vehicle Tweaker API"
+    "name": "Vehicle Tweaker API",
+    "category": "frameworks",
+    "thumbnail": "https://images.steamusercontent.com/ugc/943950775989202622/DDD53C1960FB2E8D01079578ED296501FF879DA3/"
   },
   {
     "id": "3814486926",
-    "name": "Viewpoint - 3D Fences"
+    "name": "Viewpoint - 3D Fences",
+    "category": "visuals",
+    "thumbnail": "https://images.steamusercontent.com/ugc/9880001480743807243/376C22E1887167E0CCF4579FC6D3F6591B4489CE/"
   },
   {
     "id": "3820158673",
-    "name": "Viewpoint - 3D RVs [B42.21] [WIP]"
+    "name": "Viewpoint - 3D RVs [B42.21] [WIP]",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/16715228244783182748/0A5795A782D1FEAB679F8AE73CB9CD942BA24EAD/"
   },
   {
     "id": "3813194971",
-    "name": "Viewpoint - Advanced Throwables"
+    "name": "Viewpoint - Advanced Throwables",
+    "category": "weapons",
+    "thumbnail": "https://images.steamusercontent.com/ugc/15504587383070240779/986A581E4E6F399A3F8A2EBD790C145FB1D520DE/"
   },
   {
     "id": "3812984535",
-    "name": "Viewpoint - Immersive Effects"
+    "name": "Viewpoint - Immersive Effects",
+    "category": "visuals",
+    "thumbnail": "https://images.steamusercontent.com/ugc/13886809763722336510/752ED08768EE779EB823023629521C8C715FAD17/"
   },
   {
     "id": "3812659488",
-    "name": "Viewpoint - Papa_Chad Vehicle Compatibility [B42.21]"
+    "name": "Viewpoint - Papa_Chad Vehicle Compatibility [B42.21]",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/18182085419241116294/C3E1E6B2D3FB49F74FA3CC25A84465787D3F5AE7/"
   },
   {
     "id": "3818189653",
-    "name": "Viewpoint - Visible Loot"
+    "name": "Viewpoint - Visible Loot",
+    "category": "visuals",
+    "thumbnail": "https://images.steamusercontent.com/ugc/15414434373616830950/6FA59F02940911852A17F2710CA8592ECC09C085/"
   },
   {
     "id": "3815223174",
-    "name": "Viewpoint Better Terrain"
+    "name": "Viewpoint Better Terrain",
+    "category": "visuals",
+    "thumbnail": "https://images.steamusercontent.com/ugc/11948627692374523846/60EF1BE57B5AE674C6B19CBBF2347D565A63F010/"
   },
   {
     "id": "3812864848",
-    "name": "Viewpoint True Ballistics"
+    "name": "Viewpoint True Ballistics",
+    "category": "weapons",
+    "thumbnail": "https://images.steamusercontent.com/ugc/17020841956446019373/D961EB7D2B541D2EED9480DBC8FB02E7C440D6A4/"
   },
   {
     "id": "3409472393",
-    "name": "W900 Semi-Truck [B42]"
+    "name": "W900 Semi-Truck [B42]",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/13048035143871049/F8FEC6054A63CB32B020F18FC80C9D87CEF5217B/"
   },
   {
     "id": "3819972196",
-    "name": "WinterFX"
+    "name": "WinterFX",
+    "category": "visuals",
+    "thumbnail": "https://images.steamusercontent.com/ugc/16285312310283284129/A4290DB7A0834F46CAABBB9953C7D1A400064B98/"
   },
   {
     "id": "2810471370",
-    "name": "Yaki's BarberShop"
+    "name": "Yaki's BarberShop",
+    "category": "gear",
+    "thumbnail": "https://images.steamusercontent.com/ugc/10793773215004595/E44473965DF68E0E1E6B7A1B2DDDCD8837BA018E/"
   },
   {
     "id": "3624971238",
-    "name": "Yet Another PZ LIbrary"
+    "name": "Yet Another PZ LIbrary",
+    "category": "frameworks",
+    "thumbnail": "https://images.steamusercontent.com/ugc/12577586933225622959/C8A5FE3EE19089ED8D954006B3C1372B9E713C1D/"
   },
   {
     "id": "2830570280",
-    "name": "You drive, I sleep"
+    "name": "You drive, I sleep",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/1861691636112312841/533F7686E786B637AD0E92965F87BA061BE297D8/"
   },
   {
     "id": "3814073243",
-    "name": "Zombie Visibility Fix + Stair-O-Vision"
+    "name": "Zombie Visibility Fix + Stair-O-Vision",
+    "category": "gameplay",
+    "thumbnail": "https://images.steamusercontent.com/ugc/10508307296678541965/359FC760E0EFB04A3199EC44874333383B196A23/"
   },
   {
     "id": "3619862853",
-    "name": "ZombieBuddy"
+    "name": "ZombieBuddy",
+    "category": "frameworks",
+    "thumbnail": "https://images.steamusercontent.com/ugc/10920101026334489270/4B71DB71B9C68BD000CBFE5F7C38E3A772934D84/"
   }
 ]

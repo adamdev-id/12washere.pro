@@ -34,3 +34,14 @@
 .join-prerequisite{margin-top:24px;padding:13px 16px;border:1px solid #82513c;border-left:3px solid var(--accent);background:var(--panel);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px 20px}
 .join-prerequisite p{margin:0;color:var(--muted);font-size:13px}.join-prerequisite #join-prerequisite-title{font-weight:700;color:var(--text)}
 .setup-actions{display:inline-flex;flex-wrap:wrap;gap:0 8px;max-width:100%}
+
+/* Workshop filters and preview cards */
+.mod-categories{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 16px}.mod-categories[hidden]{display:none}
+.mod-filter-button{display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:6px 10px;border:1px solid var(--line);background:var(--panel);color:var(--text);font:11px/1.3 var(--body)}
+.mod-filter-button:hover,.mod-filter-button[aria-pressed=true]{border-color:var(--accent);color:#ff996e}.mod-filter-button[aria-pressed=true]{background:#2b211b}
+.mod-filter-count{color:var(--muted);font:9px var(--mono)}.mod-empty{margin:14px 0;color:var(--muted);font-size:13px}
+.mod-card{display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:10px}.mod-card[hidden]{display:none}
+.mod-thumb{display:block;width:100%;aspect-ratio:1;overflow:hidden;background:#20271f url('assets/favicon.svg') center/24px no-repeat;border:1px solid var(--line)}
+.mod-thumb.has-preview{background-image:none}.mod-thumb img{display:block;width:100%;height:100%;object-fit:contain}
+.mod-card-category{margin:4px 0 0;color:var(--muted);font:9px/1.4 var(--mono);overflow-wrap:anywhere}
+@media(max-width:680px){.mod-card{grid-template-columns:46px minmax(0,1fr) auto;gap:8px;padding:9px}.mod-card .workshop-link{padding-inline:7px}}
