@@ -7,8 +7,8 @@
   <meta name="description" content="Browse the 12WASHERE Project Zomboid server's Steam Workshop mods and required ZombieBuddy setup.">
   <title data-i18n="modPageTitle">Modlist — 12WASHERE</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=4">
-  <script src="language.js" defer></script>
+  <link rel="stylesheet" href="style.css?v=5">
+  <script src="language.js?v=2" defer></script>
   <script src="mods.js?v=2" defer></script>
 </head>
 <body>
@@ -30,13 +30,18 @@
       <h1 id="mods-title" data-i18n-html="modTitle">SERVER <span>MODLIST.</span></h1>
       <p data-i18n="modIntro">Browse the Steam Workshop items used by 12WASHERE. Set up ZombieBuddy before your first join.</p>
     </section>
-    <section class="required-card" aria-labelledby="required-title">
+    <section class="required-card" id="zombiebuddy" aria-labelledby="required-title">
       <div class="card-title"><span aria-hidden="true">✳</span> <span data-i18n="required">REQUIRED BEFORE JOINING</span> <span class="protocol" data-i18n="setup">SETUP / 01</span></div>
       <h2 id="required-title" data-i18n="install">Install ZombieBuddy.</h2>
       <p data-i18n-html="requiredIntro"><strong>ZombieBuddy is required. Subscribing on Steam alone is not enough.</strong> Follow the setup tutorial before connecting.</p>
       <ol class="setup-steps">
         <li><span data-i18n-html="setup1">Subscribe to <strong>ZombieBuddy</strong> on Steam Workshop.</span><a class="button outline-button" href="https://steamcommunity.com/workshop/filedetails/?id=3619862853">Steam Workshop <span aria-hidden="true">↗</span></a></li>
-        <li><span data-i18n-html="setup2">Close Project Zomboid. On Windows, download and run the <strong>ZombieBuddy 4.4 installer</strong> from the release's Assets section.</span><a class="button outline-button" href="https://github.com/zed-0xff/ZombieBuddy/releases/tag/windows_installer_4.4" data-i18n-html="winInstaller">Windows installer <span aria-hidden="true">↗</span></a></li>
+        <li><span data-i18n-html="setup2">Close Project Zomboid. On Windows, download and run the <strong>ZombieBuddy 4.4 installer</strong>.</span>
+          <div class="setup-actions">
+            <a class="button outline-button" href="https://github.com/zed-0xff/ZombieBuddy/releases/download/windows_installer_4.4/ZombieBuddyInstaller_v4.4.exe" aria-label="Download ZombieBuddy 4.4 for Windows" data-i18n-aria="winDownloadLabel" data-i18n-html="winDownload">Download <span aria-hidden="true">↓</span></a>
+            <a class="button outline-button" href="https://github.com/zed-0xff/ZombieBuddy" data-i18n-html="openGithub">Open GitHub Page <span aria-hidden="true">↗</span></a>
+          </div>
+        </li>
         <li><span data-i18n-html="setup3">Finish setup using the tutorial, then launch the game and join <strong>12WASHERE</strong>.</span><a class="button outline-button" href="https://www.youtube.com/watch?v=pxk5iyz0yME" data-i18n-html="tutorial">Watch tutorial <span aria-hidden="true">↗</span></a></li>
       </ol>
       <p class="setup-note" data-i18n="otherPlatforms">On Linux or macOS? Follow the instructions for your platform on the ZombieBuddy Workshop page.</p>

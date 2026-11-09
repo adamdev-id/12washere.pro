@@ -29,3 +29,8 @@
 .language-switch button:hover{color:var(--text)}.language-switch button[aria-pressed=true]{background:#2b211b;color:#ff996e}
 @media(max-width:900px){.header-tools{display:grid;justify-items:end;gap:6px}.header-tools nav{gap:16px}.language-switch button{padding-block:5px;min-height:28px}}
 @media(max-width:680px){.header:has(.language-switch:not([hidden])){height:104px}.header-tools nav{gap:8px}.language-switch{gap:3px}}
+
+/* Required setup in the joining guide */
+.join-prerequisite{margin-top:24px;padding:13px 16px;border:1px solid #82513c;border-left:3px solid var(--accent);background:var(--panel);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px 20px}
+.join-prerequisite p{margin:0;color:var(--muted);font-size:13px}.join-prerequisite #join-prerequisite-title{font-weight:700;color:var(--text)}
+.setup-actions{display:inline-flex;flex-wrap:wrap;gap:0 8px;max-width:100%}
