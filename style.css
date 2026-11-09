@@ -45,3 +45,16 @@
 .mod-thumb.has-preview{background-image:none}.mod-thumb img{display:block;width:100%;height:100%;object-fit:contain}
 .mod-card-category{margin:4px 0 0;color:var(--muted);font:9px/1.4 var(--mono);overflow-wrap:anywhere}
 @media(max-width:680px){.mod-card{grid-template-columns:46px minmax(0,1fr) auto;gap:8px;padding:9px}.mod-card .workshop-link{padding-inline:7px}}
+
+/* Keep navigation and catalog controls available while scrolling. */
+:root{--site-header-height:116px;scroll-padding-top:calc(var(--site-header-height) + 12px)}
+.site-header{position:sticky;top:0;z-index:10;background:var(--bg)}
+.site-header .header{height:var(--site-header-height)}
+.mod-toolbar{position:sticky;top:var(--site-header-height);z-index:5;background:var(--bg);padding-block:12px 10px;border-bottom:1px solid var(--line);margin:10px 0 12px}
+.mod-toolbar .mod-search{margin:0 0 8px}.mod-toolbar .mod-categories{margin:0}
+@media(max-width:1000px){:root{--site-header-height:96px}}
+@media(max-width:680px){
+  :root{--site-header-height:104px}
+  .mod-toolbar .mod-categories{flex-wrap:nowrap;overflow-x:auto;overscroll-behavior-inline:contain;scrollbar-width:thin;scrollbar-color:#46513d transparent;padding:3px 1px 6px}
+  .mod-toolbar .mod-filter-button{flex-shrink:0}.mod-toolbar .mod-filter-button:focus-visible{outline-offset:-2px}
+}

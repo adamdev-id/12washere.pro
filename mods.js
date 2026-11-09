@@ -2,7 +2,7 @@
 
 const modGrid = document.querySelector('#mod-grid');
 const modCount = document.querySelector('#mod-count');
-const modSearch = document.querySelector('#mod-search');
+const modToolbar = document.querySelector('#mod-toolbar');
 const modFilter = document.querySelector('#mod-filter');
 const modCategories = document.querySelector('#mod-categories');
 const modEmpty = document.querySelector('#mod-empty');
@@ -83,12 +83,12 @@ function addCategoryButtons(mods) {
     button.append(label, count);
     button.addEventListener('click', () => {
       selectedCategory = category;
-      filterMods();
+      filterFromTop();
     });
     categoryButtons.set(category, { button, label });
     modCategories.append(button);
   }
-  modCategories.hidden = false;
+  modToolbar.hidden = false;
 }
 
 function filterMods() {
@@ -111,6 +111,12 @@ function filterMods() {
   modCount.textContent = t(filtered ? 'workshopFiltered' : 'workshopCount', { visible, total: cards.length });
 }
 
+function filterFromTop() {
+  const scrolledPastStart = modGrid.getBoundingClientRect().top < modToolbar.getBoundingClientRect().bottom;
+  filterMods();
+  if (scrolledPastStart) modToolbar.parentElement.scrollIntoView({ block: 'start', behavior: 'instant' });
+}
+
 function localizeMods() {
   for (const { link, mod, category } of cards ?? []) {
     link.setAttribute('aria-label', t('workshopLabel', { name: mod.name }));
@@ -121,7 +127,7 @@ function localizeMods() {
 }
 
 document.addEventListener('site-language-change', localizeMods);
-modFilter.addEventListener('input', filterMods);
+modFilter.addEventListener('input', filterFromTop);
 
 async function loadMods() {
   try {
@@ -134,7 +140,6 @@ async function loadMods() {
     cards = mods.map(modCard);
     modGrid.replaceChildren(...cards.map(({ card }) => card));
     addCategoryButtons(mods);
-    modSearch.hidden = false;
   } catch {
     modLoadFailed = true;
   }
