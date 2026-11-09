@@ -11,6 +11,14 @@
 /* Server roster and Workshop field guide */
 .nav-mods{color:#c5cbbf}.nav-mods[aria-current=page],.nav-mods:hover{color:var(--accent)}
 .outline-button{border:1px solid #64705f;color:var(--text);min-height:40px;gap:14px;padding:8px 14px}.outline-button:hover{border-color:var(--accent);color:var(--accent)}.outline-button span{font-size:16px;color:var(--accent)}
+.hero-actions .outline-button{min-height:52px}
+@media(max-width:1000px){
+  .hero-actions .button{gap:10px;padding-inline:12px}
+}
+@media(max-width:680px){
+  .hero-actions{gap:12px}
+  .hero-actions .outline-button{min-height:50px}
+}
 .roster{padding-block:0 52px}.roster-card{margin-top:24px}.roster-card .card-title{min-height:39px}.roster-card .protocol{font-size:11px}
 .roster-card .status-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--muted)}.roster-card .status-dot[data-state=online]{background:#a6c18b}.roster-card .status-dot[data-state=unreachable]{background:var(--accent)}
 .roster-message{margin:16px 0 0;color:var(--muted);font-size:13px}.player-list{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}.player-list li{border:1px solid var(--line);padding:5px 11px;overflow-wrap:anywhere;font:11px/1.6 var(--mono);max-width:100%}

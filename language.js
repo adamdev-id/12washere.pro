@@ -8,6 +8,7 @@
     brandHome: 'Beranda 12WASHERE',
     modlist: 'Daftar Mod',
     join: 'Gabung ke server <span aria-hidden="true">↗</span>',
+    joinDiscord: 'Gabung Discord <span aria-hidden="true">↗</span>',
     footerMotto: 'Tinggalkan jejak. Tetap hidup.',
     footerNote: 'Server Project Zomboid independen.<br>Tidak berafiliasi dengan The Indie Stone.',
     guideLink: 'Cara bergabung',
