@@ -6,6 +6,12 @@
     "thumbnail": "https://images.steamusercontent.com/ugc/2056489234183986875/9762E80F4A37AA1BE05361CF094D2B9156A7B1CA/"
   },
   {
+    "id": "3784677588",
+    "name": "3D Gun Racks",
+    "category": "weapons",
+    "thumbnail": "https://images.steamusercontent.com/ugc/12584544772447311207/6166292DBA7AF18AAC75360655C2449659DB8C64/"
+  },
+  {
     "id": "2883755057",
     "name": "41.78+ Propane Torch Fix [B42 Supported]",
     "category": "gameplay",
@@ -22,12 +28,6 @@
     "name": "'62 Daimler Ferret",
     "category": "vehicles",
     "thumbnail": "https://images.steamusercontent.com/ugc/10914691073659773702/3DF6CC8FCE8B48A6ED6C85AEA97DE1B5EA3B8B72/"
-  },
-  {
-    "id": "3810302175",
-    "name": "6282 3D models for Viewpoint [sour_kisel]",
-    "category": "visuals",
-    "thumbnail": "https://images.steamusercontent.com/ugc/10271782414478548645/4C4F27DF95107791B2888ED69B4C9224ACCCD478/"
   },
   {
     "id": "3041122351",
@@ -390,6 +390,12 @@
     "thumbnail": "https://images.steamusercontent.com/ugc/11215160649061727820/DA9356EEAEEEEF7D2D6A2EE1F0CDEB4BBAD01253/"
   },
   {
+    "id": "3837229266",
+    "name": "[42.22] Reload Your Weapons Again",
+    "category": "weapons",
+    "thumbnail": "https://images.steamusercontent.com/ugc/10616052987356674567/5F46D4D26F1CC0B269949B7A8A0B62B0E54D30B1/"
+  },
+  {
     "id": "3774316897",
     "name": "[42] Marz Mods animsets for Linux",
     "category": "frameworks",
@@ -414,6 +420,18 @@
     "thumbnail": "https://images.steamusercontent.com/ugc/12115443873188198230/83FDB3540CA92766AB78E33C04F1BD61D9940392/"
   },
   {
+    "id": "3785695033",
+    "name": "[B42.20+] Vehicle Enter/Exit Fix",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/17800041436973725263/BB81BE6D92E11CBDA4E44034681F7EA6A5D46A36/"
+  },
+  {
+    "id": "3783874874",
+    "name": "[B42.20+] Vehicle Weapon Clipping Fix",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/17237766617948909608/E48E3CDB8AA2E27AB78FA2DEF5FEF5FE41D3BA9A/"
+  },
+  {
     "id": "3791086306",
     "name": "[B42.20+MP] Nik's Military Stuff",
     "category": "gear",
@@ -426,8 +444,20 @@
     "thumbnail": "https://images.steamusercontent.com/ugc/18391563020777737780/609EE41F670372E7B122C2171EC32B2098D2D599/"
   },
   {
+    "id": "3775160975",
+    "name": "[B42.20] Derpy Autodrive",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/15753113064098443910/9C32951D138F35C0BD24D9F8D4A5A1345AECDADE/"
+  },
+  {
+    "id": "3780639614",
+    "name": "[B42.21+ MP] - Push Vehicle",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/13869561563253346021/5BE60A7683436950C39AA80979F71890A10B6DEE/"
+  },
+  {
     "id": "3420478458",
-    "name": "[B42.21] Better Flashlights",
+    "name": "[B42.22] Better Flashlights",
     "category": "gear",
     "thumbnail": "https://images.steamusercontent.com/ugc/16368868299536637551/A7321C1BEF70211928D0F4A3097653A1066BF86F/"
   },
@@ -450,6 +480,12 @@
     "thumbnail": "https://images.steamusercontent.com/ugc/9905019905468974662/A173D982553167E3FFADF2AC424475477A910290/"
   },
   {
+    "id": "3650168851",
+    "name": "[B42] Horticulture",
+    "category": "gameplay",
+    "thumbnail": "https://images.steamusercontent.com/ugc/17291927512861060206/CB2C2A3275DF036782FFC73EE60992C3E23B6F54/"
+  },
+  {
     "id": "2747517727",
     "name": "[B42] Spawn with items and clothing by occupation",
     "category": "gameplay",
@@ -462,22 +498,16 @@
     "thumbnail": "https://images.steamusercontent.com/ugc/8552036264544139/D7AF829879FDBF8B3F5476CE7D9C1B5A9DEB8EDE/"
   },
   {
-    "id": "3409723807",
-    "name": "[B42] UH-1B Helicopter (Beta)",
-    "category": "vehicles",
-    "thumbnail": "https://images.steamusercontent.com/ugc/1789036378438117/DFCBB731B9ECDB852B8080BEA4E75CCD2593D8D3/"
-  },
-  {
     "id": "3546314080",
     "name": "[B42] Water Pipes",
     "category": "interface",
     "thumbnail": "https://images.steamusercontent.com/ugc/9518334001341677482/A6205F9184361466598E814C096FA59661537223/"
   },
   {
-    "id": "3783444342",
-    "name": "[B42]Aviation Core (Beta)",
-    "category": "vehicles",
-    "thumbnail": "https://images.steamusercontent.com/ugc/16785610240929791942/BAC2354718477993A49E8C3CB52B36D9BDB263F4/"
+    "id": "3475536311",
+    "name": "[B42MP] Lawn Care: Scythe & Rake",
+    "category": "gameplay",
+    "thumbnail": "https://images.steamusercontent.com/ugc/12100275261491882697/33E295DD1100045F9B478FB11325E5D331695A42/"
   },
   {
     "id": "3790021065",
@@ -486,22 +516,28 @@
     "thumbnail": "https://images.steamusercontent.com/ugc/12986781048564877993/AF978D63C43D85CCBAADED523BFB13C6A2B5DF21/"
   },
   {
-    "id": "3824463369",
-    "name": "[RKC]BOEING 737-200 / RV-HOPE",
+    "id": "3834076794",
+    "name": "[RKC]Bradley M2 / M3 Tracked IFV / M242 25mm + TOW",
     "category": "vehicles",
-    "thumbnail": "https://images.steamusercontent.com/ugc/17329556907425980358/2F168CEF494DDAB58FE28C472598CE7315798522/"
+    "thumbnail": "https://images.steamusercontent.com/ugc/14601094147605822853/BC673F3854B453074A0B713FE68F83B823D95ECC/"
   },
   {
-    "id": "3822736890",
-    "name": "[RKC]LV-93 Business Jet (Based on Learjet 60) - Flyable Airplane",
+    "id": "3812498829",
+    "name": "[RKC]HEMTT A3 C-RAM Truck",
     "category": "vehicles",
-    "thumbnail": "https://images.steamusercontent.com/ugc/17079044509663511070/074AC36B3FD7D1BE451A7759EE976EAA09F26B84/"
+    "thumbnail": "https://images.steamusercontent.com/ugc/16538847816409881226/AF1A2FF18340C26E9DF05775626B3F77F6F7EF52/"
   },
   {
-    "id": "3822736282",
-    "name": "[RKC]WINGSMITH Aircraft",
+    "id": "3829093936",
+    "name": "[RKC]LAV-25 8x8 Armored Vehicle / M242 25mm HE",
     "category": "vehicles",
-    "thumbnail": "https://images.steamusercontent.com/ugc/17826355138324721515/3E468E114E204024EB9EE7A4C904F5AA69559A08/"
+    "thumbnail": "https://images.steamusercontent.com/ugc/11230510668499360167/BADA6B64579B45CEA14516FB84C2D515A79B8031/"
+  },
+  {
+    "id": "3812497744",
+    "name": "[RKC]TRUCKSMITH Vehicle",
+    "category": "frameworks",
+    "thumbnail": "https://images.steamusercontent.com/ugc/15514627161061343260/50195EE637B0BEE4407CFED74FB2A6FFC45E936A/"
   },
   {
     "id": "3610005735",
@@ -525,7 +561,7 @@
     "id": "3816324722",
     "name": "Attachments UI [B42]",
     "category": "weapons",
-    "thumbnail": "https://images.steamusercontent.com/ugc/10656544480461865950/E1E7DEAD29B705FB143565565D0E8B64327BC8C3/"
+    "thumbnail": "https://images.steamusercontent.com/ugc/12908988309764907949/E1E7DEAD29B705FB143565565D0E8B64327BC8C3/"
   },
   {
     "id": "2335368829",
@@ -540,6 +576,18 @@
     "thumbnail": "https://images.steamusercontent.com/ugc/47950207615515272/139A3819BF66CF7A4D790182A6F707BE9578A4D8/"
   },
   {
+    "id": "3798108603",
+    "name": "Aviation core - STUB",
+    "category": "frameworks",
+    "thumbnail": "https://images.steamusercontent.com/ugc/17479951437912511158/0E9A6816E8DE351D7210C63E5137D5CB0F8C24BD/"
+  },
+  {
+    "id": "3812970899",
+    "name": "Better Building Plus [B42 MP]",
+    "category": "gameplay",
+    "thumbnail": "https://images.steamusercontent.com/ugc/9615276059082108728/8305251E73139D928D59C5EEE79E416B899A1222/"
+  },
+  {
     "id": "2756434288",
     "name": "Better Server Settings",
     "category": "interface",
@@ -550,6 +598,12 @@
     "name": "Better Sorting",
     "category": "interface",
     "thumbnail": "https://images.steamusercontent.com/ugc/16772822583472605211/D95CB3CD91A8350380A3613B70E87C31F9F37DC6/"
+  },
+  {
+    "id": "3728775267",
+    "name": "Better Vehicle Dynamics",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/11142119677457764721/DF503FB0301893853FFCDC0A7DB77681D7CFEC70/"
   },
   {
     "id": "3670064951",
@@ -594,10 +648,10 @@
     "thumbnail": "https://images.steamusercontent.com/ugc/12899416899600432604/D044797042212D804E92C1DDCDDCA3A4D9C7F9CB/"
   },
   {
-    "id": "3825724093",
-    "name": "DeadWorks Vehicle Framework [B42.21]",
-    "category": "vehicles",
-    "thumbnail": "https://images.steamusercontent.com/ugc/15143993747792728335/0D88991725AF0C20FA258DB705C117E0F903010B/"
+    "id": "3780683663",
+    "name": "Cye's Push Doors! [SP/MP]",
+    "category": "gameplay",
+    "thumbnail": "https://images.steamusercontent.com/ugc/13774221452177953134/DDFFBF25CA995696C7DA047C024900E404BAF304/"
   },
   {
     "id": "3390014923",
@@ -610,6 +664,18 @@
     "name": "errorMagnifier",
     "category": "frameworks",
     "thumbnail": "https://images.steamusercontent.com/ugc/2006946285955965520/F1B969816DF9BDB7EF43BDD2345BA1045BEA895F/"
+  },
+  {
+    "id": "3785740658",
+    "name": "Fence Sheets",
+    "category": "gameplay",
+    "thumbnail": "https://images.steamusercontent.com/ugc/11810053326347896396/BAC2DE2B8B6F5579A4F5F0C02DC1D365FFE78DA5/"
+  },
+  {
+    "id": "3795414660",
+    "name": "Fitted Barricades",
+    "category": "gameplay",
+    "thumbnail": "https://images.steamusercontent.com/ugc/15679859386331631812/AF71E75C204D75228538052D3EF9AFBF96E816CB/"
   },
   {
     "id": "2447729538",
@@ -630,10 +696,22 @@
     "thumbnail": "https://images.steamusercontent.com/ugc/14074466576912419734/BBF659C935F83F03F207039C906D0ECF8602122E/"
   },
   {
-    "id": "3822754688",
-    "name": "Immersive Physics & Weather (Project Viewpoint)",
+    "id": "3820183693",
+    "name": "Guns of Marz Extension: Guns of Tien",
+    "category": "weapons",
+    "thumbnail": "https://images.steamusercontent.com/ugc/13263214534483934290/E7CCD95BB5B2328B3BFBB84672CC201FDF3F7D54/"
+  },
+  {
+    "id": "3653092321",
+    "name": "Immersive Hotwire",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/18086488054364607979/4443F6138BF397AB57B0728D93FAF109CED89358/"
+  },
+  {
+    "id": "3810071828",
+    "name": "Immersive Snow",
     "category": "visuals",
-    "thumbnail": "https://images.steamusercontent.com/ugc/13860909155889136549/C7FEBE57B7B8FA5CD55467A5876483BB03F52713/"
+    "thumbnail": "https://images.steamusercontent.com/ugc/12157993001986626933/79D43FDB99D23B210A35D60E73C2520935B67228/"
   },
   {
     "id": "3426448380",
@@ -684,10 +762,16 @@
     "thumbnail": "https://images.steamusercontent.com/ugc/15715050568416654795/087DEA3ACE0996A19BC44EB44410CB2B899BBA73/"
   },
   {
-    "id": "3811344119",
-    "name": "Light Fix - Project Viewpoint",
-    "category": "visuals",
-    "thumbnail": "https://images.steamusercontent.com/ugc/17761879297563457144/226E9FA9A06057093B504304426CD32243EC852D/"
+    "id": "3779562002",
+    "name": "LG Extended Electricity",
+    "category": "gameplay",
+    "thumbnail": "https://images.steamusercontent.com/ugc/14166994895942222919/862A72B80E7D916F8442E4DDA65A340F25CF08E5/"
+  },
+  {
+    "id": "3779561845",
+    "name": "LG Extended Plumbing",
+    "category": "gameplay",
+    "thumbnail": "https://images.steamusercontent.com/ugc/14318956410460697451/F08EF420E1A1A25080D7786AD3339F944B35C8D9/"
   },
   {
     "id": "2934132344",
@@ -756,6 +840,12 @@
     "thumbnail": "https://images.steamusercontent.com/ugc/16338958128929926556/D8A8676286642BEA8A65E90B95893C34E06ACD60/"
   },
   {
+    "id": "3413150945",
+    "name": "More Damaged Objects [42MP]",
+    "category": "visuals",
+    "thumbnail": "https://images.steamusercontent.com/ugc/16426279306800710/28CDF187821C4B4CB67E160ABC49D370F8C9CBD7/"
+  },
+  {
     "id": "1299328280",
     "name": "More Traits [Legacy, read description]",
     "category": "gameplay",
@@ -780,16 +870,28 @@
     "thumbnail": "https://images.steamusercontent.com/ugc/10778131726246828238/97BFC6401E4E1C4B3AADCEE17D4D86C8FD2713CA/"
   },
   {
-    "id": "3465040406",
-    "name": "Open All Containers [42MP]",
-    "category": "gameplay",
-    "thumbnail": "https://images.steamusercontent.com/ugc/17014627234948777872/C6259357B678C74AC46CB093B818254BE04B9137/"
+    "id": "3773985930",
+    "name": "O.C.D. Inventory",
+    "category": "interface",
+    "thumbnail": "https://images.steamusercontent.com/ugc/11275237058835363887/6502A0A25499B824CA10CF35C516B9E74CDB4ADA/"
   },
   {
     "id": "3823941573",
     "name": "Operator Gear [B42.20]",
     "category": "gear",
     "thumbnail": "https://images.steamusercontent.com/ugc/14939636752433231355/29CF108068BE0573076C7A20E6DD0545540B2E33/"
+  },
+  {
+    "id": "3725078880",
+    "name": "Physiks MP Player DataSync Optimizer B42",
+    "category": "frameworks",
+    "thumbnail": "https://images.steamusercontent.com/ugc/11129167960050762139/59493437A097E8F27001A817C1EA915CADFCFFF0/"
+  },
+  {
+    "id": "3739173520",
+    "name": "Plysken Irrigation Pipes",
+    "category": "gameplay",
+    "thumbnail": "https://images.steamusercontent.com/ugc/12255493305822874573/5310B83906AF76AF6CE2449C5316CE56BA832094/"
   },
   {
     "id": "3827957976",
@@ -801,19 +903,19 @@
     "id": "3809306528",
     "name": "Project Viewpoint",
     "category": "visuals",
-    "thumbnail": "https://images.steamusercontent.com/ugc/16249019974149349336/1CCDE21EF067AA876A68EAB010ED65D07AF1DB81/"
+    "thumbnail": "https://images.steamusercontent.com/ugc/14714836903021878874/4585371D53F97B3BA9A78BC8B8CC74733D5DB4AF/"
+  },
+  {
+    "id": "3817413313",
+    "name": "Project Viewpoint - Immersive Driving",
+    "category": "vehicles",
+    "thumbnail": "https://images.steamusercontent.com/ugc/14339610901384081825/09AD03718A0B1E61C033C582D4478E35AB9EA746/"
   },
   {
     "id": "3815019204",
     "name": "Project Viewpoint - KI5 Vehicle Parts Fix",
     "category": "vehicles",
     "thumbnail": "https://images.steamusercontent.com/ugc/10580302107048888923/A140B578DF4FE6882DC94AF086137CEC3F5F5199/"
-  },
-  {
-    "id": "3812518796",
-    "name": "Project Viewpoint - Place Items (SUB-MOD)",
-    "category": "gameplay",
-    "thumbnail": "https://images.steamusercontent.com/ugc/16015762719304082596/0453D289E9DA790FFEEFC0FAAEFD304F133F804B/"
   },
   {
     "id": "3813929757",
@@ -834,10 +936,10 @@
     "thumbnail": "https://images.steamusercontent.com/ugc/11455362144364358968/8DECAEC60BE58D1E9EC5C8798DCBDE14810E9ED8/"
   },
   {
-    "id": "2695471997",
-    "name": "PZ-ClothingUI - Clothing items grid view (B41 + B42 Updated)",
-    "category": "interface",
-    "thumbnail": "https://images.steamusercontent.com/ugc/13329851009688042755/D752A2FDF4D46649D3E1D4CC2969E3F70EE1D322/"
+    "id": "3813908957",
+    "name": "Project Viewpoint: True Weathers & Lighting",
+    "category": "visuals",
+    "thumbnail": "https://images.steamusercontent.com/ugc/10807209661108739356/717B48883AA5E0783710C76AE4D4497D012702BF/"
   },
   {
     "id": "3781012462",
@@ -858,16 +960,22 @@
     "thumbnail": "https://images.steamusercontent.com/ugc/16099906274350214560/57EB4C4105FACA64986B4D428A4B9E9A32E5985B/"
   },
   {
-    "id": "3774360904",
-    "name": "Railroader [MP | Viewpoint 3D]: Drivable Trains, Rolling Stock & Railway Life",
-    "category": "vehicles",
-    "thumbnail": "https://images.steamusercontent.com/ugc/13583497214559321320/F5652B9A6022710BF534752AD375FDCB540D87A3/"
-  },
-  {
     "id": "2956146279",
     "name": "Rain Cleans Blood [B42.20 + MP]",
     "category": "gameplay",
     "thumbnail": "https://images.steamusercontent.com/ugc/16590947677681455242/0492039769B26BAD08ED7B90FFE045EF00DBDF98/"
+  },
+  {
+    "id": "3718883428",
+    "name": "RC's Structures Framework [B42.17+ MP]",
+    "category": "frameworks",
+    "thumbnail": "https://images.steamusercontent.com/ugc/17033012089040346941/BA0EA591D08B30419D5DD1B8ABBC37C21F9E26A0/"
+  },
+  {
+    "id": "3635591071",
+    "name": "Realistic Dashboard & Gauges [MP]",
+    "category": "interface",
+    "thumbnail": "https://images.steamusercontent.com/ugc/12041135448272045903/186A01F0066F0B07544EE497885AC4B971A25570/"
   },
   {
     "id": "3659447892",
@@ -888,6 +996,18 @@
     "thumbnail": "https://images.steamusercontent.com/ugc/10417200470918148775/7721D00A1D02580AF208609B91E43A14BF7F4879/"
   },
   {
+    "id": "3596827035",
+    "name": "ShelterHold: Beehive",
+    "category": "gameplay",
+    "thumbnail": "https://images.steamusercontent.com/ugc/15966424482580537293/A6A2A8C032F07B6EE04D96D4715055B9FCBDF5CD/"
+  },
+  {
+    "id": "3719852082",
+    "name": "Side-By-Side Containers",
+    "category": "interface",
+    "thumbnail": "https://images.steamusercontent.com/ugc/11087477915445734737/746C684B47FF697B011A57581A7CAB86AFCFD6AA/"
+  },
+  {
     "id": "3634921763",
     "name": "Simple Context Menu Icons",
     "category": "interface",
@@ -898,6 +1018,12 @@
     "name": "Skill Recovery Journal",
     "category": "gameplay",
     "thumbnail": "https://images.steamusercontent.com/ugc/16705179691990913665/8391C9CC390A0FA349F1343BB1C03E3A5B397CC7/"
+  },
+  {
+    "id": "3778511497",
+    "name": "Skully's Zombie Collision [B42.20+]",
+    "category": "gameplay",
+    "thumbnail": "https://images.steamusercontent.com/ugc/9883958305725378728/6164AC683C30419DEB5E8A42991D34155D02B40C/"
   },
   {
     "id": "3805569715",
@@ -915,7 +1041,7 @@
     "id": "3808944882",
     "name": "Survivor Briefing",
     "category": "gameplay",
-    "thumbnail": "https://images.steamusercontent.com/ugc/16239685112603834019/626491FFDE26C1A177A4606AB20D7CDC9703BFF4/"
+    "thumbnail": "https://images.steamusercontent.com/ugc/10281347574295542802/626491FFDE26C1A177A4606AB20D7CDC9703BFF4/"
   },
   {
     "id": "2366717227",
@@ -964,6 +1090,12 @@
     "name": "Traits As Skills",
     "category": "gameplay",
     "thumbnail": "https://images.steamusercontent.com/ugc/13994556884921062826/E6455770D5E9C5D7E781284DC499D2EA5406BCD5/"
+  },
+  {
+    "id": "3781533687",
+    "name": "True Sleep - Better Multiplayer Sleep",
+    "category": "gameplay",
+    "thumbnail": "https://images.steamusercontent.com/ugc/14235030756370188962/A2B4EADA9D079473AA8109B756384DF77DB36A37/"
   },
   {
     "id": "3402491515",
@@ -1038,52 +1170,28 @@
     "thumbnail": "https://images.steamusercontent.com/ugc/943950775989202622/DDD53C1960FB2E8D01079578ED296501FF879DA3/"
   },
   {
-    "id": "3814486926",
-    "name": "Viewpoint - 3D Fences",
-    "category": "visuals",
-    "thumbnail": "https://images.steamusercontent.com/ugc/9880001480743807243/376C22E1887167E0CCF4579FC6D3F6591B4489CE/"
-  },
-  {
-    "id": "3820158673",
-    "name": "Viewpoint - 3D RVs [B42.21] [WIP]",
-    "category": "vehicles",
-    "thumbnail": "https://images.steamusercontent.com/ugc/16715228244783182748/0A5795A782D1FEAB679F8AE73CB9CD942BA24EAD/"
-  },
-  {
     "id": "3813194971",
     "name": "Viewpoint - Advanced Throwables",
     "category": "weapons",
     "thumbnail": "https://images.steamusercontent.com/ugc/15504587383070240779/986A581E4E6F399A3F8A2EBD790C145FB1D520DE/"
   },
   {
-    "id": "3812984535",
-    "name": "Viewpoint - Immersive Effects",
-    "category": "visuals",
-    "thumbnail": "https://images.steamusercontent.com/ugc/13886809763722336510/752ED08768EE779EB823023629521C8C715FAD17/"
-  },
-  {
     "id": "3812659488",
-    "name": "Viewpoint - Papa_Chad Vehicle Compatibility [B42.21]",
+    "name": "Viewpoint - Papa_Chad Vehicle Compatibility [B42.22]",
     "category": "vehicles",
     "thumbnail": "https://images.steamusercontent.com/ugc/18182085419241116294/C3E1E6B2D3FB49F74FA3CC25A84465787D3F5AE7/"
-  },
-  {
-    "id": "3818189653",
-    "name": "Viewpoint - Visible Loot",
-    "category": "visuals",
-    "thumbnail": "https://images.steamusercontent.com/ugc/15414434373616830950/6FA59F02940911852A17F2710CA8592ECC09C085/"
-  },
-  {
-    "id": "3815223174",
-    "name": "Viewpoint Better Terrain",
-    "category": "visuals",
-    "thumbnail": "https://images.steamusercontent.com/ugc/11948627692374523846/60EF1BE57B5AE674C6B19CBBF2347D565A63F010/"
   },
   {
     "id": "3812864848",
     "name": "Viewpoint True Ballistics",
     "category": "weapons",
     "thumbnail": "https://images.steamusercontent.com/ugc/17020841956446019373/D961EB7D2B541D2EED9480DBC8FB02E7C440D6A4/"
+  },
+  {
+    "id": "3799596085",
+    "name": "Visible Door Damage [B42 MP] - Viewpoint compatible",
+    "category": "visuals",
+    "thumbnail": "https://images.steamusercontent.com/ugc/12481313716332482539/FA50C447E68EE299F740D7067BE001B8EE025598/"
   },
   {
     "id": "3409472393",
@@ -1114,6 +1222,12 @@
     "name": "You drive, I sleep",
     "category": "vehicles",
     "thumbnail": "https://images.steamusercontent.com/ugc/1861691636112312841/533F7686E786B637AD0E92965F87BA061BE297D8/"
+  },
+  {
+    "id": "3811483602",
+    "name": "Zombie Dismemberment",
+    "category": "visuals",
+    "thumbnail": "https://images.steamusercontent.com/ugc/16382336203873903045/13D6BFE00D48FFF78A3275648E0510418C7A661C/"
   },
   {
     "id": "3814073243",

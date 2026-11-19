@@ -131,7 +131,7 @@ modFilter.addEventListener('input', filterFromTop);
 
 async function loadMods() {
   try {
-    const response = await fetch('mods.json?v=2');
+    const response = await fetch('mods.json?v=3');
     if (!response.ok) throw new Error('Mod list unavailable');
     const mods = await response.json();
     if (!Array.isArray(mods) || !mods.every(mod => /^\d+$/.test(mod.id) && typeof mod.name === 'string' && mod.name.trim() && mod.category !== 'all' && categoryLabels.has(mod.category))) {
