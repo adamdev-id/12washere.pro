@@ -55,6 +55,7 @@
 @media(max-width:680px){.mod-card{grid-template-columns:46px minmax(0,1fr) auto;gap:8px;padding:9px}.mod-card .workshop-link{padding-inline:7px}}
 
 /* Keep navigation and catalog controls available while scrolling. */
+.setup-steps .patcher-step{margin-top:12px;padding:18px;border:1px solid #82513c;background:#20251d}.patcher-heading{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:10px}.patcher-heading>strong{font-size:18px}.patcher-platform{font:11px var(--mono);color:var(--muted)}.required-card .patcher-step p{font-size:14px;line-height:1.7}.required-card .patcher-includes{margin:10px 0 12px}.required-card .patcher-warning{margin-top:10px;color:#ffae8b}.patcher-extras a{text-decoration:underline;text-underline-offset:3px}.patcher-extras a:hover{color:var(--accent)}.patcher-step .setup-actions{gap:8px}.patcher-step .primary{min-height:44px}
 :root{--site-header-height:116px;scroll-padding-top:calc(var(--site-header-height) + 12px)}
 .site-header{position:sticky;top:0;z-index:10;background:var(--bg)}
 .site-header .header{height:var(--site-header-height)}

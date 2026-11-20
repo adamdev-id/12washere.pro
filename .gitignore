@@ -1,0 +1,6 @@
+patcher/.build/
+patcher/__pycache__/
+patcher/*.spec
+patcher/*.log
+patcher/verification.json
+.venv/

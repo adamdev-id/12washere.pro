@@ -1,0 +1,8 @@
+name=12WASHERE Spawn Menu Fix
+id=12WashereSpawnMenuFix
+modversion=1.1.0
+versionMin=42.22.0
+require=Louisville_Quarantine_Zone
+description=Restores descriptions and previews for the compact ,KY multiplayer spawn regions, and Louisville Quarantine Zone. Adds readable ALICE, J&G and KATTAJ1 clothing-slot labels in English and Indonesian. Keeps spawn positions unchanged.
+poster=poster.png
+icon=poster.png

@@ -1,0 +1,5 @@
+# Keep validated package bytes and upstream asset whitespace intact.
+downloads/** -text -whitespace
+patcher/payload/** -text -whitespace
+patcher/local-mod/** -text -whitespace
+patcher/THIRD-PARTY-NOTICES.txt -whitespace

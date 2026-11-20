@@ -1,5 +1,17 @@
 # 12WASHERE — Project Zomboid landing page
 
+## Windows client patcher
+
+The standalone [12washere.pro Patcher](patcher/README.md) bundles the spawn-menu,
+clothing-label and custom outfit preset fixes. It detects Steam libraries,
+blocks patch/restore while Project Zomboid is running, and keeps reversible
+backups. Player files are in `downloads/`; there is no Workshop publication.
+Players download the [standalone EXE](https://12washere.pro/downloads/12washere.pro-Patcher.exe)
+from the [required setup section](https://12washere.pro/mods.html#client-patcher).
+See [player instructions and limits](downloads/README.txt). The ZIPs are optional.
+`.gitattributes` keeps the published executables, archives and hashed payload
+files byte-for-byte intact.
+
 [12washere.pro](https://12washere.pro/) is a static site published by GitHub Pages from the root of `main`. The custom domain is set in `CNAME` and the repository's Pages settings. No build step is required.
 
 ## Joining
