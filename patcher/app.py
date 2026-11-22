@@ -16,14 +16,15 @@ BG, PANEL, TEXT, MUTED, LINE, ACCENT = '#101411', '#171d18', '#eeeede', '#a2aa9e
 STRINGS = {
     'en': {
         'subtitle': 'PROJECT ZOMBOID / CLIENT PATCHER', 'heading': 'GET READY FOR KNOX.',
-        'intro': 'Spawn previews. Readable clothing labels. Outfit presets that keep your gear.',
+        'intro': 'Spawn previews, clothing labels, outfit presets, and Viewpoint route overlays.',
         'folder': 'PROJECT ZOMBOID INSTALLATION', 'detect': 'Detect Steam', 'browse': 'Browse…',
         'patch': 'Patch game', 'verify': 'Verify', 'restore': 'Restore backup', 'backups': 'Open backups',
         'spawn': 'SPAWN MENU', 'spawn_body': 'Town descriptions + previews\nLouisville Quarantine Zone',
         'labels': 'CLOTHING LABELS', 'labels_body': '31 custom slot names\nEnglish + Indonesian',
         'presets': 'OUTFIT PRESETS', 'presets_body': 'KATTAJ1, ALICE + J&G\nKeep names, colors + textures',
+        'viewpoint': 'VIEWPOINT ROUTES', 'viewpoint_body': 'Separate route styles\nHUD per camera',
         'limits_title': 'BEFORE YOU PATCH',
-        'limits': '• Close Project Zomboid first. Fully restart it after patching.\n• Windows 10/11 x64 only. Mods and ZombieBuddy are installed separately.\n• Already lost preset selections cannot be rebuilt. Character/world saves are untouched.\n• Steam updates / Verify Files can replace these fixes. Rerun this patcher afterward.\n• Unknown preset code is refused. Restore protects files changed since patching.\n• Servers enforcing Lua checksums need the same preset fix on their server.',
+        'limits': '• Close Project Zomboid first. Fully restart it after patching.\n• Windows 10/11 x64 only. Autodrive, Viewpoint and ZombieBuddy are separate requirements.\n• Route add-on installs to Zomboid/mods. Enable it in Viewpoint: Delete → Add-ons.\n• Already lost preset selections cannot be rebuilt. Character/world saves are untouched.\n• Steam updates can replace game fixes. Unknown preset code is refused.\n• Servers enforcing Lua checksums need the same preset fix on their server.',
         'idle': 'Choose an installation, then Verify or Patch game.',
         'closed': 'Project Zomboid is closed. Ready to patch.',
         'running': 'Project Zomboid is running. Please close it before patching or restoring.',
@@ -31,9 +32,9 @@ STRINGS = {
         'busy': 'Working… Please keep Project Zomboid closed.',
         'found': 'Found {count} installation(s). Select the one you play.',
         'not_found': 'Steam detection found no compatible game. Use Browse to select ProjectZomboid.',
-        'ready': 'Patch available: {spawn} spawn files, {labels} labels, {presets} preset fix.',
-        'verified': 'Verified. All three fixes are installed. Restart the game if it was already open.',
-        'installed': 'Patched and verified {count} files. You can now start Project Zomboid.',
+        'ready': 'Available: {spawn} spawn files, {labels} labels, {presets} preset fix, {viewpoint} route add-on files.',
+        'verified': 'Verified. Game fixes and the route add-on are installed. Enable routes in Viewpoint: Delete → Add-ons.',
+        'installed': 'Patched and verified {count} files. Start the game; enable routes in Viewpoint: Delete → Add-ons.',
         'restored': 'Restored {count} files from the latest backup.',
         'restore_confirm': 'Restore the latest patcher backup for this installation?\n\nOnly files changed by that patch will be restored. Files changed afterward by Steam or another tool will block Restore.',
         'confirm_title': 'Restore patcher backup', 'error_title': 'Patcher stopped',
@@ -59,14 +60,15 @@ STRINGS = {
     },
     'id': {
         'subtitle': 'PROJECT ZOMBOID / PATCHER CLIENT', 'heading': 'SIAP MASUK KNOX.',
-        'intro': 'Pratinjau lokasi, nama slot pakaian, dan preset yang menyimpan perlengkapanmu.',
+        'intro': 'Pratinjau lokasi, nama slot pakaian, preset, dan garis rute Viewpoint.',
         'folder': 'LOKASI PEMASANGAN PROJECT ZOMBOID', 'detect': 'Deteksi Steam', 'browse': 'Pilih folder…',
         'patch': 'Pasang patch', 'verify': 'Periksa', 'restore': 'Pulihkan cadangan', 'backups': 'Buka cadangan',
         'spawn': 'MENU LOKASI AWAL', 'spawn_body': 'Deskripsi + pratinjau kota\nLouisville Quarantine Zone',
         'labels': 'NAMA SLOT PAKAIAN', 'labels_body': '31 nama slot mod\nInggris + Indonesia',
         'presets': 'PRESET PAKAIAN', 'presets_body': 'KATTAJ1, ALICE + J&G\nSimpan nama, warna + tekstur',
+        'viewpoint': 'RUTE VIEWPOINT', 'viewpoint_body': 'Gaya rute terpisah\nHUD per kamera',
         'limits_title': 'SEBELUM MEMASANG PATCH',
-        'limits': '• Tutup Project Zomboid dahulu. Buka ulang setelah patch selesai.\n• Khusus Windows 10/11 x64. Mod dan ZombieBuddy dipasang secara terpisah.\n• Pilihan preset yang sudah hilang tidak dapat dipulihkan. Save karakter/dunia tidak diubah.\n• Update Steam / Verify Files dapat menimpa patch. Jalankan patcher lagi setelahnya.\n• Kode preset yang tidak dikenal ditolak. Pemulihan melindungi file yang sudah berubah.\n• Server dengan pemeriksaan checksum Lua perlu perbaikan preset yang sama di server.',
+        'limits': '• Tutup Project Zomboid dahulu. Buka ulang setelah patch selesai.\n• Khusus Windows 10/11 x64. Autodrive, Viewpoint, dan ZombieBuddy dipasang terpisah.\n• Add-on rute dipasang ke Zomboid/mods. Aktifkan di Viewpoint: Delete → Add-ons.\n• Pilihan preset yang sudah hilang tidak dapat dipulihkan. Save karakter/dunia tidak diubah.\n• Update Steam dapat menimpa patch game. Kode preset yang tidak dikenal ditolak.\n• Server dengan pemeriksaan checksum Lua perlu perbaikan preset yang sama di server.',
         'idle': 'Pilih lokasi game, lalu Periksa atau Pasang patch.',
         'closed': 'Project Zomboid sudah ditutup. Siap memasang patch.',
         'running': 'Project Zomboid sedang berjalan. Tutup terlebih dahulu sebelum memasang atau memulihkan patch.',
@@ -74,9 +76,9 @@ STRINGS = {
         'busy': 'Sedang diproses… Jangan buka Project Zomboid dahulu.',
         'found': '{count} instalasi ditemukan. Pilih yang kamu gunakan.',
         'not_found': 'Game yang cocok tidak ditemukan. Gunakan Pilih folder untuk memilih ProjectZomboid.',
-        'ready': 'Patch tersedia: {spawn} file lokasi, {labels} nama slot, {presets} perbaikan preset.',
-        'verified': 'Terverifikasi. Ketiga perbaikan sudah terpasang. Buka ulang game jika sebelumnya masih berjalan.',
-        'installed': '{count} file berhasil dipasang dan diperiksa. Project Zomboid sudah boleh dibuka.',
+        'ready': 'Tersedia: {spawn} file lokasi, {labels} nama slot, {presets} perbaikan preset, {viewpoint} file add-on rute.',
+        'verified': 'Terverifikasi. Perbaikan game dan add-on rute terpasang. Aktifkan rute di Viewpoint: Delete → Add-ons.',
+        'installed': '{count} file terpasang dan diperiksa. Buka game; aktifkan rute di Viewpoint: Delete → Add-ons.',
         'restored': '{count} file dipulihkan dari cadangan terakhir.',
         'restore_confirm': 'Pulihkan cadangan patcher terakhir untuk instalasi ini?\n\nHanya file yang diubah patch tersebut yang dipulihkan. Perubahan baru dari Steam atau alat lain akan menghentikan pemulihan.',
         'confirm_title': 'Pulihkan cadangan patcher', 'error_title': 'Patcher berhenti',
@@ -151,10 +153,10 @@ class App:
         self.label(outer, 'intro', fg=MUTED, font=('Segoe UI', 10)).pack(anchor='w', pady=(2, 15))
         cards = tk.Frame(outer, bg=BG)
         cards.pack(fill='x')
-        for i, (heading, body) in enumerate([('spawn', 'spawn_body'), ('labels', 'labels_body'), ('presets', 'presets_body')]):
+        for i, (heading, body) in enumerate([('spawn', 'spawn_body'), ('labels', 'labels_body'), ('presets', 'presets_body'), ('viewpoint', 'viewpoint_body')]):
             card = tk.Frame(cards, bg=PANEL, highlightbackground=LINE, highlightthickness=1)
-            card.grid(row=0, column=i, sticky='nsew', padx=(0 if i == 0 else 7, 0))
-            cards.columnconfigure(i, weight=1, uniform='cards')
+            card.grid(row=i // 2, column=i % 2, sticky='nsew', padx=(0 if i % 2 == 0 else 7, 0), pady=(0 if i < 2 else 7, 0))
+            cards.columnconfigure(i % 2, weight=1, uniform='cards')
             self.label(card, heading, bg=PANEL, fg=ACCENT, font=('Consolas', 10, 'bold')).pack(anchor='w', padx=14, pady=(12, 5))
             self.label(card, body, bg=PANEL, fg=TEXT, font=('Segoe UI', 10), justify='left').pack(anchor='w', padx=14, pady=(0, 12))
         self.label(outer, 'folder', fg=MUTED, font=('Consolas', 9)).pack(anchor='w', pady=(18, 7))

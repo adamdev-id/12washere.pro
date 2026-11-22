@@ -3,7 +3,8 @@
 ## Windows client patcher
 
 The standalone [12washere.pro Patcher](patcher/README.md) bundles the spawn-menu,
-clothing-label and custom outfit preset fixes. It detects Steam libraries,
+clothing-label and custom outfit preset fixes, plus the local Derpy Autodrive
+Viewpoint route add-on. It detects Steam libraries,
 blocks patch/restore while Project Zomboid is running, and keeps reversible
 backups. Player files are in `downloads/`; there is no Workshop publication.
 Players download the [standalone EXE](https://12washere.pro/downloads/12washere.pro-Patcher.exe)

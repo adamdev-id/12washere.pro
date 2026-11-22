@@ -78,7 +78,7 @@
     setup3: 'Ikuti tutorial untuk menyelesaikan pemasangan <strong>ZombieBuddy</strong>.',
     patcherTitle: 'Jalankan 12washere.pro Patcher.',
     patcherSteps: 'Pastikan <strong>Project Zomboid sudah ditutup</strong>. Unduh dan jalankan patcher, pastikan lokasi game yang terdeteksi sudah benar, lalu klik <strong>Patch game</strong>. Tunggu hingga berhasil, buka kembali game, lalu gabung ke 12WASHERE.',
-    patcherIncludes: 'Sudah mencakup deskripsi dan pratinjau lokasi awal, nama slot pakaian, serta perbaikan preset pakaian mod. Cukup file EXE; tidak perlu Python atau ZIP tambahan.',
+    patcherIncludes: 'Mencakup deskripsi dan pratinjau lokasi awal, nama slot pakaian, perbaikan preset, serta add-on rute lokal Autodrive Viewpoint. Aktifkan rute di Viewpoint: Delete → Add-ons. Cukup file EXE; tidak perlu Python atau ZIP tambahan.',
     patcherDownload: 'Unduh Patcher (.exe)',
     patcherInstructions: 'Petunjuk dan batasan',
     patcherRunning: 'Jika patcher menampilkan “Project Zomboid is running”, tutup game terlebih dahulu. Patch dan Restore tetap diblokir selama game masih berjalan.',

@@ -12,10 +12,17 @@ import re
 import sys
 import uuid
 
-VERSION = '1.0.0'
+VERSION = '1.5.3'
 PRESET_PATH = 'media/lua/client/OptionScreens/CharacterCreationMain.lua'
 UI_PATHS = {f'media/lua/shared/Translate/{lang}/UI.json' for lang in ('EN', 'ID')}
 GAME_NAMES = {'projectzomboid.exe', 'projectzomboid64.exe', 'projectzomboid32.exe'}
+MOD_PREFIX = 'local-mods/DerpyAutodriveViewpoint/'
+MOD_PATHS = {MOD_PREFIX + path for path in (
+    'README.md', 'common/mod.info', '42/media/lua/client/DerpyAutodriveViewpoint.lua',
+    'common/media/viewpoint/addons/derpy.autodrive-viewpoint/addon.properties',
+    'common/media/viewpoint/addons/derpy.autodrive-viewpoint/DerpyAutodriveViewpoint.jar',
+    'common/media/viewpoint/addons/derpy.autodrive-viewpoint/settings.properties',
+)}
 
 
 class PatchError(Exception):
@@ -167,19 +174,26 @@ class Change:
 
 
 class Engine:
-    def __init__(self, payload=None, storage=None, guard=None):
+    def __init__(self, payload=None, storage=None, guard=None, mods=None):
         self.payload = Path(payload or payload_dir()).resolve()
         self.storage = Path(storage or state_dir()).resolve()
         self.guard = guard or ensure_closed
+        self.mods = Path(mods if mods is not None else Path.home() / 'Zomboid/mods').resolve()
         self.manifest = json.loads((self.payload / 'manifest.json').read_text(encoding='utf-8'))
         self.files = self.manifest['files']
         self.allowed = set(self.files) | UI_PATHS | {PRESET_PATH}
         for relative in self.allowed:
-            if '\\' in relative or Path(relative).is_absolute() or '..' in Path(relative).parts or not relative.startswith('media/'):
+            if '\\' in relative or Path(relative).is_absolute() or '..' in Path(relative).parts or not (relative.startswith('media/') or relative in MOD_PATHS):
                 raise PatchError('payload_invalid', relative)
+        if not MOD_PATHS.issubset(self.files):
+            raise PatchError('payload_invalid', 'The Viewpoint route add-on is incomplete.')
         for relative, expected in self.files.items():
             path = self.payload / relative
-            if not path.resolve().is_relative_to(self.payload) or sha(path.read_bytes()) != expected:
+            try:
+                valid = path.resolve().is_relative_to(self.payload) and sha(path.read_bytes()) == expected
+            except OSError:
+                valid = False
+            if not valid:
                 raise PatchError('payload_invalid', relative)
         self.labels = json.loads((self.payload / 'clothing-labels.json').read_text(encoding='utf-8'))
         if set(self.labels) != {'EN', 'ID'}:
@@ -196,22 +210,24 @@ class Engine:
     def target(self, game, relative):
         if relative not in self.allowed:
             raise PatchError('unsafe_path', relative)
-        target = game / relative
-        if not target.resolve().is_relative_to(game):
+        root = self.mods if relative in MOD_PATHS else game
+        destination = relative.removeprefix('local-mods/') if relative in MOD_PATHS else relative
+        target = root / destination
+        if not target.resolve().is_relative_to(root):
             raise PatchError('unsafe_path', relative)
         return target
 
     def plan(self, game):
         game = validate_game(game)
         changes = []
-        counts = {'spawn': 0, 'labels': 0, 'presets': 0}
+        counts = {'spawn': 0, 'labels': 0, 'presets': 0, 'viewpoint': 0}
         for relative in self.files:
             destination = self.target(game, relative)
             before = destination.read_bytes() if destination.exists() else None
             after = (self.payload / relative).read_bytes()
             if before != after:
                 changes.append(Change(relative, before, after))
-                counts['spawn'] += 1
+                counts['viewpoint' if relative in MOD_PATHS else 'spawn'] += 1
         for lang, labels in self.labels.items():
             relative = f'media/lua/shared/Translate/{lang}/UI.json'
             before = self.target(game, relative).read_bytes()
@@ -277,7 +293,15 @@ class Engine:
 
     @contextmanager
     def lock(self, game):
-        directory = self.backup_root(game)
+        # All installations share the same player mods directory. Lock that scope
+        # as well as the selected game so two patchers cannot race on the add-on.
+        mod_key = sha(str(self.mods).casefold().encode('utf-8'))[:16]
+        with self._lock_file(self.storage / 'locks' / ('mods-' + mod_key)):
+            with self._lock_file(self.backup_root(game)):
+                yield
+
+    @contextmanager
+    def _lock_file(self, directory):
         directory.mkdir(parents=True, exist_ok=True)
         with (directory / 'operation.lock').open('a+b') as handle:
             handle.seek(0)
@@ -320,7 +344,7 @@ class Engine:
             if change.before is not None:
                 self.write_atomic(backup / 'original' / change.relative, change.before)
             entries.append({'path': change.relative, 'before': sha(change.before) if change.before is not None else None, 'after': sha(change.after)})
-        data = {'version': VERSION, 'game': str(game), 'status': 'applying', 'entries': entries}
+        data = {'version': VERSION, 'game': str(game), 'mods': str(self.mods), 'status': 'applying', 'entries': entries}
         journal = backup / 'transaction.json'
         self.journal(journal, data)
         try:
@@ -354,6 +378,9 @@ class Engine:
         entries = data.get('entries')
         if not isinstance(entries, list) or len({entry['path'] for entry in entries}) != len(entries):
             raise PatchError('backup_invalid')
+        if any(entry['path'] in MOD_PATHS for entry in entries):
+            if os.path.normcase(data.get('mods', '')) != os.path.normcase(str(self.mods)):
+                raise PatchError('backup_invalid', 'This backup belongs to a different player mods folder.')
         for entry in entries:
             target = self.target(game, entry['path'])
             current = target.read_bytes() if target.exists() else None
@@ -369,11 +396,11 @@ class Engine:
                 if sha(original) != entry['before']:
                     raise PatchError('backup_invalid', entry['path'])
             if digest != entry['before']:
-                operations.append((target, current, original))
+                operations.append((target, current, original, entry['path']))
         self.guard()
         data['status'] = 'restoring'
         self.journal(journal, data)
-        for index, (target, expected, original) in enumerate(operations, 1):
+        for index, (target, expected, original, relative) in enumerate(operations, 1):
             self.guard()
             current = target.read_bytes() if target.exists() else None
             if current != expected:
@@ -382,7 +409,7 @@ class Engine:
                 target.unlink()
             else:
                 self.write_atomic(target, original)
-            progress(index, len(operations), str(target.relative_to(game)))
+            progress(index, len(operations), relative)
         data['status'] = 'restored'
         self.journal(journal, data)
         return {'status': 'restored', 'restored_files': len(operations), 'backup': str(journal.parent)}

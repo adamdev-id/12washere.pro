@@ -16,7 +16,8 @@ class PatcherTests(unittest.TestCase):
         self.root = Path(self.temp.name)
         self.game = self.root / 'SteamLibrary/steamapps/common/ProjectZomboid'
         self.game.mkdir(parents=True)
-        self.engine = core.Engine(storage=self.root / 'state', guard=lambda: None)
+        self.mods = self.root / 'player/Zomboid/mods'
+        self.engine = core.Engine(storage=self.root / 'state', guard=lambda: None, mods=self.mods)
         self.put('projectzomboid.jar', b'fixture')
         self.put('ProjectZomboid64.exe', b'fixture')
         self.put('media/lua/shared/Translate/EN/Muldraugh, KY.json', b'{}')
@@ -37,6 +38,9 @@ class PatcherTests(unittest.TestCase):
     def snapshot(self):
         return {path.relative_to(self.game).as_posix(): path.read_bytes() for path in self.game.rglob('*') if path.is_file()}
 
+    def mod_snapshot(self):
+        return {path.relative_to(self.mods).as_posix(): path.read_bytes() for path in self.mods.rglob('*') if path.is_file()}
+
     def assert_error(self, code, function):
         with self.assertRaises(core.PatchError) as context:
             function()
@@ -44,7 +48,10 @@ class PatcherTests(unittest.TestCase):
 
     def test_patch_verify_idempotent_and_restore(self):
         result = self.engine.apply(self.game)
-        self.assertEqual(result['changed_files'], 228)
+        self.assertEqual(result['changed_files'], 234)
+        self.assertEqual(result['counts']['viewpoint'], 6)
+        self.assertEqual(len(self.mod_snapshot()), 6)
+        self.assertTrue((self.mods / 'DerpyAutodriveViewpoint/common/mod.info').is_file())
         self.assertEqual(self.engine.plan(self.game)[0], [])
         patched = self.snapshot()
         for lang in ('EN', 'ID'):
@@ -58,7 +65,89 @@ class PatcherTests(unittest.TestCase):
         self.assertEqual(len(self.engine.backups(self.game)), 1)
         self.engine.restore(self.game)
         self.assertEqual(self.snapshot(), self.original)
+        self.assertEqual(self.mod_snapshot(), {})
         self.assertEqual(self.engine.backups(self.game), [])
+
+    def test_existing_local_addon_is_backed_up_and_restored(self):
+        relative = 'DerpyAutodriveViewpoint/common/mod.info'
+        existing = self.mods / relative
+        existing.parent.mkdir(parents=True)
+        existing.write_bytes(b'older local add-on')
+        unrelated = self.mods / 'AnotherMod/common/mod.info'
+        unrelated.parent.mkdir(parents=True)
+        unrelated.write_bytes(b'unrelated mod')
+        before = self.mod_snapshot()
+        self.engine.apply(self.game)
+        self.assertNotEqual(existing.read_bytes(), b'older local add-on')
+        self.engine.restore(self.game)
+        self.assertEqual(self.mod_snapshot(), before)
+
+    def test_later_addon_update_blocks_entire_restore(self):
+        self.engine.apply(self.game)
+        jar = self.mods / 'DerpyAutodriveViewpoint/common/media/viewpoint/addons/derpy.autodrive-viewpoint/DerpyAutodriveViewpoint.jar'
+        jar.write_bytes(b'newer add-on version')
+        before_game, before_mods = self.snapshot(), self.mod_snapshot()
+        self.assert_error('restore_conflict', lambda: self.engine.restore(self.game))
+        self.assertEqual(self.snapshot(), before_game)
+        self.assertEqual(self.mod_snapshot(), before_mods)
+
+    def test_addon_write_failure_rolls_back_both_roots(self):
+        write = self.engine.write_atomic
+        calls = 0
+        def failing(path, data):
+            nonlocal calls
+            if path.is_relative_to(self.mods):
+                calls += 1
+                if calls == 2:
+                    raise OSError('simulated full mod disk')
+            write(path, data)
+        with patch.object(self.engine, 'write_atomic', side_effect=failing):
+            self.assert_error('rolled_back', lambda: self.engine.apply(self.game))
+        self.assertEqual(self.snapshot(), self.original)
+        self.assertEqual(self.mod_snapshot(), {})
+
+    def test_restore_refuses_different_player_mods_folder(self):
+        self.engine.apply(self.game)
+        self.engine.mods = (self.root / 'other-player/Zomboid/mods').resolve()
+        before = self.snapshot()
+        self.assert_error('backup_invalid', lambda: self.engine.restore(self.game))
+        self.assertEqual(self.snapshot(), before)
+        self.assertFalse(self.engine.mods.exists())
+
+    def test_missing_or_tampered_addon_payload_is_refused(self):
+        import shutil
+        payload = self.root / 'payload'
+        shutil.copytree(self.engine.payload, payload)
+        relative = next(iter(core.MOD_PATHS))
+        (payload / relative).write_bytes(b'damaged payload')
+        self.assert_error('payload_invalid', lambda: core.Engine(payload=payload, mods=self.mods))
+        (payload / relative).unlink()
+        self.assert_error('payload_invalid', lambda: core.Engine(payload=payload, mods=self.mods))
+        manifest = json.loads((payload / 'manifest.json').read_text())
+        del manifest['files'][relative]
+        (payload / 'manifest.json').write_text(json.dumps(manifest))
+        self.assert_error('payload_invalid', lambda: core.Engine(payload=payload, mods=self.mods))
+
+    def test_mod_paths_remain_whitelisted(self):
+        for path in ('local-mods/OtherMod/common/mod.info', 'local-mods/DerpyAutodriveViewpoint/../../Saves/player.db'):
+            self.assert_error('unsafe_path', lambda: self.engine.target(self.game, path))
+
+    def test_legacy_game_only_backup_restores_without_touching_addon(self):
+        self.engine.apply(self.game)
+        journal, data = self.engine.backups(self.game)[0]
+        data['version'] = '1.0.0'
+        del data['mods']
+        data['entries'] = [entry for entry in data['entries'] if entry['path'] not in core.MOD_PATHS]
+        self.engine.journal(journal, data)
+        mods_before = self.mod_snapshot()
+        self.engine.restore(self.game)
+        self.assertEqual(self.snapshot(), self.original)
+        self.assertEqual(self.mod_snapshot(), mods_before)
+
+    def test_shared_mod_folder_is_locked_across_game_installations(self):
+        other = core.Engine(storage=self.root / 'state', guard=lambda: None, mods=self.mods)
+        with self.engine.lock(self.game):
+            self.assert_error('another_patcher', lambda: other.apply(self.root / 'OtherGame'))
 
     def test_game_running_blocks_patch_and_restore(self):
         def blocked():

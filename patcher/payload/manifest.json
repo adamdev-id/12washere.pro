@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.5.3",
   "target": "Windows Build 42.22 preset format 1",
   "files": {
     "media/lua/shared/Translate/AR/Brandenburg,KY.json": "e3f85d9d47355cdfe342fc779cb72140e72cdc907a99febad80c441fc951958c",
@@ -226,7 +226,13 @@
     "media/maps/March Ridge,KY/thumb.png": "9c00706c7353077f6c38f696c61bfb07c82c388e559921ee2915b937eee8ddd1",
     "media/maps/Valley Station,KY/map.info": "e92ebabc1752acc00ec3548fc807119323f5a4c7d0b1378714275615f2aa3a5d",
     "media/maps/Valley Station,KY/thumb.png": "9c00706c7353077f6c38f696c61bfb07c82c388e559921ee2915b937eee8ddd1",
-    "media/ui/12WashereSpawn/LVQZ.png": "e476167ff24f5fb89b35d12af37d01e2b13a163f81eb9eb5e421c2d861486d3b"
+    "media/ui/12WashereSpawn/LVQZ.png": "e476167ff24f5fb89b35d12af37d01e2b13a163f81eb9eb5e421c2d861486d3b",
+    "local-mods/DerpyAutodriveViewpoint/42/media/lua/client/DerpyAutodriveViewpoint.lua": "f02bdeebf2429dc2437b28b8740b2c34b16514849ce81595cbd0cd6466e3a1d7",
+    "local-mods/DerpyAutodriveViewpoint/common/media/viewpoint/addons/derpy.autodrive-viewpoint/addon.properties": "e29f3397fe27c3ce6ccb315c06d3d8260fccaf60c833065d82873db76dfbe0a7",
+    "local-mods/DerpyAutodriveViewpoint/common/media/viewpoint/addons/derpy.autodrive-viewpoint/DerpyAutodriveViewpoint.jar": "160ced5318e7db40df8ab8ca35a6d26ae44e30e383eeb34f6e0c20043cbde53b",
+    "local-mods/DerpyAutodriveViewpoint/common/mod.info": "cb6b7b9b526d96c3e56ff36cc432a2f43d1c592b3e91c8a47a1a14ab486fc87a",
+    "local-mods/DerpyAutodriveViewpoint/README.md": "25f47fcc10eba25cb13970bec0e540d5d0820a875a87a11ec62aaf8729672759",
+    "local-mods/DerpyAutodriveViewpoint/common/media/viewpoint/addons/derpy.autodrive-viewpoint/settings.properties": "cda8375a7e55a20c837e4e40a8b44d320af538211c5531dbf35751972dd8ddf6"
   },
   "support_files": {
     "clothing-labels.json": "522a885c52e38dae7921f96c893cf4e401028731308a5c8d07dc459732d20fe0",

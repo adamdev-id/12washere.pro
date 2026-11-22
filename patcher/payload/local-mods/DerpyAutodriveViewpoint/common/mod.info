@@ -1,0 +1,8 @@
+name=Derpy Autodrive - Viewpoint Routes
+id=DerpyAutodriveViewpoint
+author=Local compatibility add-on
+description=Projects Autodrive road, route and trajectory overlays through Viewpoint's current first- or third-person camera. Enable the render add-on in Viewpoint settings. Camera controls are unchanged.
+modversion=0.5.3
+versionMin=42.22
+require=\DerpyAutodrive,\Viewpoint
+loadModAfter=DerpyAutodrive,Viewpoint

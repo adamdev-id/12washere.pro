@@ -1,4 +1,4 @@
-12washere.pro Patcher 1.0.0
+12washere.pro Patcher 1.5.3
 Windows 10/11 x64 | Project Zomboid Build 42.22 preset format 1
 
 QUICK START
@@ -10,6 +10,32 @@ QUICK START
    folder containing ProjectZomboid64.exe.
 4. Click Patch game. Wait until it reports patched and verified.
 5. Launch Project Zomboid again. Load your outfit preset before saving over it.
+6. With Autodrive, Viewpoint and ZombieBuddy installed, enable "Derpy Autodrive
+   - Viewpoint Routes" under Viewpoint settings: Delete > Add-ons. Keep Panini
+   projection off. The server must enable this local mod for multiplayer.
+7. In the add-on's General Settings, choose a display independently for each
+   camera: Navigation HUD, Road Guidance, Both, or Off. Defaults are Navigation
+   HUD in first person and Road Guidance in third person.
+8. Destination Guidance (yellow) and Trajectory Guidance (green) each have
+   an Enabled switch (default ON). Hide either road overlay independently,
+   keeping the HUD and the other route. Each also has its own Line/Arrow
+   selector, line width, brightness, arrow size/spacing,
+   animation speed, and pulse/fade. Defaults: yellow arrows and green line.
+9. Navigation HUD defaults to 3D Direction Arrow with Car Heading; Turn Arrow
+   is also available. Animation
+   is ON by default, with adjustable speed/intensity. Turn Arrow flows a light
+   through the turn shape; 3D Direction Arrow follows the road ahead using
+   Car Heading (default) or Player POV. Car Heading ignores looking around. Its look-away fading defaults OFF. Turning animation
+   off still lets the 3D arrow track camera direction. HUD position, size and
+   brightness are independent. It works with either camera or road overlays off.
+   Saved player styles stay selected; choose 3D Direction Arrow and Car Heading
+   once to switch an existing profile to the new defaults.
+   3D Turn anticipation (default 25 m) previews the planned green path through
+   bends, even when hidden. Rotation smoothness (default 0.3 s) eases changes.
+10. Match destination length to green trajectory stays on by default. It
+    shortens either yellow lines or arrows at the green endpoint. Autodrive's
+    own Navigation line and Trajectory toggles still control their road overlay.
+
 
 The warning "Project Zomboid is running. Please close it before patching or
 restoring" disables Patch and Restore. The patcher never closes your game.
@@ -23,19 +49,27 @@ WHAT IS INCLUDED
 - A preset reader fix: only the FIRST colon separates a preset name from its
   data. Custom slots such as KATTAJ1:BackFanny retain their names and item data,
   including color and texture selections.
+- Derpy Autodrive - Viewpoint Routes 0.5.3: independent yellow/green
+  Line or Arrow guidance, with per-camera road/HUD display selectors.
+  Installed to %USERPROFILE%\Zomboid\mods\DerpyAutodriveViewpoint. Requires
+  Autodrive, Viewpoint 0.1.7 / API 1.0.0 and ZombieBuddy, installed separately.
 
-No Mods= or WorkshopItems= changes are needed. Fixes are installed directly
-into the client's game files. This patcher does not install a Workshop mod.
+Spawn, label and preset fixes are installed directly into the client's game
+files. The route add-on is installed as a local mod; it has no Workshop ID.
+For multiplayer, the server must have the same route mod and include
+DerpyAutodriveViewpoint in Mods=. The patcher does not edit server settings.
 The optional 12WashereSpawnMenuFix.zip is the local-mod edition of the spawn
 and label assets. You do not need to enable that local mod when using this
 patcher. The preset parser fix is provided by the patcher, not by that mod ZIP.
+DerpyAutodriveViewpoint.zip provides the route add-on for manual installation.
+The patcher EXE already contains it, so Windows patcher users do not need that ZIP.
 
 BACKUPS AND RESTORE
 - Before changing anything, the patcher validates every planned change and
   backs up each existing file it will replace.
 - Backups/logs are stored at %LOCALAPPDATA%\12washere.pro\Patcher.
 - Restore backup undoes the latest active patch for the selected installation.
-  Newly added files from that patch are removed; existing files are restored.
+  Newly added game and route-mod files are removed; existing files are restored.
 - Restore refuses files changed since patching, protecting later Steam updates
   or edits. It does not overwrite them to force an old backup into place.
 - An interrupted patch keeps a recovery record. Close the game, then Restore
@@ -50,7 +84,7 @@ LIMITS
   Reselect missing items and save again after patching. Intact presets can load.
 - Character, world and vehicle saves are never edited. This patcher does not
   repair corrupt characters, server world maps, mod conflicts or missing mods.
-- Workshop mods and ZombieBuddy remain separate installations. See
+- Autodrive, Viewpoint, other Workshop mods and ZombieBuddy remain separate installations. See
   https://12washere.pro/mods.html for server requirements.
 - Steam updates or Verify Files can replace these fixes. Run Verify in this
   patcher afterward, and Patch game again if it recognizes the new game code.
@@ -64,6 +98,9 @@ LIMITS
   rights may be required for games installed in protected directories.
 - The patcher works offline. It never uploads files, reads Steam credentials,
   subscribes to mods, or changes the dedicated server.
+- The new guidance passed geometry, game Lua, loader and GPU checks. Its
+  animated display still needs an actual driving-session check. It targets player one's normal Viewpoint
+  camera; Panini, Minecraft/Iris packs and split-screen are not supported.
 
 SUPPORT
 https://12washere.pro/
