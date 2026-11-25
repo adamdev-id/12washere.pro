@@ -12,7 +12,7 @@ import re
 import sys
 import uuid
 
-VERSION = '1.6.0'
+VERSION = '1.7.0'
 PRESET_PATH = 'media/lua/client/OptionScreens/CharacterCreationMain.lua'
 UI_PATHS = {f'media/lua/shared/Translate/{lang}/UI.json' for lang in ('EN', 'ID')}
 GAME_NAMES = {'projectzomboid.exe', 'projectzomboid64.exe', 'projectzomboid32.exe'}

@@ -1,4 +1,4 @@
-12washere.pro Patcher 1.6.0
+12washere.pro Patcher 1.7.0
 Windows 10/11 x64 | Project Zomboid Build 42.22 preset format 1
 
 QUICK START
@@ -116,7 +116,7 @@ Python, Tcl/Tk, psutil and PyInstaller have their own licenses. See
 patcher/THIRD-PARTY-NOTICES.txt in the source repository.
 
 APPROVED SERVER MODS
-Use Check release, then Sync approved mods with Project Zomboid closed.
+Use Check release, then Sync/Patch Mods from Server with Project Zomboid closed.
 Only the published release from https://pz.12washere.pro is downloaded.
 Draft updates in PZ Panel are never distributed to players. Each file is
 verified using its size and SHA-256 hash. Unchanged files are reused.
@@ -136,3 +136,20 @@ Use Play approved release in the patcher after syncing. It starts Steam with
 copies with the same Mod ID. For direct Steam launches, set that same text
 in Project Zomboid > Properties > Launch Options. Without this option, PZ
 can choose an updated Workshop copy instead of the approved local copy.
+
+SERVER MOD VERSION TABS (1.7.0)
+Needs Update lists missing, older, modified or incomplete managed mods.
+Latest lists mods whose files match the approved server release. Both tabs
+show a mod image/name, Server Mod Version, and Client Mod Version. Versions
+identify approved snapshots (rev. followed by a short content revision), not
+Steam's newest Workshop upload. Mod dates appear when supplied by a release.
+Drafts in PZ Panel are never listed. Counts refresh after Check release,
+synchronization and restore. No approved release yet means both lists are
+empty; this does not install draft mods.
+There are no individual mod updates. Needs Update has one button:
+Sync/Patch Mods from Server. It synchronizes the complete approved release,
+downloading changed files only. Modified/missing files in folders already
+managed by this patcher are repaired; the previous local contents are backed
+up for Restore mod release. Unmanaged conflicting folders are refused.
+Close PZ before syncing and restart it afterward. Thumbnail failures use a
+placeholder and do not prevent checking/installing approved mods.

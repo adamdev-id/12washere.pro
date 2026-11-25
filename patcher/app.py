@@ -12,6 +12,7 @@ from tkinter import filedialog, messagebox, ttk
 
 import core
 import releases
+from mods_view import ModsTable, ThumbnailCache
 
 BG, PANEL, TEXT, MUTED, LINE, ACCENT = '#101411', '#171d18', '#eeeede', '#a2aa9e', '#31392f', '#ef7848'
 STRINGS = {
@@ -138,6 +139,45 @@ STRINGS['id'].update({
     'footer': '12washere.pro / v{version} / patch game + rilis mod server',
 })
 
+STRINGS['en'].update({
+    'approved_title': 'SERVER MODS',
+    'approved_body': 'Compare installed mods with the approved 12washere.pro release. Close Project Zomboid before syncing.\nUse Play approved release, or Steam launch options: -modfolders mods,steam,workshop.',
+    'release_sync': 'Sync/Patch Mods from Server',
+    'tab_needs': 'Needs Update', 'tab_latest': 'Latest',
+    'column_mod': 'Mod Image + Mod Name', 'column_server': 'Server Mod Version', 'column_client': 'Client Mod Version',
+    'mod_missing': 'Not installed', 'mod_unverified': 'Unverified local copy', 'mod_removed': 'Not in approved release',
+    'mod_modified': 'Modified / incomplete', 'mod_recovery': 'Recovery needed',
+    'mods_summary': 'Approved release: {latest}    |    Client release: {installed}',
+    'mods_loading': 'Checking the approved release and verifying local mod files…',
+    'mods_not_checked': 'Check release to compare your installed mods.',
+    'mods_all_current': 'No mod files need updating.', 'mods_no_current': 'Matching mods will appear here after synchronization.',
+    'mods_hint': 'Sync applies the complete approved release. Changed files are backed up. Restart Project Zomboid afterward.',
+    'mods_stale': 'The check failed. These are previous results; check again before syncing.',
+    'mods_failed': 'Could not check the release. Check your connection, then use Check release to retry.',
+    'mods_recovery': 'An interrupted sync needs recovery. Keep the game closed and use Restore mod release.',
+    'mods_pending': 'All files match. Sync to record the approved release before playing.',
+    'release_conflict': 'An unmanaged mod folder conflicts with the release. Back it up and move it before syncing.',
+})
+STRINGS['id'].update({
+    'approved_title': 'MOD SERVER',
+    'approved_body': 'Bandingkan mod terpasang dengan rilis 12washere.pro yang disetujui. Tutup Project Zomboid sebelum sinkronisasi.\nGunakan Mainkan rilis, atau Steam Launch Options: -modfolders mods,steam,workshop.',
+    'release_sync': 'Sinkronkan/Patch Mod dari Server',
+    'tab_needs': 'Perlu Update', 'tab_latest': 'Terbaru',
+    'column_mod': 'Gambar + Nama Mod', 'column_server': 'Versi Mod Server', 'column_client': 'Versi Mod Client',
+    'mod_missing': 'Belum terpasang', 'mod_unverified': 'Salinan lokal belum diperiksa', 'mod_removed': 'Tidak ada dalam rilis',
+    'mod_modified': 'Diubah / tidak lengkap', 'mod_recovery': 'Perlu pemulihan',
+    'mods_summary': 'Rilis disetujui: {latest}    |    Rilis client: {installed}',
+    'mods_loading': 'Memeriksa rilis yang disetujui dan berkas mod lokal…',
+    'mods_not_checked': 'Periksa rilis untuk membandingkan mod yang terpasang.',
+    'mods_all_current': 'Tidak ada berkas mod yang perlu diperbarui.', 'mods_no_current': 'Mod yang sudah sesuai akan muncul di sini setelah sinkronisasi.',
+    'mods_hint': 'Sinkronisasi memasang seluruh rilis yang disetujui. Berkas yang berubah dicadangkan. Buka ulang Project Zomboid setelahnya.',
+    'mods_stale': 'Pemeriksaan gagal. Hasil sebelumnya ditampilkan; periksa lagi sebelum sinkronisasi.',
+    'mods_failed': 'Rilis tidak dapat diperiksa. Periksa koneksi, lalu gunakan Periksa rilis untuk mencoba lagi.',
+    'mods_recovery': 'Sinkronisasi terputus perlu dipulihkan. Tutup game lalu gunakan Pulihkan rilis mod.',
+    'mods_pending': 'Semua berkas sesuai. Sinkronkan untuk mencatat rilis yang disetujui sebelum bermain.',
+    'release_conflict': 'Folder mod di luar pengelolaan patcher bentrok dengan rilis. Cadangkan dan pindahkan sebelum sinkronisasi.',
+})
+
 class App:
     def __init__(self, root):
         self.root, self.language = root, 'en'
@@ -149,6 +189,7 @@ class App:
         self.blocked = True
         self.process_checking = False
         self.has_backup = False
+        self.initial_release_check = True
         self.status_key, self.status_values = 'idle', {}
         self.bound = []
         root.title('12washere.pro Patcher')
@@ -171,6 +212,8 @@ class App:
         page.bind('<Configure>', lambda event: canvas.configure(scrollregion=canvas.bbox('all')))
         canvas.bind('<Configure>', lambda event: canvas.itemconfigure(page_window, width=event.width))
         def wheel(event):
+            if event.widget.winfo_class() == 'Treeview':
+                return
             if not isinstance(event.widget, tk.Text):
                 canvas.yview_scroll(-int(event.delta / 120), 'units')
         root.bind_all('<MouseWheel>', wheel)
@@ -193,21 +236,23 @@ class App:
             cards.columnconfigure(i % 2, weight=1, uniform='cards')
             self.label(card, heading, bg=PANEL, fg=ACCENT, font=('Consolas', 10, 'bold')).pack(anchor='w', padx=14, pady=(12, 5))
             self.label(card, body, bg=PANEL, fg=TEXT, font=('Segoe UI', 10), justify='left').pack(anchor='w', padx=14, pady=(0, 12))
-        self.label(outer, 'folder', fg=MUTED, font=('Consolas', 9)).pack(anchor='w', pady=(18, 7))
         approved = tk.Frame(outer, bg=PANEL, highlightbackground=LINE, highlightthickness=1)
         approved.pack(fill='x', pady=(12, 0))
         self.label(approved, 'approved_title', bg=PANEL, fg=ACCENT, font=('Consolas', 10, 'bold')).pack(anchor='w', padx=12, pady=(10, 4))
         self.label(approved, 'approved_body', bg=PANEL, fg=MUTED, justify='left', wraplength=940).pack(anchor='w', padx=12)
         release_actions = tk.Frame(approved, bg=PANEL)
         release_actions.pack(fill='x', padx=12, pady=10)
-        self.release_check = self.button(release_actions, 'release_check', lambda: self.run('release_check', self.approved.status))
+        self.release_check = self.button(release_actions, 'release_check', self.check_release)
         self.release_check.pack(side='left')
-        self.release_sync = self.button(release_actions, 'release_sync', lambda: self.run('release_sync', lambda: self.approved.sync(self.report_progress)), primary=True)
-        self.release_sync.pack(side='left', padx=8)
         self.release_restore = self.button(release_actions, 'release_restore', self.restore_release)
         self.release_restore.pack(side='left')
         self.release_play = self.button(release_actions, 'release_play', lambda: self.run('release_play', lambda: self.approved.launch(self.path.get())))
         self.release_play.pack(side='left', padx=8)
+        self.mods_table = ModsTable(approved, self.t, self.button, self.sync_release, self.messages,
+                                   ThumbnailCache(self.engine.storage / 'thumbnails'))
+        self.mods_table.pack(fill='both', expand=True)
+        self.release_sync = self.mods_table.sync_button
+        self.label(outer, 'folder', fg=MUTED, font=('Consolas', 9)).pack(anchor='w', pady=(18, 7))
         row = tk.Frame(outer, bg=BG)
         row.pack(fill='x')
         self.path = tk.StringVar()
@@ -267,6 +312,7 @@ class App:
             widget.configure(text=self.t(key))
         self.set_status(self.status_key, **self.status_values)
         self.render_process()
+        self.mods_table.render()
 
     def set_status(self, key, **values):
         self.status_key, self.status_values = key, values
@@ -284,9 +330,9 @@ class App:
         self.patch_button.configure(state='normal' if selected and not self.busy and not self.blocked else 'disabled')
         self.restore_button.configure(state='normal' if selected and self.has_backup and not self.busy and not self.blocked else 'disabled')
         self.release_check.configure(state='disabled' if self.busy else 'normal')
-        for button in (self.release_sync, self.release_restore):
-            button.configure(state='disabled' if self.busy or self.blocked else 'normal')
-        self.release_play.configure(state='normal' if selected and not self.busy and not self.blocked else 'disabled')
+        self.release_restore.configure(state='disabled' if self.busy or self.blocked else 'normal')
+        self.release_sync.configure(state='normal' if not self.busy and not self.blocked and self.mods_table.can_sync else 'disabled')
+        self.release_play.configure(state='normal' if selected and not self.busy and not self.blocked and self.mods_table.can_play else 'disabled')
         for button in (self.verify_button, self.detect_button, self.browse_button):
             button.configure(state='disabled' if self.busy else 'normal')
         self.combo.configure(state='disabled' if self.busy else 'readonly')
@@ -339,6 +385,16 @@ class App:
         if messagebox.askyesno(self.t('confirm_title'), self.t('release_restore_confirm'), parent=self.root):
             self.run('release_restore', self.approved.restore)
 
+    def check_release(self):
+        if self.busy:
+            return
+        self.initial_release_check = False
+        self.mods_table.begin()
+        self.run('release_check', lambda: self.approved.inspect(self.report_progress))
+
+    def sync_release(self):
+        self.run('release_sync', lambda: (self.approved.sync(self.report_progress), self.approved.inspect(self.report_progress)))
+
     def report_progress(self, done, total, path):
         self.messages.put(('progress', (done, total, path)))
 
@@ -353,6 +409,9 @@ class App:
             if action == 'progress':
                 done, total, _ = future
                 self.progress.configure(value=100 * done / max(total, 1))
+                continue
+            if action == 'thumbnail':
+                self.mods_table.receive_thumbnail(*future)
                 continue
             if action == 'process':
                 self.process_checking = False
@@ -375,21 +434,31 @@ class App:
                     self.set_status('found' if values else 'not_found', **({'count': len(values)} if values else {}))
                     if values:
                         self.root.after(100, self.verify)
+                    elif self.initial_release_check:
+                        self.root.after(100, self.check_release)
                 elif action == 'verify':
                     (changes, counts), self.has_backup = result
                     self.set_status('ready' if changes else 'verified', **(counts if changes else {}))
                     self.log(json.dumps({'pending_files': len(changes), 'pending': counts, 'backup_available': self.has_backup}))
                     self.progress.configure(value=0 if changes else 100)
+                    if self.initial_release_check:
+                        self.root.after(100, self.check_release)
                 elif action == 'release_check':
-                    self.set_status('release_info', latest=result['latest'] or '—', installed=result['installed'] or '—', mods=result['mods'], mb=round(result['bytes'] / 1024 ** 2, 1))
-                    self.log(json.dumps(result))
+                    self.mods_table.set_report(result)
+                    self.set_status('release_none' if not result['latest'] else 'mods_summary', latest=result['latest'], installed=result['installed'] or '—')
+                    self.progress.configure(value=100)
+                    self.log(json.dumps({key: value for key, value in result.items() if key != 'rows'}))
                 elif action == 'release_sync':
+                    result, comparison = result
+                    self.mods_table.set_report(comparison)
                     self.set_status('release_none' if result['status'] == 'no_release' else 'release_done', release=result.get('release', ''))
                     self.progress.configure(value=100)
                     self.log(json.dumps(result))
                 elif action == 'release_restore':
                     self.set_status('release_restored')
                     self.log(json.dumps(result))
+                    self.mods_table.failed()
+                    self.root.after(100, self.check_release)
                 elif action == 'release_play':
                     self.set_status('release_launched')
                     self.log(json.dumps(result))
@@ -402,12 +471,15 @@ class App:
                         self.set_status('restored', count=result['restored_files'])
                     self.log(json.dumps(result))
             except Exception as exc:
+                if action.startswith('release_'):
+                    self.mods_table.failed()
                 self.has_backup = bool(self.engine.backups(self.path.get())) if self.path.get() else False
                 key = exc.code if isinstance(exc, core.PatchError) else 'permission' if isinstance(exc, PermissionError) else 'unexpected'
                 self.set_status(key)
                 self.log(str(exc))
                 logging.exception('Operation failed')
-                messagebox.showerror(self.t('error_title'), self.t(key) + ('\n\n' + str(exc) if str(exc) != key else ''), parent=self.root)
+                if action != 'release_check':
+                    messagebox.showerror(self.t('error_title'), self.t(key) + ('\n\n' + str(exc) if str(exc) != key else ''), parent=self.root)
             self.update_buttons()
         self.root.after(80, self.poll)
 
@@ -416,6 +488,7 @@ class App:
             messagebox.showinfo('12washere.pro', self.t('busy'), parent=self.root)
             return
         self.pool.shutdown(wait=False, cancel_futures=True)
+        self.mods_table.close()
         self.root.destroy()
 
 

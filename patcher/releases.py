@@ -167,6 +167,95 @@ class ApprovedMods:
                 'bytes': sum(f['size'] for f in latest['files']) if latest else 0,
                 'recovery': self.pending.exists()}
 
+    @staticmethod
+    def mod_entries(manifest):
+        """Group content by Workshop item, including manifests from older patchers."""
+        if not manifest:
+            return {}
+        groups = {}
+        for file in manifest['files']:
+            id_ = re.match(r'zcp_([0-9]+)_', file['path']).group(1)
+            groups.setdefault(id_, []).append(file)
+        metadata = manifest.get('mods', [])
+        if not isinstance(metadata, list):
+            raise PatchError('release_invalid', 'Invalid mod metadata.')
+        by_id = {}
+        for mod in metadata:
+            if not isinstance(mod, dict):
+                raise PatchError('release_invalid', 'Invalid mod metadata.')
+            id_ = mod.get('workshopId')
+            if id_ is not None:
+                if not isinstance(id_, str) or not re.fullmatch(r'[0-9]{1,15}', id_) or id_ in by_id:
+                    raise PatchError('release_invalid', 'Invalid or duplicate Workshop metadata.')
+                by_id[id_] = mod
+        result = {}
+        for id_, files in groups.items():
+            mod = by_id.get(id_, {})
+            # Existing schema-1 releases provide the authoritative revision.
+            # Derive it for legacy manifests which contain only a file list.
+            revision = mod.get('revision') or sha(json.dumps(files, ensure_ascii=False, separators=(',', ':')).encode())
+            if not isinstance(revision, str) or not re.fullmatch('[a-f0-9]{64}', revision):
+                raise PatchError('release_invalid', 'Invalid mod revision.')
+            title = mod.get('title') or f'Workshop {id_}'
+            if not isinstance(title, str) or len(title) > 1024:
+                raise PatchError('release_invalid', 'Invalid mod title.')
+            result[id_] = {'workshop_id': id_, 'title': title, 'revision': revision,
+                           'updated_at': mod.get('updatedAt'), 'files': files,
+                           'roots': sorted({f['path'].split('/')[0] for f in files})}
+        return result
+
+    def inspect(self, progress=lambda *_: None):
+        """Read-only comparison with the approved release; never consult Steam versions."""
+        with Engine._lock_file(self, self.lock_dir):
+            latest, installed = self.latest(), self.read_state()
+            previous = installed['manifest'] if installed else None
+            report = {'latest': latest['release'] if latest else None,
+                      'installed': previous['release'] if previous else None,
+                      'published_at': latest.get('publishedAt') if latest else None,
+                      'recovery': self.pending.exists(), 'rows': [], 'needs_update': 0, 'current': 0}
+            if not latest:
+                return report
+            server, client = self.mod_entries(latest), self.mod_entries(previous)
+            expected = self.inventory(latest)
+            prior = self.inventory(previous) if previous else {}
+            roots = sorted({r for item in [*server.values(), *client.values()] for r in item['roots']})
+            actual = {}
+            for index, root in enumerate(roots, 1):
+                try:
+                    actual[root] = self.actual(root)
+                except FileNotFoundError:
+                    # A file removed while scanning is a changed local copy.
+                    actual[root] = None
+                progress(index, len(roots), root)
+            for id_ in sorted(set(server) | set(client), key=lambda id_: (server.get(id_) or client[id_])['title'].casefold()):
+                target, local = server.get(id_), client.get(id_)
+                item_roots = sorted(set((target or {}).get('roots', [])) | set((local or {}).get('roots', [])))
+                matches = all(actual[root] == expected.get(root, {}) for root in item_roots)
+                present = any(actual[root] for root in item_roots)
+                if target is None:
+                    if not present:
+                        continue
+                    state = 'removed'
+                elif matches and not report['recovery']:
+                    state = 'current'
+                elif not present:
+                    state = 'missing'
+                elif report['recovery']:
+                    state = 'recovery'
+                elif local and local['revision'] != target['revision'] and all(actual[root] == prior.get(root, {}) for root in item_roots):
+                    state = 'outdated'
+                else:
+                    state = 'modified'
+                version = target['revision'] if state == 'current' else local['revision'] if local and present else None
+                report['rows'].append({'workshop_id': id_, 'title': (target or local)['title'],
+                    'server_revision': target['revision'] if target else None,
+                    'client_revision': version, 'server_date': target.get('updated_at') if target else None,
+                    'client_date': (target if state == 'current' else local or {}).get('updated_at'),
+                    'state': state, 'present': bool(present)})
+            report['needs_update'] = sum(row['state'] != 'current' for row in report['rows'])
+            report['current'] = len(report['rows']) - report['needs_update']
+            return report
+
     def check_duplicates(self, manifest):
         ids = {id_ for mod in manifest.get('mods', []) for id_ in mod.get('modIds', [])}
         managed = set(self.inventory(manifest))
@@ -233,8 +322,8 @@ class ApprovedMods:
                 return {'status': 'current', 'release': latest['release']}
             changed = [root for root in roots if actual[root] != after.get(root, {})]
             for root in changed:
-                if actual[root] != before.get(root, {}) or (root not in before and (self.mods / root).exists()):
-                    raise PatchError('release_conflict', f'{root} contains files outside the previously installed release. Back up/move that folder before syncing.')
+                if root not in before and (self.mods / root).exists():
+                    raise PatchError('release_conflict', f'{root} already exists outside the managed release. Back up/move that folder before syncing.')
             total, done = sum(f['size'] for f in latest['files'] if f['path'].split('/')[0] in changed), 0
             progress_lock = Lock()
             def tick(amount):
@@ -272,7 +361,8 @@ class ApprovedMods:
             if shutil.disk_usage(self.mods).free < 64 * 1024 ** 2:
                 raise PatchError('release_invalid', 'Less than 64 MB free disk space remains.')
             transaction = {'work': str(work), 'roots': changed, 'moved': [], 'installed': [],
-                           'previous': {'manifest': installed['manifest']} if installed else None, 'manifest': latest}
+                           'previous': {'manifest': installed['manifest']} if installed else None, 'manifest': latest,
+                           'beforeInventory': {root: actual[root] for root in changed}}
             self.write(self.pending, transaction)
             try:
                 for root in changed:
@@ -301,11 +391,17 @@ class ApprovedMods:
             relative(root + '/placeholder')
         if any(r not in transaction['roots'] for r in transaction['moved'] + transaction['installed']):
             raise PatchError('backup_invalid')
+        for root, files in transaction.get('beforeInventory', {}).items():
+            if root not in transaction['roots'] or not isinstance(files, dict):
+                raise PatchError('backup_invalid')
+            for name, digest in files.items():
+                if relative(name).split('/')[0] != root or not re.fullmatch('[a-f0-9]{64}', digest):
+                    raise PatchError('backup_invalid')
         return work
 
     def _recover(self, transaction):
         work = self._work(transaction)
-        previous = self.inventory(transaction['previous']['manifest']) if transaction['previous'] else {}
+        previous = transaction.get('beforeInventory', self.inventory(transaction['previous']['manifest']) if transaction['previous'] else {})
         after = self.inventory(transaction['manifest'])
         # Validate every backup before deleting anything. A retry after a crash
         # between restoring a folder and removing the journal is idempotent.
@@ -346,7 +442,7 @@ class ApprovedMods:
             transaction = installed['backup']
             work = self._work(transaction)
             after = self.inventory(installed['manifest'])
-            previous = self.inventory(transaction['previous']['manifest']) if transaction['previous'] else {}
+            previous = transaction.get('beforeInventory', self.inventory(transaction['previous']['manifest']) if transaction['previous'] else {})
             for root in transaction['moved']:
                 if self.actual(root, work / 'old') != previous.get(root, {}):
                     raise PatchError('backup_invalid', root)

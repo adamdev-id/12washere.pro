@@ -57,14 +57,15 @@ class ApprovedReleasesTest(unittest.TestCase):
             self.engine.sync()
         self.assertFalse((self.engine.mods / 'zcp_123456_Demo').exists())
 
-    def test_user_changes_and_foreign_folder_are_preserved(self):
+    def test_owned_user_changes_are_backed_up_and_restore_recovers_them(self):
         self.engine.sync()
         extra = self.engine.mods / 'zcp_123456_Demo/personal.lua'
         extra.write_bytes(b'user edit')
         self.release = '102-aabbccddeeff'
         self.files['zcp_123456_Demo/file.lua'] = b'update'
-        with self.assertRaises(PatchError): self.engine.sync()
-        with self.assertRaises(PatchError): self.engine.restore()
+        self.engine.sync()
+        self.assertFalse(extra.exists())
+        self.engine.restore()
         self.assertEqual(extra.read_bytes(), b'user edit')
 
     def test_rollback_on_install_failure(self):

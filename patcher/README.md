@@ -5,7 +5,7 @@ outfit preset colon-parser fix. Version 1.5.3 also installs the bundled Derpy
 Autodrive Viewpoint route add-on to `%USERPROFILE%/Zomboid/mods/DerpyAutodriveViewpoint`.
 Version 1.6.0 adds approved server releases from PZ Panel at
 `https://pz.12washere.pro/api/mod-releases/9059cf4f988a72fe963e87c8/latest`.
-The existing game fixes work offline; **Sync approved mods** fetches only the
+The existing game fixes work offline; **Sync/Patch Mods from Server** fetches only the
 published release, verifies hashes, and manages separate `zcp_*` local folders.
 Draft downloads are never distributed. **Play approved release** verifies the
 release and launches Steam with `-modfolders mods,steam,workshop`. Direct Steam
@@ -136,3 +136,19 @@ Arrow animation remains enabled and 3D look-away fading stays off. Turn Arrow
 and Player POV remain available. New defaults apply to fresh/default settings;
 previously saved player choices are preserved. Existing players can select
 3D Direction Arrow and Car Heading once under Navigation HUD to switch.
+
+## Server mod browser (1.7.0)
+
+`mods_view.py` renders Needs Update / Latest with shared column definitions
+and a single whole-release Sync/Patch action in Needs Update. `releases.py`
+`inspect()` compares actual local file hashes with the approved manifest;
+stored version labels alone never mark a mod current. It groups files by
+Workshop item, accepts optional per-mod update dates and derives revisions
+for legacy manifests. The existing public thumbnail proxy provides cached
+44px mod images; Pillow is bundled in the EXE. Failed images use a placeholder.
+
+Checks run off the Tk thread. A failed refresh keeps old rows visibly stale
+and disables Sync/Play until a successful refresh. Owned changed folders are
+backed up before repair, with actual pre-sync hashes journaled for recovery.
+Unmanaged folders are still never overwritten. Restore remains separate.
+Tests: `test_mods_view.py`, `test_releases.py`, and the existing core suite.
