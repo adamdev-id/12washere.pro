@@ -11,6 +11,7 @@ import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 
 import core
+import releases
 
 BG, PANEL, TEXT, MUTED, LINE, ACCENT = '#101411', '#171d18', '#eeeede', '#a2aa9e', '#31392f', '#ef7848'
 STRINGS = {
@@ -105,12 +106,45 @@ STRINGS = {
 }
 
 
+
+STRINGS['en'].update({
+    'approved_title': 'APPROVED SERVER MODS',
+    'approved_body': 'Download the release approved in PZ Panel. Draft Workshop updates stay on the server.\nClose Project Zomboid before syncing; restart it afterward. Your saves are untouched.\nLaunch here, or set Steam launch options: -modfolders mods,steam,workshop.',
+    'release_play': 'Play approved release', 'release_launched': 'Starting Steam with local mods first.', 'release_outdated': 'Sync the approved release before launching.',
+    'release_check': 'Check release', 'release_sync': 'Sync approved mods', 'release_restore': 'Restore mod release',
+    'release_restore_confirm': 'Restore the previous local mod release, or recover an interrupted sync?\n\nKeep Project Zomboid closed. Newer personal edits will block restoration.',
+    'release_info': 'Approved: {latest} | Installed: {installed} | {mods} mods, {mb} MB',
+    'release_none': 'No approved release has been published yet. No server mods were downloaded.',
+    'release_done': 'Approved release {release} is installed and verified. Restart Project Zomboid.',
+    'release_restored': 'Previous server mod release restored. Restart Project Zomboid.',
+    'release_invalid': 'The approved release failed validation. No unverified files will be installed.',
+    'release_network': 'Cannot reach the approved release server. Check your connection and try again.',
+    'release_conflict': 'A managed mod folder contains personal changes. Back it up and move it before syncing.',
+    'footer': '12washere.pro / v{version} / game fixes + approved server releases',
+})
+STRINGS['id'].update({
+    'approved_title': 'MOD SERVER YANG DISETUJUI',
+    'approved_body': 'Unduh rilis yang disetujui melalui PZ Panel. Update draft belum dikirim ke pemain.\nTutup Project Zomboid sebelum sinkronisasi, lalu buka ulang. Save tidak diubah.\nBuka dari sini, atau isi Steam Launch Options: -modfolders mods,steam,workshop.',
+    'release_play': 'Mainkan rilis', 'release_launched': 'Membuka Steam dengan prioritas mod lokal.', 'release_outdated': 'Sinkronkan rilis yang disetujui sebelum bermain.',
+    'release_check': 'Periksa rilis', 'release_sync': 'Sinkronkan mod', 'release_restore': 'Pulihkan rilis mod',
+    'release_restore_confirm': 'Pulihkan rilis mod sebelumnya atau sinkronisasi yang terputus?\n\nTutup Project Zomboid. Perubahan pribadi yang lebih baru akan memblokir pemulihan.',
+    'release_info': 'Disetujui: {latest} | Terpasang: {installed} | {mods} mod, {mb} MB',
+    'release_none': 'Belum ada rilis yang disetujui. Mod server tidak diunduh.',
+    'release_done': 'Rilis {release} terpasang dan terverifikasi. Buka ulang Project Zomboid.',
+    'release_restored': 'Rilis mod sebelumnya dipulihkan. Buka ulang Project Zomboid.',
+    'release_invalid': 'Validasi rilis gagal. Berkas yang belum terverifikasi tidak dipasang.',
+    'release_network': 'Server rilis tidak dapat dihubungi. Periksa koneksi dan coba lagi.',
+    'release_conflict': 'Folder mod berisi perubahan pribadi. Cadangkan dan pindahkan sebelum sinkronisasi.',
+    'footer': '12washere.pro / v{version} / patch game + rilis mod server',
+})
+
 class App:
     def __init__(self, root):
         self.root, self.language = root, 'en'
         self.pool = ThreadPoolExecutor(max_workers=1)
         self.messages = queue.Queue()
         self.engine = core.Engine()
+        self.approved = releases.ApprovedMods(mods=self.engine.mods, storage=self.engine.storage)
         self.busy = False
         self.blocked = True
         self.process_checking = False
@@ -160,6 +194,20 @@ class App:
             self.label(card, heading, bg=PANEL, fg=ACCENT, font=('Consolas', 10, 'bold')).pack(anchor='w', padx=14, pady=(12, 5))
             self.label(card, body, bg=PANEL, fg=TEXT, font=('Segoe UI', 10), justify='left').pack(anchor='w', padx=14, pady=(0, 12))
         self.label(outer, 'folder', fg=MUTED, font=('Consolas', 9)).pack(anchor='w', pady=(18, 7))
+        approved = tk.Frame(outer, bg=PANEL, highlightbackground=LINE, highlightthickness=1)
+        approved.pack(fill='x', pady=(12, 0))
+        self.label(approved, 'approved_title', bg=PANEL, fg=ACCENT, font=('Consolas', 10, 'bold')).pack(anchor='w', padx=12, pady=(10, 4))
+        self.label(approved, 'approved_body', bg=PANEL, fg=MUTED, justify='left', wraplength=940).pack(anchor='w', padx=12)
+        release_actions = tk.Frame(approved, bg=PANEL)
+        release_actions.pack(fill='x', padx=12, pady=10)
+        self.release_check = self.button(release_actions, 'release_check', lambda: self.run('release_check', self.approved.status))
+        self.release_check.pack(side='left')
+        self.release_sync = self.button(release_actions, 'release_sync', lambda: self.run('release_sync', lambda: self.approved.sync(self.report_progress)), primary=True)
+        self.release_sync.pack(side='left', padx=8)
+        self.release_restore = self.button(release_actions, 'release_restore', self.restore_release)
+        self.release_restore.pack(side='left')
+        self.release_play = self.button(release_actions, 'release_play', lambda: self.run('release_play', lambda: self.approved.launch(self.path.get())))
+        self.release_play.pack(side='left', padx=8)
         row = tk.Frame(outer, bg=BG)
         row.pack(fill='x')
         self.path = tk.StringVar()
@@ -235,6 +283,10 @@ class App:
         selected = bool(self.path.get())
         self.patch_button.configure(state='normal' if selected and not self.busy and not self.blocked else 'disabled')
         self.restore_button.configure(state='normal' if selected and self.has_backup and not self.busy and not self.blocked else 'disabled')
+        self.release_check.configure(state='disabled' if self.busy else 'normal')
+        for button in (self.release_sync, self.release_restore):
+            button.configure(state='disabled' if self.busy or self.blocked else 'normal')
+        self.release_play.configure(state='normal' if selected and not self.busy and not self.blocked else 'disabled')
         for button in (self.verify_button, self.detect_button, self.browse_button):
             button.configure(state='disabled' if self.busy else 'normal')
         self.combo.configure(state='disabled' if self.busy else 'readonly')
@@ -283,6 +335,10 @@ class App:
             game = self.path.get()
             self.run('restore', lambda: self.engine.restore(game, self.report_progress))
 
+    def restore_release(self):
+        if messagebox.askyesno(self.t('confirm_title'), self.t('release_restore_confirm'), parent=self.root):
+            self.run('release_restore', self.approved.restore)
+
     def report_progress(self, done, total, path):
         self.messages.put(('progress', (done, total, path)))
 
@@ -324,6 +380,19 @@ class App:
                     self.set_status('ready' if changes else 'verified', **(counts if changes else {}))
                     self.log(json.dumps({'pending_files': len(changes), 'pending': counts, 'backup_available': self.has_backup}))
                     self.progress.configure(value=0 if changes else 100)
+                elif action == 'release_check':
+                    self.set_status('release_info', latest=result['latest'] or '—', installed=result['installed'] or '—', mods=result['mods'], mb=round(result['bytes'] / 1024 ** 2, 1))
+                    self.log(json.dumps(result))
+                elif action == 'release_sync':
+                    self.set_status('release_none' if result['status'] == 'no_release' else 'release_done', release=result.get('release', ''))
+                    self.progress.configure(value=100)
+                    self.log(json.dumps(result))
+                elif action == 'release_restore':
+                    self.set_status('release_restored')
+                    self.log(json.dumps(result))
+                elif action == 'release_play':
+                    self.set_status('release_launched')
+                    self.log(json.dumps(result))
                 else:
                     self.has_backup = bool(self.engine.backups(self.path.get()))
                     self.progress.configure(value=100)

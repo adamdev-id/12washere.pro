@@ -1,4 +1,4 @@
-12washere.pro Patcher 1.5.3
+12washere.pro Patcher 1.6.0
 Windows 10/11 x64 | Project Zomboid Build 42.22 preset format 1
 
 QUICK START
@@ -114,3 +114,25 @@ metadata is from the installed game. Credits/ownership of those assets remain
 with their authors. This is an independent compatibility tool.
 Python, Tcl/Tk, psutil and PyInstaller have their own licenses. See
 patcher/THIRD-PARTY-NOTICES.txt in the source repository.
+
+APPROVED SERVER MODS
+Use Check release, then Sync approved mods with Project Zomboid closed.
+Only the published release from https://pz.12washere.pro is downloaded.
+Draft updates in PZ Panel are never distributed to players. Each file is
+verified using its size and SHA-256 hash. Unchanged files are reused.
+Mod snapshots are installed under Zomboid/mods/zcp_<WorkshopID>_<folder>.
+Steam subscriptions and unrelated mods/saves are untouched. If you have
+duplicate Workshop copies of the same Mod ID, keep the approved local copy
+active for this server. Separate Java/game loaders still need installation.
+Restore mod release rolls back one release (and can recover interrupted
+updates). Do not join a server using a different release after rollback.
+Backups: Zomboid/.12washere-release-backups; records/cache: LocalAppData/
+12washere.pro/Patcher/approved-mods. Never delete backups during recovery.
+No approved release yet is normal until the administrator publishes one.
+Game fixes / Restore backup are independent from approved server mods.
+
+Use Play approved release in the patcher after syncing. It starts Steam with
+-modfolders mods,steam,workshop, putting approved local mods ahead of Steam
+copies with the same Mod ID. For direct Steam launches, set that same text
+in Project Zomboid > Properties > Launch Options. Without this option, PZ
+can choose an updated Workshop copy instead of the approved local copy.

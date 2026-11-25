@@ -3,7 +3,16 @@
 Windows desktop patcher for the client-side spawn metadata, clothing labels and
 outfit preset colon-parser fix. Version 1.5.3 also installs the bundled Derpy
 Autodrive Viewpoint route add-on to `%USERPROFILE%/Zomboid/mods/DerpyAutodriveViewpoint`.
-There is no server connection or Workshop upload.
+Version 1.6.0 adds approved server releases from PZ Panel at
+`https://pz.12washere.pro/api/mod-releases/9059cf4f988a72fe963e87c8/latest`.
+The existing game fixes work offline; **Sync approved mods** fetches only the
+published release, verifies hashes, and manages separate `zcp_*` local folders.
+Draft downloads are never distributed. **Play approved release** verifies the
+release and launches Steam with `-modfolders mods,steam,workshop`. Direct Steam
+launches need that option too, to prefer local copies over Workshop copies.
+Unmanaged local folders providing duplicate Mod IDs are refused. There is no
+Workshop upload. See `C:\Github\zomboid-control-panel\docs\local-mod-releases.md`
+for the panel protocol, deployment, and publication/recovery workflow.
 
 ## Build
 
