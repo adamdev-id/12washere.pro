@@ -26,6 +26,8 @@ The game hostname points to the separate Google Cloud server. Keep its game DNS 
 - `index.html`: page copy and connection details. Update each displayed instance if the hostname or port changes; the Copy buttons read directly from the adjacent `<code>` element.
 - `script.js`: Join dialog and clipboard controls. Increment the `?v=` on its URL in `index.html` when changing it so returning visitors fetch the new script.
 - `style.css` and `assets/`: layout, colors, and SVG artwork. Google Fonts has local system-font fallbacks.
+- `donation.html`, `donation.css`, and `donation.js`: donation page with recent donations first, separate Saweria and QRIS actions, the donation goal, and the leaderboard. The QRIS action opens a fading native dialog; without JavaScript it links directly to the supplied widget. The QR encodes the same donation URL as Saweria's QR widget: visitors open Saweria and select QRIS there. Donation page translations are in `language.js`.
+- Saweria's widget pages send `X-Frame-Options: SAMEORIGIN`, and its data API blocks browser CORS requests. The **Update public donation data** workflow reads the public widget API about every five minutes and publishes `donation-status.json` on the separate `donation-status` branch. The page uses the newest of that data and the initial checked-in snapshot, shows its timestamp, and marks data older than 20 minutes as delayed. The widget links remain available for the current Saweria view. Run `python scripts/query-donations.py donation-status.json` to refresh the local snapshot. No Saweria account credentials are required; the supplied public widget key is used only to read widget data.
 
 Without JavaScript, the Join links go to the connection section, where players can copy the details manually.
 

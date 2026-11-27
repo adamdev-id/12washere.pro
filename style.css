@@ -30,13 +30,14 @@
 @media(max-width:680px){.header .nav-mods{font-size:11px}.roster{padding-bottom:36px}.roster .section-heading{gap:12px}.roster .section-heading h2{font-size:34px}.roster .outline-button{font-size:11px;gap:6px;white-space:nowrap;padding:7px 9px}.mod-page{padding-block:34px 48px}.required-card{padding:16px}.mod-grid{grid-template-columns:1fr}.mod-search{align-items:stretch;flex-direction:column;gap:7px}.setup-steps li>span{padding-right:0}}
 
 /* Language selector */
+.nav-donation{color:#c5cbbf}.nav-donation[aria-current=page],.nav-donation:hover{color:var(--accent)}
 .header-tools{display:flex;align-items:center;gap:24px}
 .language-switch{display:flex;align-items:center;gap:5px;background:var(--panel);border:1px solid var(--line);padding:3px 5px;color:var(--muted);white-space:nowrap;font:10px/1 var(--mono)}
 .language-switch[hidden]{display:none}
 .language-switch button{border:0;background:none;color:var(--muted);padding:8px 6px;min-height:32px;font:inherit}
 .language-switch button:hover{color:var(--text)}.language-switch button[aria-pressed=true]{background:#2b211b;color:#ff996e}
 @media(max-width:900px){.header-tools{display:grid;justify-items:end;gap:6px}.header-tools nav{gap:16px}.language-switch button{padding-block:5px;min-height:28px}}
-@media(max-width:680px){.header:has(.language-switch:not([hidden])){height:104px}.header-tools nav{gap:8px}.language-switch{gap:3px}}
+@media(max-width:680px){.header:has(.language-switch:not([hidden])){height:var(--site-header-height)}.header-tools nav{gap:8px}.language-switch{gap:3px}}
 
 /* Required setup in the joining guide */
 .join-prerequisite{margin-top:24px;padding:13px 16px;border:1px solid #82513c;border-left:3px solid var(--accent);background:var(--panel);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px 20px}
@@ -63,7 +64,8 @@
 .mod-toolbar .mod-search{margin:0 0 8px}.mod-toolbar .mod-categories{margin:0}
 @media(max-width:1000px){:root{--site-header-height:96px}}
 @media(max-width:680px){
-  :root{--site-header-height:104px}
+  :root{--site-header-height:130px}
+  .header{gap:12px}.header-tools{min-width:0}.header-tools nav{flex-wrap:wrap;justify-content:flex-end;gap:6px 10px}.header .nav-donation{font-size:11px}.nav-join{white-space:nowrap}
   .mod-toolbar .mod-categories{flex-wrap:nowrap;overflow-x:auto;overscroll-behavior-inline:contain;scrollbar-width:thin;scrollbar-color:#46513d transparent;padding:3px 1px 6px}
   .mod-toolbar .mod-filter-button{flex-shrink:0}.mod-toolbar .mod-filter-button:focus-visible{outline-offset:-2px}
 }

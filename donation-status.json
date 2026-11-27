@@ -1,0 +1,86 @@
+{
+  "checkedAt": "2026-11-27T15:49:29+00:00",
+  "recent": {
+    "title": "dukung di https://saweria.co/12washere",
+    "noAmount": false,
+    "items": [
+      {
+        "donator": "Figoga",
+        "amount": 90750.0,
+        "currency": "IDR"
+      },
+      {
+        "donator": "bocilkematian",
+        "amount": 10000.0,
+        "currency": "IDR"
+      },
+      {
+        "donator": "delle",
+        "amount": 15000.0,
+        "currency": "IDR"
+      },
+      {
+        "donator": "maling",
+        "amount": 25000.0,
+        "currency": "IDR"
+      },
+      {
+        "donator": "mister1337",
+        "amount": 10000.0,
+        "currency": "IDR"
+      }
+    ]
+  },
+  "goal": {
+    "title": "MILESTONE PERTAMA?!",
+    "target": 500000.0,
+    "progress": 380750.0,
+    "currency": "IDR"
+  },
+  "leaderboard": {
+    "title": "LIST ADAMFAMS",
+    "noAmount": false,
+    "items": [
+      {
+        "donator": "Pio",
+        "amount": 150000.0,
+        "currency": "IDR"
+      },
+      {
+        "donator": "Figoga",
+        "amount": 90750.0,
+        "currency": "IDR"
+      },
+      {
+        "donator": "💃🏻",
+        "amount": 50000.0,
+        "currency": "IDR"
+      },
+      {
+        "donator": "ciciel",
+        "amount": 30000.0,
+        "currency": "IDR"
+      },
+      {
+        "donator": "maling",
+        "amount": 25000.0,
+        "currency": "IDR"
+      },
+      {
+        "donator": "delle",
+        "amount": 15000.0,
+        "currency": "IDR"
+      },
+      {
+        "donator": "bocilkematian",
+        "amount": 10000.0,
+        "currency": "IDR"
+      },
+      {
+        "donator": "mister1337",
+        "amount": 10000.0,
+        "currency": "IDR"
+      }
+    ]
+  }
+}
