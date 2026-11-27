@@ -1,0 +1,23 @@
+[Unit]
+Description=Check the 12WASHERE public Steam player roster
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=12washere-status
+Group=12washere-status
+Environment=PZ_QUERY_HOST=127.0.0.1
+Environment=PZ_QUERY_PORT=7449
+ExecStart=/opt/12washere-server-status/venv/bin/python /opt/12washere-server-status/query-status.py /var/lib/12washere-server-status/status.json
+StateDirectory=12washere-server-status
+StateDirectoryMode=0755
+UMask=0022
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+TimeoutStartSec=25
+MemoryMax=64M
+TasksMax=8
+CPUQuota=10%

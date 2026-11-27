@@ -7,8 +7,7 @@ on:
       - .github/workflows/player-roster.yml
       - scripts/query-status.py
       - scripts/requirements-status.txt
-  schedule:
-    - cron: '3-58/5 * * * *'
+  # Optional manual/development snapshot. The live site reads the server timer.
   workflow_dispatch:
 
 permissions:

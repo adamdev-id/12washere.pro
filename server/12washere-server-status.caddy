@@ -1,0 +1,16 @@
+@publicServerStatus path /api/server-status
+handle @publicServerStatus {
+    @unsupportedStatusMethod not method GET HEAD OPTIONS
+    respond @unsupportedStatusMethod 405
+    header {
+        Access-Control-Allow-Origin "*"
+        Access-Control-Allow-Methods "GET, HEAD, OPTIONS"
+        Cache-Control "no-store"
+        X-Content-Type-Options "nosniff"
+    }
+    @statusPreflight method OPTIONS
+    respond @statusPreflight 204
+    root * /var/lib/12washere-server-status
+    rewrite * /status.json
+    file_server
+}

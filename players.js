@@ -6,10 +6,11 @@ const playerCount = document.querySelector('#player-count');
 const playerMessage = document.querySelector('#player-message');
 const playerList = document.querySelector('#player-list');
 const playerChecked = document.querySelector('#player-checked');
-const rosterUrl = 'https://raw.githubusercontent.com/adamdev-id/12washere.pro/server-status/status.json';
+const rosterUrl = 'https://pz.12washere.pro/api/server-status';
 
 let lastRoster;
 let rosterLoaded = false;
+let rosterRefreshing = false;
 
 function renderRoster(snapshot) {
   const { t, locale } = siteLanguage;
@@ -28,7 +29,7 @@ function renderRoster(snapshot) {
   if (hasTimestamp) {
     playerChecked.textContent = t('lastChecked', { date: checked.toLocaleString(locale) });
   }
-  if (!hasTimestamp || age > 20 * 60 * 1000) {
+  if (!hasTimestamp || age > 5 * 60 * 1000) {
     playerStatus.textContent = t('unavailable');
     playerDot.dataset.state = 'unknown';
     playerMessage.textContent = t(hasTimestamp ? 'stale' : 'rosterFailed');
@@ -60,9 +61,10 @@ function renderRoster(snapshot) {
 }
 
 async function refreshRoster() {
+  if (rosterRefreshing) return;
+  rosterRefreshing = true;
   try {
-    const minute = Math.floor(Date.now() / 60000);
-    const response = await fetch(`${rosterUrl}?t=${minute}`, { signal: AbortSignal.timeout(8000) });
+    const response = await fetch(rosterUrl, { cache: 'no-store', credentials: 'omit', signal: AbortSignal.timeout(8000) });
     if (!response.ok) throw new Error('Roster unavailable');
     const snapshot = await response.json();
     if (!['online', 'unreachable'].includes(snapshot?.state) ||
@@ -74,6 +76,8 @@ async function refreshRoster() {
     lastRoster = snapshot;
   } catch {
     // Keep a recent result through a short network interruption.
+  } finally {
+    rosterRefreshing = false;
   }
   rosterLoaded = true;
   renderRoster(lastRoster);
@@ -82,4 +86,6 @@ async function refreshRoster() {
 document.addEventListener('site-language-change', () => renderRoster(lastRoster));
 renderRoster(lastRoster);
 refreshRoster();
-setInterval(refreshRoster, 60000);
+document.addEventListener('visibilitychange', () => { if (!document.hidden) refreshRoster(); });
+window.addEventListener('online', refreshRoster);
+setInterval(() => { if (!document.hidden) refreshRoster(); }, 60000);
