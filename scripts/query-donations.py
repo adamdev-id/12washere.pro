@@ -54,6 +54,8 @@ def board(items, template):
         "noAmount": bool(template.get("no_amount", False)),
         "items": [
             {"donator": str(item["donator"])[:100],
+             "id": str(item.get("id", "")),
+             "isUser": bool(item.get("is_user", False)),
              "amount": amount(item["amount"]),
              "currency": str(item.get("currency", "IDR"))[:3]}
             for item in items[:100]
@@ -76,10 +78,12 @@ def query_donations():
         "checkedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "recent": board(read_widget("widgets/recent"), recent_template),
         "goal": {"title": str(milestone.get("text1", ""))[:300],
+                 "startDate": datetime.strptime(milestone["start_datetime"], "%d-%m-%Y").date().isoformat(),
                  "target": amount(milestone["target"]),
                  "progress": amount(progress["progress"]),
                  "currency": str(progress.get("currency", "IDR"))[:3]},
         "leaderboard": board(read_widget(f"widgets/leaderboard/{mode}", **params), leaderboard),
+        "leaderboardPeriod": {"mode": mode, "startDate": params.get("start")},
     }
 
 

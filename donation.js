@@ -41,8 +41,11 @@
   const goal = document.querySelector('#donation-goal');
   const leaders = document.querySelector('#donation-leaderboard');
   const status = document.querySelector('#donation-status');
-  const snapshotUrl = 'https://raw.githubusercontent.com/adamdev-id/12washere.pro/donation-status/donation-status.json';
+  const liveUrl = 'https://pz.12washere.pro/api/donations/status';
+  const refreshInterval = 30 * 1000;
   let snapshot;
+  let refreshing = false;
+  let connected = false;
 
   function money(value, currency = 'IDR') {
     return new Intl.NumberFormat(siteLanguage.locale, {style: 'currency', currency, maximumFractionDigits: 0}).format(value);
@@ -98,7 +101,9 @@
     goal.append(amount);
     const checked = new Date(snapshot.checkedAt);
     const stale = Date.now() - checked.getTime() > 20 * 60 * 1000;
-    status.textContent = siteLanguage.t(stale ? 'donationsStale' : 'donationsUpdated', {date: checked.toLocaleString(siteLanguage.locale)});
+    let message = stale ? 'donationsStale' : 'donationsUpdated';
+    if (connected && snapshot.source === 'saweria-webhook') message = snapshot.webhookConnected ? 'donationsLive' : 'donationsPending';
+    status.textContent = siteLanguage.t(message, {date: new Date(snapshot.updatedAt || snapshot.checkedAt).toLocaleString(siteLanguage.locale)});
   }
 
   async function readSnapshot(url) {
@@ -110,14 +115,25 @@
   }
 
   async function refreshDonations() {
-    const results = await Promise.allSettled([readSnapshot(snapshotUrl), readSnapshot('donation-status.json')]);
-    for (const result of results) {
-      if (result.status === 'fulfilled' && (!snapshot || Date.parse(result.value.checkedAt) > Date.parse(snapshot.checkedAt))) snapshot = result.value;
+    if (refreshing) return;
+    refreshing = true;
+    try {
+      snapshot = await readSnapshot(liveUrl);
+      connected = true;
+    } catch {
+      connected = false;
+      if (!snapshot) {
+        try { snapshot = await readSnapshot('donation-status.json'); } catch { /* Show the unavailable message. */ }
+      }
+    } finally {
+      refreshing = false;
+      renderDonations();
     }
-    renderDonations();
   }
 
   document.addEventListener('site-language-change', renderDonations);
   refreshDonations();
-  setInterval(() => { if (!document.hidden) refreshDonations(); }, 5 * 60 * 1000);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) refreshDonations(); });
+  window.addEventListener('online', refreshDonations);
+  setInterval(() => { if (!document.hidden) refreshDonations(); }, refreshInterval);
 })();

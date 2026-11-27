@@ -1,31 +1,41 @@
 {
-  "checkedAt": "2026-11-27T15:51:18+00:00",
+  "checkedAt": "2026-11-27T16:01:04+00:00",
   "recent": {
     "title": "dukung di https://saweria.co/12washere",
     "noAmount": false,
     "items": [
       {
         "donator": "Figoga",
+        "id": "4f54eb62-9c76-4e4c-9c8f-8b339e754408",
+        "isUser": false,
         "amount": 90750.0,
         "currency": "IDR"
       },
       {
         "donator": "bocilkematian",
+        "id": "f6db1551-b09f-44e0-a70b-25cfa7745a13",
+        "isUser": false,
         "amount": 10000.0,
         "currency": "IDR"
       },
       {
         "donator": "delle",
+        "id": "307b30df-62b3-4917-93f5-1a21ec25b8b8",
+        "isUser": false,
         "amount": 15000.0,
         "currency": "IDR"
       },
       {
         "donator": "maling",
+        "id": "cab1435b-d6a3-49a8-afe3-cfdb2592906a",
+        "isUser": false,
         "amount": 25000.0,
         "currency": "IDR"
       },
       {
         "donator": "mister1337",
+        "id": "f4d17a11-f07a-4ec3-b9b2-e4eebb40d972",
+        "isUser": true,
         "amount": 10000.0,
         "currency": "IDR"
       }
@@ -33,6 +43,7 @@
   },
   "goal": {
     "title": "MILESTONE PERTAMA?!",
+    "startDate": "2024-02-01",
     "target": 500000.0,
     "progress": 380750.0,
     "currency": "IDR"
@@ -43,44 +54,64 @@
     "items": [
       {
         "donator": "Pio",
+        "id": "",
+        "isUser": false,
         "amount": 150000.0,
         "currency": "IDR"
       },
       {
         "donator": "Figoga",
+        "id": "",
+        "isUser": false,
         "amount": 90750.0,
         "currency": "IDR"
       },
       {
         "donator": "💃🏻",
+        "id": "",
+        "isUser": false,
         "amount": 50000.0,
         "currency": "IDR"
       },
       {
         "donator": "ciciel",
+        "id": "",
+        "isUser": false,
         "amount": 30000.0,
         "currency": "IDR"
       },
       {
         "donator": "maling",
+        "id": "",
+        "isUser": false,
         "amount": 25000.0,
         "currency": "IDR"
       },
       {
         "donator": "delle",
+        "id": "",
+        "isUser": false,
         "amount": 15000.0,
         "currency": "IDR"
       },
       {
         "donator": "bocilkematian",
+        "id": "",
+        "isUser": false,
         "amount": 10000.0,
         "currency": "IDR"
       },
       {
         "donator": "mister1337",
+        "id": "",
+        "isUser": true,
         "amount": 10000.0,
         "currency": "IDR"
       }
     ]
+  },
+  "leaderboardPeriod": {
+    "mode": "all",
+    "startDate": null
   }
 }

@@ -1,0 +1,4 @@
+@publicDonations path /api/donations/status /api/donations/webhook/*
+handle @publicDonations {
+    reverse_proxy 127.0.0.1:8756
+}
