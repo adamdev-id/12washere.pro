@@ -8,8 +8,8 @@
   <title data-i18n="donationPageTitle">Donation — 12WASHERE</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css?v=11">
-  <link rel="stylesheet" href="donation.css?v=1">
-  <script src="language.js?v=9" defer></script>
+  <link rel="stylesheet" href="donation.css?v=3">
+  <script src="language.js?v=10" defer></script>
   <script src="donation.js?v=2" defer></script>
 </head>
 <body>
@@ -37,10 +37,10 @@
     <section class="donation-intro" aria-labelledby="donation-title">
       <p class="eyebrow" data-i18n="donationEyebrow">✳ SUPPORT 12WASHERE</p>
       <h1 id="donation-title" data-i18n-html="donationTitle">HELP US <span>STAY ALIVE.</span></h1>
-      <p data-i18n="donationIntro">Want to support 12WASHERE? Choose to donate via Saweria or display QRIS to scan.</p>
+      <p data-i18n="donationIntro">Want to support 12WASHERE? Donate via Saweria or scan the donation QR with your phone camera.</p>
       <div class="donation-actions">
         <a class="button primary" href="https://saweria.co/12washere" target="_blank" rel="noopener noreferrer"><span class="donation-button-label" data-i18n="donateSaweria">Donate via Saweria</span><span aria-hidden="true">↗</span></a>
-        <a class="button outline-button" id="show-qris" href="https://saweria.co/widgets/qr?streamKey=ab95bc4c3d7dbed563380562e69c7861" target="_blank" rel="noopener noreferrer" aria-haspopup="dialog" aria-controls="qris-dialog"><span class="donation-button-label" data-i18n="showQris">Show QRIS</span><span aria-hidden="true">＋</span></a>
+        <a class="button outline-button" id="show-qris" href="https://saweria.co/12washere" target="_blank" rel="noopener noreferrer" aria-haspopup="dialog" aria-controls="qris-dialog"><span class="donation-button-label" data-i18n="showQris">Show donation QR</span><span aria-hidden="true">＋</span></a>
       </div>
     </section>
     <section class="donation-widget" aria-labelledby="goal-title">
@@ -55,15 +55,24 @@
       <a class="widget-fallback" href="https://saweria.co/widgets/leaderboard?streamKey=ab95bc4c3d7dbed563380562e69c7861" target="_blank" rel="noopener noreferrer" data-i18n="widgetFallback">View on Saweria ↗</a>
     </section>
   </main>
-  <noscript><p class="wrap donation-status">Enable JavaScript to see donation updates. You can still donate via Saweria or open the QRIS widget using the buttons above.</p></noscript>
+  <noscript><p class="wrap donation-status">Enable JavaScript to see donation updates and the QR popup. You can still open Saweria using either donation button above.</p></noscript>
   <footer class="footer wrap"><a class="footer-brand" href="./">12WASHERE<span>↗</span></a><p data-i18n="footerMotto">Leave your mark. Stay alive.</p><span class="footer-note" data-i18n-html="footerNote">An independent Project Zomboid server.<br>Not affiliated with The Indie Stone.</span></footer>
   <dialog id="qris-dialog" aria-labelledby="qris-title" aria-describedby="qris-description">
-    <button class="dialog-close icon-button" type="button" aria-label="Close QRIS code" data-i18n-aria="closeQris" autofocus>×</button>
-    <p class="eyebrow">QRIS / SAWERIA</p>
+    <button class="dialog-close icon-button" type="button" aria-label="Close donation QR code" data-i18n-aria="closeQris" autofocus>×</button>
+    <p class="eyebrow" data-i18n="qrisEyebrow">SAWERIA / DONATION QR</p>
     <h2 id="qris-title" data-i18n="qrisTitle">Scan to donate.</h2>
-    <p id="qris-description" data-i18n="qrisDescription">Scan to open our Saweria page, then choose QRIS to complete your donation.</p>
-    <img class="qris-code" src="assets/saweria-qr.svg" width="300" height="300" alt="QR code for saweria.co/12washere" data-i18n-alt="qrisAlt">
-    <a class="widget-fallback" href="https://saweria.co/widgets/qr?streamKey=ab95bc4c3d7dbed563380562e69c7861" target="_blank" rel="noopener noreferrer" data-i18n="widgetFallback">View on Saweria ↗</a>
+    <p id="qris-description" data-i18n="qrisDescription">Scan with your phone camera to open Saweria, then enter an amount and choose QRIS at checkout.</p>
+    <figure class="qris-card">
+      <div class="qris-card-header">
+        <div class="qris-card-brand"><span class="qris-card-number">12</span><span>WASHERE<span class="qris-card-arrow" aria-hidden="true">↗</span></span></div>
+        <span class="qris-card-tag">SAWERIA</span>
+      </div>
+      <div class="qris-code-frame"><img class="qris-code" src="assets/saweria-qr.svg?v=3" width="300" height="300" alt="QR code for saweria.co/12washere" data-i18n-alt="qrisAlt"></div>
+      <figcaption class="qris-card-caption"><span data-i18n="footerMotto">Leave your mark. Stay alive.</span><span aria-hidden="true">✳</span></figcaption>
+    </figure>
+    <p class="qris-address">saweria.co/12washere</p>
+    <p class="qris-device-note" data-i18n="qrisDeviceNote">Using this phone? Open the donation page below.</p>
+    <a class="button primary qris-open" href="https://saweria.co/12washere" target="_blank" rel="noopener noreferrer"><span class="donation-button-label" data-i18n="donateSaweria">Donate via Saweria</span><span aria-hidden="true">↗</span></a>
   </dialog>
 </body>
 </html>
