@@ -8,7 +8,7 @@
   <title data-i18n="donationPageTitle">Donation — 12WASHERE</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css?v=11">
-  <link rel="stylesheet" href="donation.css?v=3">
+  <link rel="stylesheet" href="donation.css?v=4">
   <script src="language.js?v=10" defer></script>
   <script src="donation.js?v=2" defer></script>
 </head>
@@ -28,12 +28,6 @@
     </div>
   </header>
   <main class="donation-page wrap" id="main">
-    <section class="donation-widget recent-donations" aria-labelledby="recent-title">
-      <h2 id="recent-title" data-i18n="recentDonations">Recent donations</h2>
-      <p class="donation-status" id="donation-status" role="status" data-i18n="donationsLoading">Loading the latest donations…</p>
-      <ul class="donation-list recent-list" id="recent-donations"></ul>
-      <a class="widget-fallback" href="https://saweria.co/widgets/recent?streamKey=ab95bc4c3d7dbed563380562e69c7861" target="_blank" rel="noopener noreferrer" data-i18n="widgetFallback">View on Saweria ↗</a>
-    </section>
     <section class="donation-intro" aria-labelledby="donation-title">
       <p class="eyebrow" data-i18n="donationEyebrow">✳ SUPPORT 12WASHERE</p>
       <h1 id="donation-title" data-i18n-html="donationTitle">HELP US <span>STAY ALIVE.</span></h1>
@@ -43,17 +37,25 @@
         <a class="button outline-button" id="show-qris" href="https://saweria.co/12washere" target="_blank" rel="noopener noreferrer" aria-haspopup="dialog" aria-controls="qris-dialog"><span class="donation-button-label" data-i18n="showQris">Show donation QR</span><span aria-hidden="true">＋</span></a>
       </div>
     </section>
-    <section class="donation-widget" aria-labelledby="goal-title">
+    <section class="donation-widget donation-goal-widget" aria-labelledby="goal-title">
       <h2 id="goal-title" data-i18n="donationGoal">Milestone / Donation Goal</h2>
       <div id="donation-goal"></div>
+      <p class="donation-status" id="donation-status" role="status" data-i18n="donationsLoading">Loading the latest donations…</p>
       <a class="widget-fallback" href="https://saweria.co/widgets/milestone?streamKey=ab95bc4c3d7dbed563380562e69c7861" target="_blank" rel="noopener noreferrer" data-i18n="widgetFallback">View on Saweria ↗</a>
     </section>
-    <section class="donation-widget" aria-labelledby="leaderboard-title">
-      <h2 id="leaderboard-title" data-i18n="donationLeaderboard">Donor leaderboard</h2>
-      <p class="donation-board-title" id="leaderboard-label"></p>
-      <ol class="donation-list leaderboard-list" id="donation-leaderboard"></ol>
-      <a class="widget-fallback" href="https://saweria.co/widgets/leaderboard?streamKey=ab95bc4c3d7dbed563380562e69c7861" target="_blank" rel="noopener noreferrer" data-i18n="widgetFallback">View on Saweria ↗</a>
-    </section>
+    <div class="donation-boards">
+      <section class="donation-widget recent-donations" aria-labelledby="recent-title">
+        <h2 id="recent-title" data-i18n="recentDonations">Recent donations</h2>
+        <ul class="donation-list recent-list" id="recent-donations"></ul>
+        <a class="widget-fallback" href="https://saweria.co/widgets/recent?streamKey=ab95bc4c3d7dbed563380562e69c7861" target="_blank" rel="noopener noreferrer" data-i18n="widgetFallback">View on Saweria ↗</a>
+      </section>
+      <section class="donation-widget" aria-labelledby="leaderboard-title">
+        <h2 id="leaderboard-title" data-i18n="donationLeaderboard">Donor leaderboard</h2>
+        <p class="donation-board-title" id="leaderboard-label"></p>
+        <ol class="donation-list leaderboard-list" id="donation-leaderboard"></ol>
+        <a class="widget-fallback" href="https://saweria.co/widgets/leaderboard?streamKey=ab95bc4c3d7dbed563380562e69c7861" target="_blank" rel="noopener noreferrer" data-i18n="widgetFallback">View on Saweria ↗</a>
+      </section>
+    </div>
   </main>
   <noscript><p class="wrap donation-status">Enable JavaScript to see donation updates and the QR popup. You can still open Saweria using either donation button above.</p></noscript>
   <footer class="footer wrap"><a class="footer-brand" href="./">12WASHERE<span>↗</span></a><p data-i18n="footerMotto">Leave your mark. Stay alive.</p><span class="footer-note" data-i18n-html="footerNote">An independent Project Zomboid server.<br>Not affiliated with The Indie Stone.</span></footer>

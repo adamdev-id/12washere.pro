@@ -1,6 +1,14 @@
 .donation-page{padding-block:32px 64px}
 .donation-widget{padding:24px;background:var(--panel);border:1px solid var(--line)}
-.donation-widget+.donation-widget{margin-top:24px}
+.donation-boards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start;margin-top:24px}
+.donation-boards .donation-widget{min-width:0}
+.donation-boards .donation-list li{padding-block:9px;font-size:13px}
+.donation-boards .donation-board-title{font-size:12px;margin-bottom:12px}
+.donation-goal-widget #donation-goal{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:14px 24px}
+.donation-goal-widget .donation-board-title{margin:0}
+.donation-goal-widget .goal-amount{grid-column:2;grid-row:1;margin:0}
+.donation-goal-widget .donation-progress{grid-column:1 / -1;grid-row:2;height:14px;margin:0}
+.donation-goal-widget .donation-status{margin:16px 0 0}
 .donation-widget h2{font:600 32px/1.1 var(--display);margin:0 0 20px}
 .donation-status{margin:0 0 16px;font-size:12px;color:var(--muted)}
 .donation-list{margin:0;padding:0;list-style:none}
@@ -18,7 +26,7 @@
 .goal-amount{font:14px var(--mono);color:var(--accent)}
 .widget-fallback{display:inline-block;margin-top:14px;font-size:11px;color:var(--muted);text-decoration:underline;text-underline-offset:3px}
 .widget-fallback:hover{color:var(--accent)}
-.donation-intro{padding-block:48px}
+.donation-intro{padding-block:12px 32px}
 .donation-intro .eyebrow{margin-bottom:16px}
 .donation-intro h1{margin:0;font:800 clamp(54px,7vw,88px)/.98 var(--display);letter-spacing:-1px}
 .donation-intro h1 span{color:var(--accent)}
@@ -48,7 +56,11 @@
   .donation-page{padding-block:24px 40px}
   .donation-widget{padding:16px}
   .donation-widget h2{font-size:28px}
-  .donation-intro{padding-block:36px}
+  .donation-intro{padding-block:0 28px}
+  .donation-boards{grid-template-columns:1fr;gap:16px;margin-top:16px}
+  .donation-goal-widget #donation-goal{grid-template-columns:1fr;gap:12px}
+  .donation-goal-widget .goal-amount{grid-column:1;grid-row:2}
+  .donation-goal-widget .donation-progress{grid-row:3}
   .donation-intro h1{font-size:clamp(50px,12vw,76px)}
   #qris-dialog h2{font-size:38px}
   .qris-card-header{padding:12px}.qris-card-brand{font-size:20px}.qris-card-tag{font-size:7px;letter-spacing:1px}.qris-card-caption{padding:10px 12px;font-size:8px}
