@@ -3,3 +3,4 @@ downloads/** -text -whitespace
 patcher/payload/** -text -whitespace
 patcher/local-mod/** -text -whitespace
 patcher/THIRD-PARTY-NOTICES.txt -whitespace
+server/** text eol=lf
