@@ -10,8 +10,8 @@
   <meta property="og:type" content="website">
   <title>12WASHERE — Project Zomboid</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=11">
-  <script src="language.js?v=11" defer></script>
+  <link rel="stylesheet" href="style.css?v=12">
+  <script src="language.js?v=12" defer></script>
   <script src="script.js?v=3" defer></script>
   <script src="players.js?v=3" defer></script>
 </head>
@@ -81,6 +81,12 @@
   <footer class="footer wrap"><a class="footer-brand" href="#">12WASHERE<span>↗</span></a><p data-i18n="footerMotto">Leave your mark. Stay alive.</p><span class="footer-note" data-i18n-html="footerNote">An independent Project Zomboid server.<br>Not affiliated with The Indie Stone.</span></footer>
   <dialog id="join-dialog" aria-labelledby="join-title" aria-describedby="join-description">
     <button class="dialog-close icon-button" type="button" aria-label="Close join instructions" data-i18n-aria="closeJoin">×</button><p class="eyebrow" data-i18n="dialogEyebrow">SEE YOU ON THE OTHER SIDE</p><h2 id="join-title" data-i18n="dialogTitle">Your way in.</h2><p id="join-description" data-i18n-html="dialogIntro">Open Project Zomboid, select <strong>Join</strong>, and add these details to your favorites.</p>
+    <aside class="join-setup-reminder" aria-labelledby="join-setup-title">
+      <h3 id="join-setup-title" data-i18n="joinSetupTitle">Before you join</h3>
+      <p data-i18n="joinSetupReminder">Remember to review the ZombieBuddy setup guide before connecting.</p>
+      <a class="button outline-button" href="mods.html#zombiebuddy" data-i18n-html="joinSetupGuide">Review ZombieBuddy setup <span aria-hidden="true">↗</span></a>
+      <p class="join-setup-optional" data-i18n="joinSetupOptional">Optional: opening this guide is up to you. You can continue with the server details below.</p>
+    </aside>
     <div class="dialog-fields"><div><span data-i18n="hostname">IP / HOSTNAME</span><code>pz.12washere.pro</code><button class="small-copy" data-copy="host" aria-label="Copy hostname from join instructions" data-i18n-aria="copyHost" data-i18n="copy">Copy</button></div><div><span data-i18n="port">PORT</span><code>7449</code><button class="small-copy" data-copy="port" aria-label="Copy port from join instructions" data-i18n-aria="copyPort" data-i18n="copy">Copy</button></div></div>
     <p class="dialog-status" role="status" aria-live="polite" aria-atomic="true"></p>
     <a class="button primary launch" href="steam://rungameid/108600" data-i18n-html="launch">Launch Project Zomboid <span aria-hidden="true">↗</span></a><p class="launch-note" data-i18n="launchNote">Requires Steam and Project Zomboid on this device. Launching opens the game; enter the server details in its Join menu.</p>

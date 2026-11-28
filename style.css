@@ -40,6 +40,11 @@
 @media(max-width:680px){.header:has(.language-switch:not([hidden])){height:var(--site-header-height)}.header-tools nav{gap:8px}.language-switch{gap:3px}}
 
 /* Required setup in the joining guide */
+.join-setup-reminder{margin-top:20px;padding:16px;border:1px solid #82513c;border-left:3px solid var(--accent);background:var(--bg)}
+.join-setup-reminder h3{margin:0 0 8px;font-size:16px;color:var(--text)}
+.join-setup-reminder p{margin:0 0 12px;color:var(--muted);font-size:12px}
+.join-setup-reminder .button{font-size:12px;gap:12px}
+.join-setup-reminder .join-setup-optional{margin:12px 0 0;font-size:11px}
 .join-prerequisite{margin-top:24px;padding:13px 16px;border:1px solid #82513c;border-left:3px solid var(--accent);background:var(--panel);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px 20px}
 .join-prerequisite p{margin:0;color:var(--muted);font-size:13px}.join-prerequisite #join-prerequisite-title{font-weight:700;color:var(--text)}
 .setup-actions{display:inline-flex;flex-wrap:wrap;gap:0 8px;max-width:100%}
